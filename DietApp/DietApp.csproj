@@ -54,6 +54,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCCalendar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCalendar.Designer.cs">
+      <DependentUpon>UCCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCClients.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCClients.Designer.cs">
+      <DependentUpon>UCClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCDashboard.Designer.cs">
+      <DependentUpon>UCDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSettings.Designer.cs">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -65,7 +89,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UCCalendar.resx">
+      <DependentUpon>UCCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCClients.resx">
+      <DependentUpon>UCClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCDashboard.resx">
+      <DependentUpon>UCDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSettings.resx">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +115,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Conact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
