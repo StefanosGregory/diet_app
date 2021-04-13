@@ -35,6 +35,8 @@ namespace DietApp
             PnlNav.Left = BtnDashboard.Left;
             BtnDashboard.BackColor = Color.FromArgb(46, 51, 73);
             ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = ucDashboard1.Location;
+            BtnCloseApp.Location = new Point(this.Width - BtnCloseApp.Width - 10 , 10);
+            BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5 , 10);
         }
 
 
@@ -96,6 +98,37 @@ namespace DietApp
          * End
          * >
          */
-        
+
+
+        /*
+         * _ X Buttons
+         * <
+         */
+
+
+        private void BtnCloseApp_MouseEnter(object sender, EventArgs e)
+        {
+            BtnCloseApp.ForeColor = Color.FromArgb(178, 34, 34);
+        }
+
+        private void BtnCloseApp_MouseLeave(object sender, EventArgs e)
+        {
+            BtnCloseApp.ForeColor = Color.FromArgb(0, 126, 249);
+        }
+
+        private void BtnCloseApp_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        /*
+         * End
+         * >
+         */
     }
 }

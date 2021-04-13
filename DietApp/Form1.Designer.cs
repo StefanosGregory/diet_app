@@ -39,6 +39,8 @@ namespace DietApp
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnCloseApp = new System.Windows.Forms.Button();
+            this.BtnMinimize = new System.Windows.Forms.Button();
             this.ucSettings1 = new DietApp.UCSettings();
             this.ucCalendar1 = new DietApp.UCCalendar();
             this.ucClients1 = new DietApp.UCClients();
@@ -182,6 +184,39 @@ namespace DietApp
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnCloseApp
+            // 
+            this.BtnCloseApp.FlatAppearance.BorderSize = 0;
+            this.BtnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCloseApp.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCloseApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.BtnCloseApp.Location = new System.Drawing.Point(2199, 12);
+            this.BtnCloseApp.Name = "BtnCloseApp";
+            this.BtnCloseApp.Size = new System.Drawing.Size(68, 56);
+            this.BtnCloseApp.TabIndex = 7;
+            this.BtnCloseApp.Text = "X";
+            this.BtnCloseApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnCloseApp.UseVisualStyleBackColor = true;
+            this.BtnCloseApp.Click += new System.EventHandler(this.BtnCloseApp_Click);
+            this.BtnCloseApp.MouseEnter += new System.EventHandler(this.BtnCloseApp_MouseEnter);
+            this.BtnCloseApp.MouseLeave += new System.EventHandler(this.BtnCloseApp_MouseLeave);
+            // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimize.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.BtnMinimize.Location = new System.Drawing.Point(2136, 10);
+            this.BtnMinimize.Name = "BtnMinimize";
+            this.BtnMinimize.Size = new System.Drawing.Size(57, 56);
+            this.BtnMinimize.TabIndex = 8;
+            this.BtnMinimize.Text = "__";
+            this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnMinimize.UseVisualStyleBackColor = true;
+            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
             // ucSettings1
             // 
             this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -225,6 +260,8 @@ namespace DietApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(2279, 1406);
+            this.Controls.Add(this.BtnMinimize);
+            this.Controls.Add(this.BtnCloseApp);
             this.Controls.Add(this.ucSettings1);
             this.Controls.Add(this.ucCalendar1);
             this.Controls.Add(this.ucClients1);
@@ -260,6 +297,8 @@ namespace DietApp
         private UCClients ucClients1;
         private UCCalendar ucCalendar1;
         private UCSettings ucSettings1;
+        private System.Windows.Forms.Button BtnCloseApp;
+        private System.Windows.Forms.Button BtnMinimize;
     }
 }
 
