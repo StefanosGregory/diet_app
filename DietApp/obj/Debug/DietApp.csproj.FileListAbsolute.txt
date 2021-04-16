@@ -2,7 +2,6 @@ C:\Users\Bakeries\Desktop\diet_app\DietApp\bin\Debug\DietApp.exe.config
 C:\Users\Bakeries\Desktop\diet_app\DietApp\bin\Debug\DietApp.exe
 C:\Users\Bakeries\Desktop\diet_app\DietApp\bin\Debug\DietApp.pdb
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.csprojAssemblyReference.cache
-C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.Form1.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.Properties.Resources.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.csproj.GenerateResource.cache
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.csproj.CoreCompileInputs.cache
@@ -22,3 +21,8 @@ C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCClients.resources
 C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCCalendar.resources
 C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCSettings.resources
 C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.MainForm.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.MainForm.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCCalendar.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCClients.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCDashboard.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCSettings.resources
