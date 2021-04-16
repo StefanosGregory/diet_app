@@ -38,33 +38,33 @@ namespace DietApp
         private void FillfDaysInMonth(int year, int month)
         {
             var first = new DateTime(year, month, 1);
-            var last = first.AddMonths(1).AddDays(-1);
             var days = DateTime.DaysInMonth(year, month);
+            var tmp = new DateTime(year, month, 1).AddMonths(-1);
+            int previousmonth = Int16.Parse(tmp.ToString("MM"));
             
-
-            //first = first.ToString("dddd");
             switch (first.ToString("dddd"))
             {
-                case "Sunday":
-                    dayLblCorrection(1, days);
-                    break;
+                
                 case "Monday":
-                    dayLblCorrection(2, days);
+                    dayLblCorrection(1, days, month, year, previousmonth);
                     break;
                 case "Thuesday":
-                    dayLblCorrection(3, days);
+                    dayLblCorrection(2, days, month, year, previousmonth);
                     break;
                 case "Wednesday":
-                    dayLblCorrection(4, days);
+                    dayLblCorrection(3, days, month, year, previousmonth);
                     break;
                 case "Thursday":
-                    dayLblCorrection(6, days);
+                    dayLblCorrection(4, days, month, year, previousmonth);
                     break;
                 case "Friday":
-                    dayLblCorrection(6, days);
+                    dayLblCorrection(5, days, month, year, previousmonth);
                     break;
                 case "Saturday":
-                    dayLblCorrection(7, days);
+                    dayLblCorrection(6, days, month, year, previousmonth);
+                    break;
+                case "Sunday":
+                    dayLblCorrection(7, days, month, year, previousmonth);
                     break;
                 default:
                     MessageBox.Show("error");
@@ -73,18 +73,37 @@ namespace DietApp
 
         }
 
-        private void dayLblCorrection(int index, int days)
+        private void dayLblCorrection(int index, int days, int month, int year, int previousmonth)
         {
-            Console.WriteLine("days: " + days.ToString() + " index: " + index.ToString());
-            Label[] lb = { Day1Lbl, Day2Lbl, Day3Lbl, Day4Lbl, Day5Lbl, Day6Lbl, Day7Lbl, Day8Lbl, Day9Lbl, Day10Lbl, Day11Lbl, Day12Lbl, Day13Lbl, Day14Lbl, Day15Lbl, Day16Lbl, Day17Lbl, Day18Lbl, Day19Lbl, Day20Lbl, Day21Lbl, Day22Lbl, Day23Lbl, Day24Lbl, Day25Lbl, Day26Lbl, Day27Lbl, Day28Lbl, Day29Lbl, Day30Lbl, Day31Lbl, Day32Lbl, Day33Lbl, Day34Lbl, Day35Lbl };
+            Label[] lb = { Day1Lbl, Day2Lbl, Day3Lbl, Day4Lbl, Day5Lbl, Day6Lbl, Day7Lbl, Day8Lbl, Day9Lbl, Day10Lbl, Day11Lbl, Day12Lbl, Day13Lbl, Day14Lbl, Day15Lbl, Day16Lbl, Day17Lbl, Day18Lbl, Day19Lbl, Day20Lbl, Day21Lbl, Day22Lbl, Day23Lbl, Day24Lbl, Day25Lbl, Day26Lbl, Day27Lbl, Day28Lbl, Day29Lbl, Day30Lbl, Day31Lbl, Day32Lbl, Day33Lbl, Day34Lbl, Day35Lbl, Day36Lbl, Day37Lbl };
+
+            // Display the current month's day numbers.
             int j = 1;
-            //Console.WriteLine(lb[-1].ToString());
-            // for 
-            for (int i = index - 1; i <= days + index - 1; i++)
+            int d = index - 1;
+            for (; d <= days + index - 2; d++)
+            {
+                lb[d].Text = j.ToString();
+                lb[d].ForeColor = Color.FromArgb(158, 161, 176);
+                j++;
+            }
+
+            // Display next mont's first visible day numbers.
+            j = 1;
+            for (; d <= 36; d++)
+            {
+                lb[d].Text = j.ToString();
+                lb[d].ForeColor = Color.FromArgb(104, 104, 104);
+                j++;
+
+            }
+
+            // Display previous month's last visible day numbers.
+            j = DateTime.DaysInMonth(year, previousmonth);
+            for (int i = index - 2; i >= 0; i--)
             {
                 lb[i].Text = j.ToString();
-
-                j++;
+                lb[i].ForeColor = Color.FromArgb(104, 104, 104);
+                j--;
             }
         }
 

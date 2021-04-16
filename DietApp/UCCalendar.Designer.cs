@@ -119,6 +119,10 @@ namespace DietApp
             this.liveTimeLbl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel37 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Day36Lbl = new System.Windows.Forms.Label();
+            this.flowLayoutPanel38 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Day37Lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
@@ -159,6 +163,8 @@ namespace DietApp
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.flowLayoutPanel37.SuspendLayout();
+            this.flowLayoutPanel38.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -182,7 +188,7 @@ namespace DietApp
             this.panel1.Location = new System.Drawing.Point(26, 73);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 706);
+            this.panel1.Size = new System.Drawing.Size(940, 818);
             this.panel1.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -223,11 +229,13 @@ namespace DietApp
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel34);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel35);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel36);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel37);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel38);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 610);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(940, 722);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
             // flowLayoutPanel5
@@ -249,7 +257,7 @@ namespace DietApp
             this.Day1Lbl.Name = "Day1Lbl";
             this.Day1Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day1Lbl.TabIndex = 5;
-            this.Day1Lbl.Text = "1";
+            this.Day1Lbl.Text = "DayNumber";
             this.Day1Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel2
@@ -271,7 +279,7 @@ namespace DietApp
             this.Day2Lbl.Name = "Day2Lbl";
             this.Day2Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day2Lbl.TabIndex = 6;
-            this.Day2Lbl.Text = "2";
+            this.Day2Lbl.Text = "DayNumber";
             this.Day2Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel3
@@ -293,7 +301,7 @@ namespace DietApp
             this.Day3Lbl.Name = "Day3Lbl";
             this.Day3Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day3Lbl.TabIndex = 10;
-            this.Day3Lbl.Text = "3";
+            this.Day3Lbl.Text = "DayNumber";
             this.Day3Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel4
@@ -315,7 +323,7 @@ namespace DietApp
             this.Day4Lbl.Name = "Day4Lbl";
             this.Day4Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day4Lbl.TabIndex = 9;
-            this.Day4Lbl.Text = "4";
+            this.Day4Lbl.Text = "DayNumber";
             this.Day4Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel6
@@ -337,7 +345,7 @@ namespace DietApp
             this.Day5Lbl.Name = "Day5Lbl";
             this.Day5Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day5Lbl.TabIndex = 8;
-            this.Day5Lbl.Text = "5";
+            this.Day5Lbl.Text = "DayNumber";
             this.Day5Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel7
@@ -359,7 +367,7 @@ namespace DietApp
             this.Day6Lbl.Name = "Day6Lbl";
             this.Day6Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day6Lbl.TabIndex = 7;
-            this.Day6Lbl.Text = "6";
+            this.Day6Lbl.Text = "DayNumber";
             this.Day6Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel8
@@ -381,7 +389,7 @@ namespace DietApp
             this.Day7Lbl.Name = "Day7Lbl";
             this.Day7Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day7Lbl.TabIndex = 11;
-            this.Day7Lbl.Text = "7";
+            this.Day7Lbl.Text = "DayNumber";
             this.Day7Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel9
@@ -403,7 +411,7 @@ namespace DietApp
             this.Day8Lbl.Name = "Day8Lbl";
             this.Day8Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day8Lbl.TabIndex = 10;
-            this.Day8Lbl.Text = "8";
+            this.Day8Lbl.Text = "DayNumber";
             this.Day8Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel14
@@ -425,7 +433,7 @@ namespace DietApp
             this.Day9Lbl.Name = "Day9Lbl";
             this.Day9Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day9Lbl.TabIndex = 9;
-            this.Day9Lbl.Text = "9";
+            this.Day9Lbl.Text = "DayNumber";
             this.Day9Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel13
@@ -447,7 +455,7 @@ namespace DietApp
             this.Day10Lbl.Name = "Day10Lbl";
             this.Day10Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day10Lbl.TabIndex = 8;
-            this.Day10Lbl.Text = "10";
+            this.Day10Lbl.Text = "DayNumber";
             this.Day10Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel15
@@ -469,7 +477,7 @@ namespace DietApp
             this.Day11Lbl.Name = "Day11Lbl";
             this.Day11Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day11Lbl.TabIndex = 13;
-            this.Day11Lbl.Text = "11";
+            this.Day11Lbl.Text = "DayNumber";
             this.Day11Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel12
@@ -491,7 +499,7 @@ namespace DietApp
             this.Day12Lbl.Name = "Day12Lbl";
             this.Day12Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day12Lbl.TabIndex = 12;
-            this.Day12Lbl.Text = "12";
+            this.Day12Lbl.Text = "DayNumber";
             this.Day12Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel11
@@ -513,7 +521,7 @@ namespace DietApp
             this.Day13Lbl.Name = "Day13Lbl";
             this.Day13Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day13Lbl.TabIndex = 11;
-            this.Day13Lbl.Text = "13";
+            this.Day13Lbl.Text = "DayNumber";
             this.Day13Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel10
@@ -535,7 +543,7 @@ namespace DietApp
             this.Day14Lbl.Name = "Day14Lbl";
             this.Day14Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day14Lbl.TabIndex = 10;
-            this.Day14Lbl.Text = "14";
+            this.Day14Lbl.Text = "DayNumber";
             this.Day14Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel16
@@ -557,7 +565,7 @@ namespace DietApp
             this.Day15Lbl.Name = "Day15Lbl";
             this.Day15Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day15Lbl.TabIndex = 9;
-            this.Day15Lbl.Text = "15";
+            this.Day15Lbl.Text = "DayNumber";
             this.Day15Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel22
@@ -579,7 +587,7 @@ namespace DietApp
             this.Day16Lbl.Name = "Day16Lbl";
             this.Day16Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day16Lbl.TabIndex = 13;
-            this.Day16Lbl.Text = "16";
+            this.Day16Lbl.Text = "DayNumber";
             this.Day16Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel21
@@ -601,7 +609,7 @@ namespace DietApp
             this.Day17Lbl.Name = "Day17Lbl";
             this.Day17Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day17Lbl.TabIndex = 12;
-            this.Day17Lbl.Text = "17";
+            this.Day17Lbl.Text = "DayNumber";
             this.Day17Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel20
@@ -623,7 +631,7 @@ namespace DietApp
             this.Day18Lbl.Name = "Day18Lbl";
             this.Day18Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day18Lbl.TabIndex = 11;
-            this.Day18Lbl.Text = "18";
+            this.Day18Lbl.Text = "DayNumber";
             this.Day18Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel19
@@ -645,7 +653,7 @@ namespace DietApp
             this.Day19Lbl.Name = "Day19Lbl";
             this.Day19Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day19Lbl.TabIndex = 10;
-            this.Day19Lbl.Text = "19";
+            this.Day19Lbl.Text = "DayNumber";
             this.Day19Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel18
@@ -667,7 +675,7 @@ namespace DietApp
             this.Day20Lbl.Name = "Day20Lbl";
             this.Day20Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day20Lbl.TabIndex = 14;
-            this.Day20Lbl.Text = "20";
+            this.Day20Lbl.Text = "DayNumber";
             this.Day20Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel17
@@ -689,7 +697,7 @@ namespace DietApp
             this.Day21Lbl.Name = "Day21Lbl";
             this.Day21Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day21Lbl.TabIndex = 13;
-            this.Day21Lbl.Text = "21";
+            this.Day21Lbl.Text = "DayNumber";
             this.Day21Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel23
@@ -711,7 +719,7 @@ namespace DietApp
             this.Day22Lbl.Name = "Day22Lbl";
             this.Day22Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day22Lbl.TabIndex = 12;
-            this.Day22Lbl.Text = "22";
+            this.Day22Lbl.Text = "DayNumber";
             this.Day22Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel29
@@ -733,7 +741,7 @@ namespace DietApp
             this.Day23Lbl.Name = "Day23Lbl";
             this.Day23Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day23Lbl.TabIndex = 11;
-            this.Day23Lbl.Text = "23";
+            this.Day23Lbl.Text = "DayNumber";
             this.Day23Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel28
@@ -755,7 +763,7 @@ namespace DietApp
             this.Day24Lbl.Name = "Day24Lbl";
             this.Day24Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day24Lbl.TabIndex = 16;
-            this.Day24Lbl.Text = "24";
+            this.Day24Lbl.Text = "DayNumber";
             this.Day24Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel27
@@ -777,7 +785,7 @@ namespace DietApp
             this.Day25Lbl.Name = "Day25Lbl";
             this.Day25Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day25Lbl.TabIndex = 15;
-            this.Day25Lbl.Text = "25";
+            this.Day25Lbl.Text = "DayNumber";
             this.Day25Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel26
@@ -799,7 +807,7 @@ namespace DietApp
             this.Day26Lbl.Name = "Day26Lbl";
             this.Day26Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day26Lbl.TabIndex = 14;
-            this.Day26Lbl.Text = "26";
+            this.Day26Lbl.Text = "DayNumber";
             this.Day26Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel25
@@ -821,7 +829,7 @@ namespace DietApp
             this.Day27Lbl.Name = "Day27Lbl";
             this.Day27Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day27Lbl.TabIndex = 13;
-            this.Day27Lbl.Text = "27";
+            this.Day27Lbl.Text = "DayNumber";
             this.Day27Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel24
@@ -843,7 +851,7 @@ namespace DietApp
             this.Day28Lbl.Name = "Day28Lbl";
             this.Day28Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day28Lbl.TabIndex = 12;
-            this.Day28Lbl.Text = "28";
+            this.Day28Lbl.Text = "DayNumber";
             this.Day28Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel30
@@ -865,7 +873,7 @@ namespace DietApp
             this.Day29Lbl.Name = "Day29Lbl";
             this.Day29Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day29Lbl.TabIndex = 15;
-            this.Day29Lbl.Text = "29";
+            this.Day29Lbl.Text = "DayNumber";
             this.Day29Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel31
@@ -887,7 +895,7 @@ namespace DietApp
             this.Day30Lbl.Name = "Day30Lbl";
             this.Day30Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day30Lbl.TabIndex = 14;
-            this.Day30Lbl.Text = "30";
+            this.Day30Lbl.Text = "DayNumber";
             this.Day30Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel32
@@ -909,7 +917,7 @@ namespace DietApp
             this.Day31Lbl.Name = "Day31Lbl";
             this.Day31Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day31Lbl.TabIndex = 13;
-            this.Day31Lbl.Text = "31";
+            this.Day31Lbl.Text = "DayNumber";
             this.Day31Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel33
@@ -931,7 +939,7 @@ namespace DietApp
             this.Day32Lbl.Name = "Day32Lbl";
             this.Day32Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day32Lbl.TabIndex = 15;
-            this.Day32Lbl.Text = "1";
+            this.Day32Lbl.Text = "DayNumber";
             this.Day32Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel34
@@ -953,7 +961,7 @@ namespace DietApp
             this.Day33Lbl.Name = "Day33Lbl";
             this.Day33Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day33Lbl.TabIndex = 14;
-            this.Day33Lbl.Text = "2";
+            this.Day33Lbl.Text = "DayNumber";
             this.Day33Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel35
@@ -975,7 +983,7 @@ namespace DietApp
             this.Day34Lbl.Name = "Day34Lbl";
             this.Day34Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day34Lbl.TabIndex = 13;
-            this.Day34Lbl.Text = "3";
+            this.Day34Lbl.Text = "DayNumber";
             this.Day34Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // flowLayoutPanel36
@@ -997,7 +1005,7 @@ namespace DietApp
             this.Day35Lbl.Name = "Day35Lbl";
             this.Day35Lbl.Size = new System.Drawing.Size(129, 19);
             this.Day35Lbl.TabIndex = 14;
-            this.Day35Lbl.Text = "4";
+            this.Day35Lbl.Text = "DayNumber";
             this.Day35Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // panel5
@@ -1022,7 +1030,7 @@ namespace DietApp
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(802, 5);
+            this.label2.Location = new System.Drawing.Point(671, 2);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 29);
@@ -1035,7 +1043,7 @@ namespace DietApp
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label3.Location = new System.Drawing.Point(669, 5);
+            this.label3.Location = new System.Drawing.Point(538, 2);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 29);
@@ -1048,7 +1056,7 @@ namespace DietApp
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label7.Location = new System.Drawing.Point(536, 5);
+            this.label7.Location = new System.Drawing.Point(405, 2);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(130, 29);
@@ -1061,7 +1069,7 @@ namespace DietApp
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label4.Location = new System.Drawing.Point(402, 5);
+            this.label4.Location = new System.Drawing.Point(271, 2);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 29);
@@ -1074,7 +1082,7 @@ namespace DietApp
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label6.Location = new System.Drawing.Point(268, 5);
+            this.label6.Location = new System.Drawing.Point(137, 2);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 29);
@@ -1087,7 +1095,7 @@ namespace DietApp
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label8.Location = new System.Drawing.Point(135, 5);
+            this.label8.Location = new System.Drawing.Point(4, 2);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 29);
@@ -1100,7 +1108,7 @@ namespace DietApp
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label5.Location = new System.Drawing.Point(2, 5);
+            this.label5.Location = new System.Drawing.Point(805, 2);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 29);
@@ -1204,6 +1212,50 @@ namespace DietApp
             this.panel2.Size = new System.Drawing.Size(1106, 70);
             this.panel2.TabIndex = 5;
             // 
+            // flowLayoutPanel37
+            // 
+            this.flowLayoutPanel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.flowLayoutPanel37.Controls.Add(this.Day36Lbl);
+            this.flowLayoutPanel37.Location = new System.Drawing.Point(2, 567);
+            this.flowLayoutPanel37.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel37.Name = "flowLayoutPanel37";
+            this.flowLayoutPanel37.Size = new System.Drawing.Size(130, 109);
+            this.flowLayoutPanel37.TabIndex = 32;
+            // 
+            // Day36Lbl
+            // 
+            this.Day36Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Day36Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.Day36Lbl.Location = new System.Drawing.Point(2, 0);
+            this.Day36Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Day36Lbl.Name = "Day36Lbl";
+            this.Day36Lbl.Size = new System.Drawing.Size(129, 19);
+            this.Day36Lbl.TabIndex = 13;
+            this.Day36Lbl.Text = "DayNumber";
+            this.Day36Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // flowLayoutPanel38
+            // 
+            this.flowLayoutPanel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.flowLayoutPanel38.Controls.Add(this.Day37Lbl);
+            this.flowLayoutPanel38.Location = new System.Drawing.Point(136, 567);
+            this.flowLayoutPanel38.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel38.Name = "flowLayoutPanel38";
+            this.flowLayoutPanel38.Size = new System.Drawing.Size(130, 109);
+            this.flowLayoutPanel38.TabIndex = 33;
+            // 
+            // Day37Lbl
+            // 
+            this.Day37Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Day37Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.Day37Lbl.Location = new System.Drawing.Point(2, 0);
+            this.Day37Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Day37Lbl.Name = "Day37Lbl";
+            this.Day37Lbl.Size = new System.Drawing.Size(129, 19);
+            this.Day37Lbl.TabIndex = 14;
+            this.Day37Lbl.Text = "DayNumber";
+            this.Day37Lbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
             // UCCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,6 +1309,8 @@ namespace DietApp
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.flowLayoutPanel37.ResumeLayout(false);
+            this.flowLayoutPanel38.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1352,5 +1406,9 @@ namespace DietApp
         private System.Windows.Forms.Label Day33Lbl;
         private System.Windows.Forms.Label Day34Lbl;
         private System.Windows.Forms.Label Day35Lbl;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel37;
+        private System.Windows.Forms.Label Day36Lbl;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel38;
+        private System.Windows.Forms.Label Day37Lbl;
     }
 }

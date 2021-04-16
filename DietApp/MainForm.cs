@@ -28,7 +28,7 @@ namespace DietApp
         public MainForm()
         {
             InitializeComponent();
-            this.Size = new Size(1200, 800);
+            this.Size = new Size(1300, 900);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
             PnlNav.Height = BtnDashboard.Height;
             PnlNav.Top = BtnDashboard.Top;
