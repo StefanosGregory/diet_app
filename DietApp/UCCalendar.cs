@@ -17,6 +17,9 @@ namespace DietApp
             InitializeComponent();
             timer1.Enabled = true;
             liveTimeLbl.Visible = true;
+            MonthLbl.Text = DateTime.Now.ToString("MMMM, yyyy");
+            FillfDaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            MonthLbl.Visible = true;
 
         }
 
@@ -29,5 +32,17 @@ namespace DietApp
         {
             liveTimeLbl.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+
+
+        private void FillfDaysInMonth(int year, int month)
+        {
+            var first = new DateTime(year, month, 1);
+            var last = first.AddMonths(1).AddDays(-1);
+            var days = DateTime.DaysInMonth(year, month);
+            //Label[] lb = {Day1Lbl}
+
+        }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace DietApp
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -220,7 +220,7 @@ namespace DietApp
             // ucSettings1
             // 
             this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucSettings1.Location = new System.Drawing.Point(299, 1103);
+            this.ucSettings1.Location = new System.Drawing.Point(299, 428);
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(1884, 1406);
             this.ucSettings1.TabIndex = 4;
@@ -231,7 +231,7 @@ namespace DietApp
             this.ucCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ucCalendar1.Location = new System.Drawing.Point(299, 303);
             this.ucCalendar1.Name = "ucCalendar1";
-            this.ucCalendar1.Size = new System.Drawing.Size(1884, 1406);
+            this.ucCalendar1.Size = new System.Drawing.Size(1968, 1406);
             this.ucCalendar1.TabIndex = 3;
             this.ucCalendar1.Visible = false;
             // 
@@ -254,7 +254,7 @@ namespace DietApp
             this.ucDashboard1.Size = new System.Drawing.Size(1884, 1406);
             this.ucDashboard1.TabIndex = 1;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,10 +269,10 @@ namespace DietApp
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "DietApp";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

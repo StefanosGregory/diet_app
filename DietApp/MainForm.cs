@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 
 namespace DietApp
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -25,7 +25,7 @@ namespace DietApp
             int nweightEllipse
             );
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             this.Size = new Size(1200, 800);
@@ -44,7 +44,7 @@ namespace DietApp
 
 
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
