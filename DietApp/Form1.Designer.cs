@@ -36,7 +36,7 @@ namespace DietApp
             this.BtnClients = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.welcomeMsgLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnCloseApp = new System.Windows.Forms.Button();
@@ -143,7 +143,7 @@ namespace DietApp
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.welcomeMsgLbl);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -152,16 +152,16 @@ namespace DietApp
             this.panel2.Size = new System.Drawing.Size(299, 316);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // welcomeMsgLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label2.Location = new System.Drawing.Point(50, 245);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Welcome message";
+            this.welcomeMsgLbl.AutoSize = true;
+            this.welcomeMsgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeMsgLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.welcomeMsgLbl.Location = new System.Drawing.Point(50, 245);
+            this.welcomeMsgLbl.Name = "welcomeMsgLbl";
+            this.welcomeMsgLbl.Size = new System.Drawing.Size(188, 24);
+            this.welcomeMsgLbl.TabIndex = 1;
+            this.welcomeMsgLbl.Text = "Welcome message";
             // 
             // label1
             // 
@@ -220,7 +220,7 @@ namespace DietApp
             // ucSettings1
             // 
             this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucSettings1.Location = new System.Drawing.Point(299, 466);
+            this.ucSettings1.Location = new System.Drawing.Point(299, 1103);
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(1884, 1406);
             this.ucSettings1.TabIndex = 4;
@@ -286,7 +286,7 @@ namespace DietApp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label welcomeMsgLbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button BtnSettings;

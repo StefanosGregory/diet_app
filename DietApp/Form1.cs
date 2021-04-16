@@ -37,7 +37,11 @@ namespace DietApp
             ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = ucDashboard1.Location;
             BtnCloseApp.Location = new Point(this.Width - BtnCloseApp.Width - 10 , 10);
             BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5 , 10);
+            WelcomeMess();
+
         }
+
+
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -126,9 +130,30 @@ namespace DietApp
             this.WindowState = FormWindowState.Minimized;
         }
 
+
         /*
          * End
          * >
          */
+
+
+        /*
+         * FUNCTIONS
+         */
+        private void WelcomeMess()
+        {
+            if (int.Parse(DateTime.Now.ToString("HH")) >= 00 && int.Parse(DateTime.Now.ToString("HH")) < 12)
+            {
+                welcomeMsgLbl.Text = "Good morning doc!";
+            }
+            else if (int.Parse(DateTime.Now.ToString("HH")) >= 12 && int.Parse(DateTime.Now.ToString("HH")) < 19)
+            {
+                welcomeMsgLbl.Text = "Good evening doc!";
+            }
+            else if (int.Parse(DateTime.Now.ToString("HH")) >= 19 && int.Parse(DateTime.Now.ToString("HH")) <= 23)
+            {
+                welcomeMsgLbl.Text = "Good night doc!";
+            }
+        }
     }
 }

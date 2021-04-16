@@ -15,6 +15,19 @@ namespace DietApp
         public UCCalendar()
         {
             InitializeComponent();
+            timer1.Enabled = true;
+            liveTimeLbl.Visible = true;
+
+        }
+
+        private void UCCalendar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            liveTimeLbl.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }
