@@ -38,6 +38,8 @@ namespace DietApp
 
         private void FillfDaysInMonth()
         {
+            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+
             var first = new DateTime(year, month, 1);
             var days = DateTime.DaysInMonth(year, month);
             int previousmonth = Int16.Parse(new DateTime(year, month, 1).AddMonths(-1).ToString("MM"));
@@ -107,6 +109,9 @@ namespace DietApp
             }
         }
 
+        /*
+         NEXT MONTH BUTTON
+         */
         private void BtnNext_Click(object sender, EventArgs e)
         {
             if (month == 12)
@@ -116,10 +121,33 @@ namespace DietApp
             }
             else month++;
 
-            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+            
+            FillfDaysInMonth();
+        }
+        private void BtnNext_MouseHover(object sender, EventArgs e)
+        {
+            new ToolTip().SetToolTip(BtnNext, "Next month");
+        }
+
+        /*
+         RELOAD BUTTON
+         */
+        private void reload_btn_Click(object sender, EventArgs e)
+        {
+            month = DateTime.Now.Month;
+            year = DateTime.Now.Year;
+
             FillfDaysInMonth();
         }
 
+        private void reload_btn_MouseEnter(object sender, EventArgs e)
+        {
+            new ToolTip().SetToolTip(reload_btn, "Current month calendar");
+        }
+
+        /*
+         PREVIOUS MONTH BUTTON
+         */
         private void BtnBack_Click(object sender, EventArgs e)
         {
             if (month == 1)
@@ -129,8 +157,13 @@ namespace DietApp
             }
             else month--;
             
-            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+            //MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
             FillfDaysInMonth();
+        }
+
+        private void BtnBack_MouseHover(object sender, EventArgs e)
+        {
+            new ToolTip().SetToolTip(BtnBack, "Previous month");
         }
 
     }
