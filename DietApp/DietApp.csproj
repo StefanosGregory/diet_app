@@ -131,8 +131,5 @@
   <ItemGroup>
     <None Include="Images\settings.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\reload.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
