@@ -12,6 +12,7 @@ namespace DietApp
 {
     public partial class UCCalendar : UserControl
     {
+        private int year = DateTime.Now.Year, month = DateTime.Now.Month;
         public UCCalendar()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace DietApp
 
         private void UCCalendar_Load(object sender, EventArgs e)
         {
-            FillfDaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+            FillfDaysInMonth();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -35,36 +36,35 @@ namespace DietApp
 
 
 
-        private void FillfDaysInMonth(int year, int month)
+        private void FillfDaysInMonth()
         {
             var first = new DateTime(year, month, 1);
             var days = DateTime.DaysInMonth(year, month);
-            var tmp = new DateTime(year, month, 1).AddMonths(-1);
-            int previousmonth = Int16.Parse(tmp.ToString("MM"));
+            int previousmonth = Int16.Parse(new DateTime(year, month, 1).AddMonths(-1).ToString("MM"));
             
             switch (first.ToString("dddd"))
             {
                 
                 case "Monday":
-                    dayLblCorrection(1, days, month, year, previousmonth);
+                    dayLblCorrection(1, days,  previousmonth);
                     break;
-                case "Thuesday":
-                    dayLblCorrection(2, days, month, year, previousmonth);
+                case "Tuesday":
+                    dayLblCorrection(2, days,  previousmonth);
                     break;
                 case "Wednesday":
-                    dayLblCorrection(3, days, month, year, previousmonth);
+                    dayLblCorrection(3, days,  previousmonth);
                     break;
                 case "Thursday":
-                    dayLblCorrection(4, days, month, year, previousmonth);
+                    dayLblCorrection(4, days,  previousmonth);
                     break;
                 case "Friday":
-                    dayLblCorrection(5, days, month, year, previousmonth);
+                    dayLblCorrection(5, days,  previousmonth);
                     break;
                 case "Saturday":
-                    dayLblCorrection(6, days, month, year, previousmonth);
+                    dayLblCorrection(6, days,  previousmonth);
                     break;
                 case "Sunday":
-                    dayLblCorrection(7, days, month, year, previousmonth);
+                    dayLblCorrection(7, days,  previousmonth);
                     break;
                 default:
                     MessageBox.Show("error");
@@ -73,7 +73,7 @@ namespace DietApp
 
         }
 
-        private void dayLblCorrection(int index, int days, int month, int year, int previousmonth)
+        private void dayLblCorrection(int index, int days,  int previousmonth)
         {
             Label[] lb = { Day1Lbl, Day2Lbl, Day3Lbl, Day4Lbl, Day5Lbl, Day6Lbl, Day7Lbl, Day8Lbl, Day9Lbl, Day10Lbl, Day11Lbl, Day12Lbl, Day13Lbl, Day14Lbl, Day15Lbl, Day16Lbl, Day17Lbl, Day18Lbl, Day19Lbl, Day20Lbl, Day21Lbl, Day22Lbl, Day23Lbl, Day24Lbl, Day25Lbl, Day26Lbl, Day27Lbl, Day28Lbl, Day29Lbl, Day30Lbl, Day31Lbl, Day32Lbl, Day33Lbl, Day34Lbl, Day35Lbl, Day36Lbl, Day37Lbl };
 
@@ -107,9 +107,31 @@ namespace DietApp
             }
         }
 
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            if (month == 12)
+            {
+                month = 1;
+                year++;
+            }
+            else month++;
+
+            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+            FillfDaysInMonth();
+        }
+
         private void BtnBack_Click(object sender, EventArgs e)
         {
-
+            if (month == 1)
+            {
+                month = 12;
+                year--;
+            }
+            else month--;
+            
+            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+            FillfDaysInMonth();
         }
+
     }
 }
