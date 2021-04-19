@@ -140,7 +140,7 @@ namespace DietApp
             FillfDaysInMonth();
         }
 
-        private void reload_btn_MouseEnter(object sender, EventArgs e)
+        private void reload_btn_MouseHover(object sender, EventArgs e)
         {
             new ToolTip().SetToolTip(reload_btn, "Current month calendar");
         }
@@ -157,7 +157,6 @@ namespace DietApp
             }
             else month--;
             
-            //MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
             FillfDaysInMonth();
         }
 
