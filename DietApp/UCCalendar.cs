@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace DietApp
 {
     public partial class UCCalendar : UserControl
     {
-        private int year = DateTime.Now.Year, month = DateTime.Now.Month;
+        private DateTime currentDate = DateTime.Today;
+        private string cs = $"Host=localhost; Username=postgres; Password=1; Database=dietDB";
+
         public UCCalendar()
         {
             InitializeComponent();
@@ -21,8 +24,31 @@ namespace DietApp
             MonthLbl.Text = DateTime.Now.ToString("MMMM, yyyy");
             
             MonthLbl.Visible = true;
+            connectWithDB();
 
         }
+
+        //////////DB Section////////////////////////
+        private void connectWithDB()
+        {
+           
+            var con = new NpgsqlConnection(cs);
+            con.Open();
+
+            var sql = "SELECT * from appoinments";
+
+            var cmd = new NpgsqlCommand(sql, con);
+
+            NpgsqlDataReader dr = cmd.ExecuteReader();
+
+
+            while (dr.Read())
+                Console.Write("{0}\t{1}\t{2} \n", dr[0], dr[1], dr[2]);
+
+
+
+        }
+        ///////////////////////////////////////////
 
         private void UCCalendar_Load(object sender, EventArgs e)
         {
@@ -38,11 +64,11 @@ namespace DietApp
 
         private void FillfDaysInMonth()
         {
-            MonthLbl.Text = (new DateTime(year, month, 1)).ToString("MMMM, yyyy");
+            MonthLbl.Text = currentDate.ToString("MMMM, yyyy");
 
-            var first = new DateTime(year, month, 1);
-            var days = DateTime.DaysInMonth(year, month);
-            int previousmonth = Int16.Parse(new DateTime(year, month, 1).AddMonths(-1).ToString("MM"));
+            var first = new DateTime(currentDate.Year, currentDate.Month, 1);
+            var days = DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
+            int previousmonth = Int16.Parse(new DateTime(currentDate.Year, currentDate.Month, 1).AddMonths(-1).ToString("MM"));
             
             switch (first.ToString("dddd"))
             {
@@ -100,7 +126,7 @@ namespace DietApp
             }
 
             // Display previous month's last visible day numbers.
-            j = DateTime.DaysInMonth(year, previousmonth);
+            j = DateTime.DaysInMonth(currentDate.Year, previousmonth);
             for (int i = index - 2; i >= 0; i--)
             {
                 lb[i].Text = j.ToString();
@@ -109,24 +135,45 @@ namespace DietApp
             }
         }
 
+        ////////Working on filling callendar appointments//////////
+        private void AddAppointmentToFlDay(int startDayAtFlnumber)
+        {   /*
+            DateTime startDate = new DateTime(currentDate.Year, currentDate.Month, 1);
+            DateTime endDate = startDate.AddMonths(1).AddDays(-1);
+            var sql = $"SELECT * from appoinments where datetime between '{startDate.ToShortDateString()}' and '{endDate.ToShortDateString()}'";
+            DataTable dt = QueryAsDataTable(sql);
+            foreach(DataRow row in dt.Rows) 
+            {
+                DateTime datetime = DateTime.Parse(row("datatime")) ;
+            }*/
+        }
+
+        private DataTable QueryAsDataTable(String sql) 
+        {
+            IDbConnection con = new NpgsqlConnection(cs);
+            IDbCommand selectCommand = con.CreateCommand();
+            selectCommand.CommandText = sql;
+            IDbDataAdapter da = new NpgsqlDataAdapter();
+            da.SelectCommand = selectCommand;
+
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+
+            return ds.Tables[0];
+            
+
+        }
+        ////////
+
         /*
          NEXT MONTH BUTTON
          */
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            if (month == 12)
-            {
-                month = 1;
-                year++;
-            }
-            else month++;
-
+            currentDate = currentDate.AddMonths(1);
             
             FillfDaysInMonth();
-        }
-        private void BtnNext_MouseHover(object sender, EventArgs e)
-        {
-            new ToolTip().SetToolTip(BtnNext, "Next month");
         }
 
         /*
@@ -134,35 +181,37 @@ namespace DietApp
          */
         private void reload_btn_Click(object sender, EventArgs e)
         {
-            month = DateTime.Now.Month;
-            year = DateTime.Now.Year;
+            currentDate = DateTime.Today;
 
             FillfDaysInMonth();
         }
 
-        private void reload_btn_MouseHover(object sender, EventArgs e)
-        {
-            new ToolTip().SetToolTip(reload_btn, "Current month calendar");
-        }
 
         /*
          PREVIOUS MONTH BUTTON
          */
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            if (month == 1)
-            {
-                month = 12;
-                year--;
-            }
-            else month--;
-            
+            currentDate = currentDate.AddMonths(-1);
+
             FillfDaysInMonth();
         }
 
+
+        /*
+         * Hovers
+         */
         private void BtnBack_MouseHover(object sender, EventArgs e)
         {
             new ToolTip().SetToolTip(BtnBack, "Previous month");
+        }
+        private void reload_btn_MouseHover(object sender, EventArgs e)
+        {
+            new ToolTip().SetToolTip(reload_btn, "Current month calendar");
+        }
+        private void BtnNext_MouseHover(object sender, EventArgs e)
+        {
+            new ToolTip().SetToolTip(BtnNext, "Next month");
         }
 
     }
