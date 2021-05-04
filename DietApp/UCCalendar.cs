@@ -22,7 +22,7 @@ namespace DietApp
             InitializeComponent();
             currentDate = DateTime.Today;
             listFlDay = new List<FlowLayoutPanel>();
-            cs = $"Host=localhost; Username=postgres; Password=1; Database=dietDB";
+            cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         }
 
 
@@ -35,6 +35,7 @@ namespace DietApp
             MonthLbl.Visible = true;
             GenerateDayPanel(36);
             AddLblToFlDay(GetFirstDayOFMonth(), GetTotalDayes());
+            DisplayCurrentDate();
         }
 
         /*
@@ -112,16 +113,17 @@ namespace DietApp
         {   
             DateTime startDate = new DateTime(currentDate.Year, currentDate.Month, 1);
             DateTime endDate = startDate.AddMonths(1).AddDays(-1);
-            var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
+            //var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
+            var sql = $"select count(id) from appointments where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
             DataTable dt = QueryAsDataTable(sql);
-            foreach(DataRow row in dt.Rows) 
-            {
-                DateTime datetime = DateTime.Parse(row["datetime"].ToString());
-                LinkLabel link = new LinkLabel();
-                link.Name = $"link{(row["ID"])}";
-                link.Text = row["fullname"].ToString();
-                listFlDay[datetime.Day + (startDayAtFlnumber - 1)].Controls.Add(link);
-            }
+            LinkLabel link = new LinkLabel();
+            DataRow row = dt.Rows[0];
+            link.Text = row["count"].ToString() + " appointments.";
+            link.LinkColor = Color.FromArgb(158, 161, 176);
+            link.Size = new Size(128, 104/2);
+            link.TextAlign = ContentAlignment.MiddleLeft;
+            DateTime datetime = DateTime.Parse(currentDate.ToString("yyyy-MM-dd"));
+            listFlDay[datetime.Day + (startDayAtFlnumber)].Controls.Add(link);
         }
 
         private DataTable QueryAsDataTable(String sql) 
