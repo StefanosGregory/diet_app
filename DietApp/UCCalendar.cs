@@ -116,14 +116,23 @@ namespace DietApp
             //var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
             var sql = $"select count(id) from appointments where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
             DataTable dt = QueryAsDataTable(sql);
-            LinkLabel link = new LinkLabel();
             DataRow row = dt.Rows[0];
-            link.Text = row["count"].ToString() + " appointments.";
-            link.LinkColor = Color.FromArgb(158, 161, 176);
-            link.Size = new Size(128, 104/2);
-            link.TextAlign = ContentAlignment.MiddleLeft;
-            DateTime datetime = DateTime.Parse(currentDate.ToString("yyyy-MM-dd"));
-            listFlDay[datetime.Day + (startDayAtFlnumber)].Controls.Add(link);
+            if (int.Parse(row["count"].ToString()) != 0)
+            {
+                LinkLabel link = new LinkLabel();
+                link.Text = row["count"].ToString() + " appointments.";
+                link.LinkColor = Color.FromArgb(158, 161, 176);
+                link.Size = new Size(128, 104 / 2);
+                link.TextAlign = ContentAlignment.MiddleLeft;
+                DateTime datetime = DateTime.Parse(currentDate.ToString("yyyy-MM-dd"));
+                listFlDay[datetime.Day + (startDayAtFlnumber)].Controls.Add(link);
+                link.Click += (sender, EventArgs) => { link_click(sender, EventArgs, startDate, endDate); };
+            }
+        }
+        private void link_click(object sender, System.EventArgs e, DateTime startDate, DateTime endDate)
+        {
+            DayFormAppoint DFA = new DayFormAppoint(startDate, endDate);
+            DFA.Show();
         }
 
         private DataTable QueryAsDataTable(String sql) 
