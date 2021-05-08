@@ -1,7 +1,7 @@
 ﻿
 namespace DietApp
 {
-    partial class UCCalendar
+    partial class UcCalendar
     {
         /// <summary> 
         /// Required designer variable.
@@ -321,7 +321,7 @@ namespace DietApp
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UCCalendar";
+            this.Name = "UcCalendar";
             this.Size = new System.Drawing.Size(2212, 1717);
             this.Load += new System.EventHandler(this.UCCalendar_Load);
             this.panel1.ResumeLayout(false);

@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -13,15 +9,14 @@ namespace DietApp
 {
     public partial class DayFormAppoint : Form
     {
-        DateTime startDate, endDate;
-        private string cs;
-        private List<Label> listFlDay;
-        public DayFormAppoint(DateTime sD, DateTime eD)
+        private readonly DateTime _appointmentDay;
+        private readonly string _cs;
+        private List<Label> _listFlDay;
+        public DayFormAppoint(string test)
         {
             InitializeComponent();
-            startDate = sD;
-            endDate = eD;
-            cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+            _appointmentDay = DateTime.Parse(test);
+            _cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         }
 
         private void DayFormAppoint_Load(object sender, EventArgs e)
@@ -30,23 +25,24 @@ namespace DietApp
         }
         private void AddAppointmentToFlDay()
         {   
-            var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
-            DataTable dt = QueryAsDataTable(sql);
-            int i = 1;
+            var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime::date='{_appointmentDay:yyyy-MM-dd}'";
+            var dt = QueryAsDataTable(sql);
+            var i = 1;
             foreach(DataRow row in dt.Rows) 
             {
-                DateTime datetime = DateTime.Parse(row["datetime"].ToString());
-                Label lbl = new Label();
-                lbl.Name = $"link{(row["ID"])}";
-                lbl.ForeColor = Color.FromArgb(158, 161, 176);
-                lbl.AutoSize = false;
-                lbl.Size = new Size(100, 150);
-                lbl.TextAlign = ContentAlignment.MiddleLeft;
-                lbl.Text = i.ToString() + ") " + row["datetime"].ToString() + " " +row["fullname"].ToString();
+                //var datetime = DateTime.Parse(row["datetime"].ToString());
+                var lbl = new Label
+                {
+                    Name = $"link{(row["ID"])}",
+                    ForeColor = Color.FromArgb(158, 161, 176),
+                    AutoSize = false,
+                    Size = new Size(100, 150),
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    Text = i + @") " + row["datetime"] + @" " + row["fullname"]
+                };
                 flAppointments.Controls.Add(lbl);
                 i += 1;
-        }
-
+            }
         }
 
         private void flAppointments_Paint(object sender, PaintEventArgs e)
@@ -54,21 +50,18 @@ namespace DietApp
 
         }
 
-        private DataTable QueryAsDataTable(String sql)
+        private DataTable QueryAsDataTable(string sql)
         {
-            IDbConnection con = new NpgsqlConnection(cs);
-            IDbCommand selectCommand = con.CreateCommand();
+            IDbCommand selectCommand = new NpgsqlConnection(_cs).CreateCommand();
             selectCommand.CommandText = sql;
             IDbDataAdapter da = new NpgsqlDataAdapter();
             da.SelectCommand = selectCommand;
 
-            DataSet ds = new DataSet();
+            var ds = new DataSet();
 
             da.Fill(ds);
 
             return ds.Tables[0];
-
-
         }
     }
 }

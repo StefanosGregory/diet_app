@@ -1,28 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
 namespace DietApp
 {
-    public partial class UCCalendar : UserControl
+    public partial class UcCalendar : UserControl
     {
-        private DateTime currentDate;
-        private List<FlowLayoutPanel> listFlDay;
-        private string cs;
+        private DateTime _currentDate;
+        private readonly List<FlowLayoutPanel> _listFlDay;
+        private readonly string _cs;
 
-        public UCCalendar()
+        public UcCalendar()
         {
             InitializeComponent();
-            currentDate = DateTime.Today;
-            listFlDay = new List<FlowLayoutPanel>();
-            cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+            _currentDate = DateTime.Today;
+            _listFlDay = new List<FlowLayoutPanel>();
+            _cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         }
 
 
@@ -34,22 +30,22 @@ namespace DietApp
 
             MonthLbl.Visible = true;
             GenerateDayPanel(36);
-            AddLblToFlDay(GetFirstDayOFMonth(), GetTotalDayes());
+            AddLblToFlDay(GetFirstDayOfMonth(), GetTotalDays());
             DisplayCurrentDate();
         }
 
         /*
-         * GETTERS FIRST DAY AND TOTAL DAYS OF A MANTH
+         * GETTERS FIRST DAY AND TOTAL DAYS OF A MONTH
          */
-        private int GetFirstDayOFMonth() 
+        private int GetFirstDayOfMonth() 
         {
-            DateTime first = new DateTime(currentDate.Year, currentDate.Month, 1);
-            return (int)(first.DayOfWeek);  
+            var first = new DateTime(_currentDate.Year, _currentDate.Month, 1);
+            return (int) first.DayOfWeek;  
         }
 
-        private int GetTotalDayes()
+        private int GetTotalDays()
         {
-            return DateTime.DaysInMonth(currentDate.Year, currentDate.Month);
+            return DateTime.DaysInMonth(_currentDate.Year, _currentDate.Month);
         }
         /*
          */
@@ -65,19 +61,18 @@ namespace DietApp
         private void GenerateDayPanel(int totalDays)
         {
             flDays.Controls.Clear();
-            listFlDay.Clear();
+            _listFlDay.Clear();
 
-            for (int i = 0; i <= totalDays; i++)
+            for (var i = 0; i <= totalDays; i++)
             {
-                FlowLayoutPanel fl = new FlowLayoutPanel();
-                fl.Name = $"flDay{i}";
-                fl.Size = new Size(128, 104);
-                fl.BackColor = Color.FromArgb(37, 42, 64);
-
+                var fl = new FlowLayoutPanel
+                {
+                    Name = $"flDay{i}", 
+                    Size = new Size(128, 104), 
+                    BackColor = Color.FromArgb(37, 42, 64)
+                };
                 flDays.Controls.Add(fl);
-
-                listFlDay.Add(fl);
-
+                _listFlDay.Add(fl);
             }
         }
 
@@ -87,21 +82,23 @@ namespace DietApp
 
         private void AddLblToFlDay(int startDay, int totalDays)
         {
-            foreach (FlowLayoutPanel fl in listFlDay)
+            foreach (var fl in _listFlDay)
             {
                 fl.Controls.Clear();
             }
 
-            for (int i = 1; i <= totalDays; i++)
+            for (var i = 1; i <= totalDays; i++)
             {
-                Label lbl = new Label();
-                lbl.Name = $"lblDay{i}";
-                lbl.AutoSize = false;
-                lbl.TextAlign = ContentAlignment.MiddleRight;
-                lbl.Size = new Size(129, 19);
-                lbl.Text = (i + " ").ToString();
-                lbl.ForeColor = Color.FromArgb(158, 161, 176);
-                listFlDay[(i) + startDay - 1].Controls.Add(lbl);
+                var lbl = new Label
+                {
+                    Name = $"lblDay{i}",
+                    AutoSize = false,
+                    TextAlign = ContentAlignment.MiddleRight,
+                    Size = new Size(129, 19),
+                    Text = i + @" ",
+                    ForeColor = Color.FromArgb(158, 161, 176)
+                };
+                _listFlDay[(i) + startDay - 1].Controls.Add(lbl);
 
             }
         }
@@ -109,38 +106,37 @@ namespace DietApp
         /*
          * FILL APPOINTMENTS
          */
-        private void AddAppointmentToFlDay(int startDayAtFlnumber)
+        private void AddAppointmentToFlDay(int startDayAtFlNumber)
         {   
-            DateTime startDate = new DateTime(currentDate.Year, currentDate.Month, 1);
-            DateTime endDate = startDate.AddMonths(1).AddDays(-1);
+            var startDate = new DateTime(_currentDate.Year, _currentDate.Month, 1);
+            var endDate = startDate.AddMonths(1).AddDays(-1);
             //var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
-            var sql = $"select count(id), cast(datetime as date) as date from appointments where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' group by date";
-            DataTable dt = QueryAsDataTable(sql);
+            var sql = $"select count(id), cast(datetime as date) as date from appointments where datetime between '{startDate:yyyy-MM-dd HH:mm:ss}' and '{endDate:yyyy-MM-dd HH:mm:ss}' group by date";
+            var dt = QueryAsDataTable(sql);
             foreach (DataRow row in dt.Rows)
             {
-                if (int.Parse(row["count"].ToString()) != 0)
+                if (int.Parse(row["count"].ToString()) == 0) continue;
+                var link = new LinkLabel
                 {
-                    LinkLabel link = new LinkLabel();
-                    link.Text = row["count"] + " appointments.";
-                    link.LinkColor = Color.FromArgb(158, 161, 176);
-                    link.Size = new Size(128, 104 / 2);
-                    link.TextAlign = ContentAlignment.MiddleLeft;
-                    DateTime datetime = DateTime.Parse(row["date"].ToString());
-                    listFlDay[datetime.Day + (startDayAtFlnumber) - 1].Controls.Add(link);
-                    link.Click += (sender, EventArgs) => { link_click(sender, EventArgs, startDate, endDate); };
-                }
+                    Name = row["date"].ToString(),
+                    Text = row["count"] + @" appointments.",
+                    LinkColor = Color.FromArgb(158, 161, 176),
+                    Size = new Size(128, 104 / 2),
+                    TextAlign = ContentAlignment.MiddleLeft
+                };
+                var datetime = DateTime.Parse(row["date"].ToString());
+                _listFlDay[datetime.Day + startDayAtFlNumber - 1].Controls.Add(link);
+                link.Click += (sender, eventArgs) => { link_click(link.Name); };
             }
         }
-        private void link_click(object sender, System.EventArgs e, DateTime startDate, DateTime endDate)
+        private static void link_click(string date)
         {
-            DayFormAppoint DFA = new DayFormAppoint(startDate, endDate);
-            DFA.Show();
+            new DayFormAppoint(date).Show();
         }
 
-        private DataTable QueryAsDataTable(String sql) 
+        private DataTable QueryAsDataTable(string sql) 
         {
-            IDbConnection con = new NpgsqlConnection(cs);
-            IDbCommand selectCommand = con.CreateCommand();
+            IDbCommand selectCommand = new NpgsqlConnection(_cs).CreateCommand();
             selectCommand.CommandText = sql;
             IDbDataAdapter da = new NpgsqlDataAdapter();
             da.SelectCommand = selectCommand;
@@ -150,8 +146,6 @@ namespace DietApp
             da.Fill(ds);
 
             return ds.Tables[0];
-            
-
         }
 
         /*
@@ -159,7 +153,7 @@ namespace DietApp
          */
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            currentDate = currentDate.AddMonths(1);
+            _currentDate = _currentDate.AddMonths(1);
             DisplayCurrentDate();
         }
 
@@ -168,7 +162,7 @@ namespace DietApp
          */
         private void reload_btn_Click(object sender, EventArgs e)
         {
-            currentDate = DateTime.Today;
+            _currentDate = DateTime.Today;
             DisplayCurrentDate();
         }
 
@@ -178,7 +172,7 @@ namespace DietApp
          */
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            currentDate = currentDate.AddMonths(-1);
+            _currentDate = _currentDate.AddMonths(-1);
             DisplayCurrentDate();
         }
 
@@ -187,9 +181,9 @@ namespace DietApp
          */
         private void DisplayCurrentDate()
         {
-            MonthLbl.Text = currentDate.ToString("MMMM, yyyy");
-            int firstDayOfMonth = GetFirstDayOFMonth();
-            AddLblToFlDay(firstDayOfMonth, GetTotalDayes());
+            MonthLbl.Text = _currentDate.ToString("MMMM, yyyy");
+            int firstDayOfMonth = GetFirstDayOfMonth();
+            AddLblToFlDay(firstDayOfMonth, GetTotalDays());
             AddAppointmentToFlDay(firstDayOfMonth);
         }   
 
