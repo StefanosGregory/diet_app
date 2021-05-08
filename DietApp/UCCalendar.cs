@@ -114,19 +114,21 @@ namespace DietApp
             DateTime startDate = new DateTime(currentDate.Year, currentDate.Month, 1);
             DateTime endDate = startDate.AddMonths(1).AddDays(-1);
             //var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
-            var sql = $"select count(id) from appointments where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
+            var sql = $"select count(id), cast(datetime as date) as date from appointments where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' group by date";
             DataTable dt = QueryAsDataTable(sql);
-            DataRow row = dt.Rows[0];
-            if (int.Parse(row["count"].ToString()) != 0)
+            foreach (DataRow row in dt.Rows)
             {
-                LinkLabel link = new LinkLabel();
-                link.Text = row["count"].ToString() + " appointments.";
-                link.LinkColor = Color.FromArgb(158, 161, 176);
-                link.Size = new Size(128, 104 / 2);
-                link.TextAlign = ContentAlignment.MiddleLeft;
-                DateTime datetime = DateTime.Parse(currentDate.ToString("yyyy-MM-dd"));
-                listFlDay[datetime.Day + (startDayAtFlnumber)].Controls.Add(link);
-                link.Click += (sender, EventArgs) => { link_click(sender, EventArgs, startDate, endDate); };
+                if (int.Parse(row["count"].ToString()) != 0)
+                {
+                    LinkLabel link = new LinkLabel();
+                    link.Text = row["count"] + " appointments.";
+                    link.LinkColor = Color.FromArgb(158, 161, 176);
+                    link.Size = new Size(128, 104 / 2);
+                    link.TextAlign = ContentAlignment.MiddleLeft;
+                    DateTime datetime = DateTime.Parse(row["date"].ToString());
+                    listFlDay[datetime.Day + (startDayAtFlnumber) - 1].Controls.Add(link);
+                    link.Click += (sender, EventArgs) => { link_click(sender, EventArgs, startDate, endDate); };
+                }
             }
         }
         private void link_click(object sender, System.EventArgs e, DateTime startDate, DateTime endDate)

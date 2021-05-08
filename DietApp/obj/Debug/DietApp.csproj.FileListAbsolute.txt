@@ -73,3 +73,4 @@ C:\Users\Bakeries\Desktop\diet_app\DietApp\bin\Debug\System.Threading.Tasks.Exte
 C:\Users\Bakeries\Desktop\diet_app\DietApp\bin\Debug\System.ValueTuple.xml
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.csproj.CopyComplete
 C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.DayFormAppoint.resources
+C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.DayFormAppoint.resources
