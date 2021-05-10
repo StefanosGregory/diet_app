@@ -13,8 +13,10 @@ namespace DietApp
 {
     public partial class MainForm : Form
     {
+        Boolean draggable;
+        int mouseX;
+        int mouseY;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
         private static extern IntPtr CreateRoundRectRgn
             (
             int nLeftRect,
@@ -154,6 +156,37 @@ namespace DietApp
             {
                 welcomeMsgLbl.Text = "Good night doc!";
             }
+        }
+
+        private void moveFormPnl_MouseEnter(object sender, EventArgs e)
+        {
+            moveFormPnl.BackColor = Color.FromArgb(158, 161, 176);
+        }
+
+        private void moveFormPnl_MouseLeave(object sender, EventArgs e)
+        {
+            moveFormPnl.BackColor = Color.FromArgb(0, 106, 249);
+        }
+
+        private void moveFormPnl_MouseDown(object sender, MouseEventArgs e)
+        {
+            draggable = true;
+            mouseX = Cursor.Position.X - this.Left;
+            mouseY = Cursor.Position.Y - this.Top;
+        }
+
+        private void moveFormPnl_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (draggable)
+            {
+                this.Top = Cursor.Position.Y - mouseY;
+                this.Left = Cursor.Position.X - mouseX;
+            }
+        }
+
+        private void moveFormPnl_MouseUp(object sender, MouseEventArgs e)
+        {
+            draggable = false;
         }
     }
 }

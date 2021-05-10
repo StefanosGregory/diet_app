@@ -31,16 +31,17 @@ namespace DietApp
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.PnlNav = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.welcomeMsgLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BtnCloseApp = new System.Windows.Forms.Button();
-            this.BtnMinimize = new System.Windows.Forms.Button();
             this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnCalendar = new System.Windows.Forms.Button();
             this.BtnClients = new System.Windows.Forms.Button();
             this.BtnDashboard = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.welcomeMsgLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnCloseApp = new System.Windows.Forms.Button();
+            this.BtnMinimize = new System.Windows.Forms.Button();
+            this.moveFormPnl = new System.Windows.Forms.Panel();
             this.ucSettings1 = new DietApp.UCSettings();
             this.ucCalendar1 = new DietApp.UcCalendar();
             this.ucClients1 = new DietApp.UCClients();
@@ -61,7 +62,7 @@ namespace DietApp
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 1950);
             this.panel1.TabIndex = 0;
@@ -70,81 +71,10 @@ namespace DietApp
             // 
             this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.PnlNav.Location = new System.Drawing.Point(4, 337);
-            this.PnlNav.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PnlNav.Margin = new System.Windows.Forms.Padding(4);
             this.PnlNav.Name = "PnlNav";
             this.PnlNav.Size = new System.Drawing.Size(4, 177);
             this.PnlNav.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.welcomeMsgLbl);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 315);
-            this.panel2.TabIndex = 1;
-            // 
-            // welcomeMsgLbl
-            // 
-            this.welcomeMsgLbl.AutoSize = true;
-            this.welcomeMsgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeMsgLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.welcomeMsgLbl.Location = new System.Drawing.Point(50, 244);
-            this.welcomeMsgLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.welcomeMsgLbl.Name = "welcomeMsgLbl";
-            this.welcomeMsgLbl.Size = new System.Drawing.Size(188, 24);
-            this.welcomeMsgLbl.TabIndex = 1;
-            this.welcomeMsgLbl.Text = "Welcome message";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(52, 183);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Doctor Name";
-            // 
-            // BtnCloseApp
-            // 
-            this.BtnCloseApp.FlatAppearance.BorderSize = 0;
-            this.BtnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCloseApp.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCloseApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.BtnCloseApp.Location = new System.Drawing.Point(2200, 12);
-            this.BtnCloseApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnCloseApp.Name = "BtnCloseApp";
-            this.BtnCloseApp.Size = new System.Drawing.Size(68, 56);
-            this.BtnCloseApp.TabIndex = 7;
-            this.BtnCloseApp.Text = "X";
-            this.BtnCloseApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnCloseApp.UseVisualStyleBackColor = true;
-            this.BtnCloseApp.Click += new System.EventHandler(this.BtnCloseApp_Click);
-            this.BtnCloseApp.MouseEnter += new System.EventHandler(this.BtnCloseApp_MouseEnter);
-            this.BtnCloseApp.MouseLeave += new System.EventHandler(this.BtnCloseApp_MouseLeave);
-            // 
-            // BtnMinimize
-            // 
-            this.BtnMinimize.FlatAppearance.BorderSize = 0;
-            this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMinimize.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.BtnMinimize.Location = new System.Drawing.Point(2136, 10);
-            this.BtnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BtnMinimize.Name = "BtnMinimize";
-            this.BtnMinimize.Size = new System.Drawing.Size(56, 56);
-            this.BtnMinimize.TabIndex = 8;
-            this.BtnMinimize.Text = "__";
-            this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnMinimize.UseVisualStyleBackColor = true;
-            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // BtnSettings
             // 
@@ -218,6 +148,42 @@ namespace DietApp
             this.BtnDashboard.UseVisualStyleBackColor = true;
             this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.welcomeMsgLbl);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 315);
+            this.panel2.TabIndex = 1;
+            // 
+            // welcomeMsgLbl
+            // 
+            this.welcomeMsgLbl.AutoSize = true;
+            this.welcomeMsgLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeMsgLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.welcomeMsgLbl.Location = new System.Drawing.Point(50, 244);
+            this.welcomeMsgLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcomeMsgLbl.Name = "welcomeMsgLbl";
+            this.welcomeMsgLbl.Size = new System.Drawing.Size(188, 24);
+            this.welcomeMsgLbl.TabIndex = 1;
+            this.welcomeMsgLbl.Text = "Welcome message";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(52, 183);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 31);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Doctor Name";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DietApp.Properties.Resources.user;
@@ -229,10 +195,60 @@ namespace DietApp
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // BtnCloseApp
+            // 
+            this.BtnCloseApp.FlatAppearance.BorderSize = 0;
+            this.BtnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCloseApp.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCloseApp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.BtnCloseApp.Location = new System.Drawing.Point(2200, 12);
+            this.BtnCloseApp.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCloseApp.Name = "BtnCloseApp";
+            this.BtnCloseApp.Size = new System.Drawing.Size(68, 56);
+            this.BtnCloseApp.TabIndex = 7;
+            this.BtnCloseApp.Text = "X";
+            this.BtnCloseApp.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnCloseApp.UseVisualStyleBackColor = true;
+            this.BtnCloseApp.Click += new System.EventHandler(this.BtnCloseApp_Click);
+            this.BtnCloseApp.MouseEnter += new System.EventHandler(this.BtnCloseApp_MouseEnter);
+            this.BtnCloseApp.MouseLeave += new System.EventHandler(this.BtnCloseApp_MouseLeave);
+            // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMinimize.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.BtnMinimize.Location = new System.Drawing.Point(2136, 10);
+            this.BtnMinimize.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnMinimize.Name = "BtnMinimize";
+            this.BtnMinimize.Size = new System.Drawing.Size(56, 56);
+            this.BtnMinimize.TabIndex = 8;
+            this.BtnMinimize.Text = "__";
+            this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BtnMinimize.UseVisualStyleBackColor = true;
+            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // moveFormPnl
+            // 
+            this.moveFormPnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(106)))), ((int)(((byte)(249)))));
+            this.moveFormPnl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.moveFormPnl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.moveFormPnl.Location = new System.Drawing.Point(300, 0);
+            this.moveFormPnl.Name = "moveFormPnl";
+            this.moveFormPnl.Size = new System.Drawing.Size(1980, 14);
+            this.moveFormPnl.TabIndex = 9;
+            this.moveFormPnl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.moveFormPnl_MouseDown);
+            this.moveFormPnl.MouseEnter += new System.EventHandler(this.moveFormPnl_MouseEnter);
+            this.moveFormPnl.MouseLeave += new System.EventHandler(this.moveFormPnl_MouseLeave);
+            this.moveFormPnl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.moveFormPnl_MouseMove);
+            this.moveFormPnl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.moveFormPnl_MouseUp);
+            // 
             // ucSettings1
             // 
             this.ucSettings1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucSettings1.Location = new System.Drawing.Point(1548, 202);
+            this.ucSettings1.Location = new System.Drawing.Point(346, 1244);
             this.ucSettings1.Margin = new System.Windows.Forms.Padding(2);
             this.ucSettings1.Name = "ucSettings1";
             this.ucSettings1.Size = new System.Drawing.Size(374, 185);
@@ -242,7 +258,7 @@ namespace DietApp
             // ucCalendar1
             // 
             this.ucCalendar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucCalendar1.Location = new System.Drawing.Point(300, 304);
+            this.ucCalendar1.Location = new System.Drawing.Point(300, 488);
             this.ucCalendar1.Margin = new System.Windows.Forms.Padding(2);
             this.ucCalendar1.Name = "ucCalendar1";
             this.ucCalendar1.Size = new System.Drawing.Size(1968, 1792);
@@ -253,7 +269,7 @@ namespace DietApp
             // 
             this.ucClients1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ucClients1.ForeColor = System.Drawing.Color.Transparent;
-            this.ucClients1.Location = new System.Drawing.Point(300, 127);
+            this.ucClients1.Location = new System.Drawing.Point(308, 337);
             this.ucClients1.Margin = new System.Windows.Forms.Padding(2);
             this.ucClients1.Name = "ucClients1";
             this.ucClients1.Size = new System.Drawing.Size(1884, 1406);
@@ -263,8 +279,7 @@ namespace DietApp
             // ucDashboard1
             // 
             this.ucDashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucDashboard1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ucDashboard1.Location = new System.Drawing.Point(300, 0);
+            this.ucDashboard1.Location = new System.Drawing.Point(300, 10);
             this.ucDashboard1.Margin = new System.Windows.Forms.Padding(2);
             this.ucDashboard1.Name = "ucDashboard1";
             this.ucDashboard1.Size = new System.Drawing.Size(1884, 1950);
@@ -276,6 +291,7 @@ namespace DietApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(2280, 1950);
+            this.Controls.Add(this.moveFormPnl);
             this.Controls.Add(this.BtnMinimize);
             this.Controls.Add(this.BtnCloseApp);
             this.Controls.Add(this.ucSettings1);
@@ -284,7 +300,7 @@ namespace DietApp
             this.Controls.Add(this.ucDashboard1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DietApp";
@@ -315,6 +331,7 @@ namespace DietApp
         private UCSettings ucSettings1;
         private System.Windows.Forms.Button BtnCloseApp;
         private System.Windows.Forms.Button BtnMinimize;
+        private System.Windows.Forms.Panel moveFormPnl;
     }
 }
 
