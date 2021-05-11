@@ -175,5 +175,8 @@
   <ItemGroup>
     <None Include="Images\settings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\delete_blue.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

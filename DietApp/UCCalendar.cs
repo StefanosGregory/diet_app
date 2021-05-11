@@ -110,7 +110,6 @@ namespace DietApp
         {   
             var startDate = new DateTime(_currentDate.Year, _currentDate.Month, 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
-            //var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime between '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' and '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}'";
             var sql = $"select count(id), cast(datetime as date) as date from appointments where datetime between '{startDate:yyyy-MM-dd HH:mm:ss}' and '{endDate:yyyy-MM-dd HH:mm:ss}' group by date";
             var dt = QueryAsDataTable(sql);
             foreach (DataRow row in dt.Rows)
