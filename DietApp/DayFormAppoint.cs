@@ -81,14 +81,26 @@ namespace DietApp
                 flAppointments.Controls.Add(img);
                 flAppointments.Controls.Add(pnl);
                 i += 1;
-                img.Click += (sender, eventArgs) => { delete_click(row["ID"]); };
+                img.Click += (sender, eventArgs) => { delete_click(row["ID"].ToString()); };
+                img.MouseEnter += (sender, eventArgs) => { delete_MouseEnter(img); };
+                img.MouseLeave += (sender, eventArgs) => { delete_MouseLeave(img); };
             }
         }
 
-        private static void delete_click(object id)
+        private void delete_click(string id)
         {
-            //Delete from database
+            WarningForm warning = new WarningForm(_cs, id);
+            warning.ShowDialog();
         }
+        private static void delete_MouseEnter(PictureBox img)
+        {
+            img.Image = Properties.Resources.delete_red;
+        }
+        private static void delete_MouseLeave(PictureBox img)
+        {
+            img.Image = Properties.Resources.delete_blue;
+        }
+
 
 
         private DataTable QueryAsDataTable(string sql)
