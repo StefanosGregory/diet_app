@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,12 +8,15 @@ namespace DietApp
 {
     public partial class DayFormAppoint : Form
     {
+        private readonly UcCalendar _calendar;
         private readonly DateTime _appointmentDay;
-        private readonly string _cs;
-        public DayFormAppoint(string test)
+        private readonly string _cs, _date;
+        public DayFormAppoint(string date, UcCalendar calendar)
         {
             InitializeComponent();
-            _appointmentDay = DateTime.Parse(test);
+            _date = date;
+            _calendar = calendar;
+            _appointmentDay = DateTime.Parse(date);
             _cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
             dateLbl.Text = _appointmentDay.ToString("D");
         }
@@ -23,6 +25,7 @@ namespace DietApp
         {
             AddAppointmentToFlDay();
         }
+
         private void AddAppointmentToFlDay()
         {   
             var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime::date='{_appointmentDay:yyyy-MM-dd}'";
@@ -89,7 +92,7 @@ namespace DietApp
 
         private void delete_click(string id)
         {
-            WarningForm warning = new WarningForm(_cs, id);
+            var warning = new WarningForm(_cs, id, _date, _calendar, this);
             warning.ShowDialog();
         }
         private static void delete_MouseEnter(PictureBox img)

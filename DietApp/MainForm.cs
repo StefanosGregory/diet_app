@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
@@ -13,9 +7,9 @@ namespace DietApp
 {
     public partial class MainForm : Form
     {
-        Boolean draggable;
-        int mouseX;
-        int mouseY;
+        private bool _draggable;
+        private int _mouseX, _mouseY;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -30,8 +24,8 @@ namespace DietApp
         public MainForm()
         {
             InitializeComponent();
-            this.Size = new Size(1300, 900);
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
+            Size = new Size(1300, 900);
+            Region = Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
             PnlNav.Height = BtnDashboard.Height;
             PnlNav.Top = BtnDashboard.Top;
             PnlNav.Left = BtnDashboard.Left;
@@ -40,15 +34,11 @@ namespace DietApp
             BtnCloseApp.Location = new Point(this.Width - BtnCloseApp.Width - 10 , 10);
             BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5 , 10);
             WelcomeMess();
-
         }
-
-
-
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            // Code to be written
         }
 
         /*
@@ -110,8 +100,6 @@ namespace DietApp
          * _ X Buttons
          * <
          */
-
-
         private void BtnCloseApp_MouseEnter(object sender, EventArgs e)
         {
             BtnCloseApp.ForeColor = Color.FromArgb(178, 34, 34);
@@ -131,8 +119,6 @@ namespace DietApp
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-
         /*
          * End
          * >
@@ -146,15 +132,15 @@ namespace DietApp
         {
             if (int.Parse(DateTime.Now.ToString("HH")) >= 00 && int.Parse(DateTime.Now.ToString("HH")) < 12)
             {
-                welcomeMsgLbl.Text = "Good morning doc!";
+                welcomeMsgLbl.Text = @"Good morning doc!";
             }
             else if (int.Parse(DateTime.Now.ToString("HH")) >= 12 && int.Parse(DateTime.Now.ToString("HH")) < 19)
             {
-                welcomeMsgLbl.Text = "Good evening doc!";
+                welcomeMsgLbl.Text = @"Good evening doc!";
             }
             else if (int.Parse(DateTime.Now.ToString("HH")) >= 19 && int.Parse(DateTime.Now.ToString("HH")) <= 23)
             {
-                welcomeMsgLbl.Text = "Good night doc!";
+                welcomeMsgLbl.Text = @"Good night doc!";
             }
         }
 
@@ -170,23 +156,21 @@ namespace DietApp
 
         private void moveFormPnl_MouseDown(object sender, MouseEventArgs e)
         {
-            draggable = true;
-            mouseX = Cursor.Position.X - this.Left;
-            mouseY = Cursor.Position.Y - this.Top;
+            _draggable = true;
+            _mouseX = Cursor.Position.X - this.Left;
+            _mouseY = Cursor.Position.Y - this.Top;
         }
 
         private void moveFormPnl_MouseMove(object sender, MouseEventArgs e)
         {
-            if (draggable)
-            {
-                this.Top = Cursor.Position.Y - mouseY;
-                this.Left = Cursor.Position.X - mouseX;
-            }
+            if (!_draggable) return;
+            Top = Cursor.Position.Y - _mouseY;
+            Left = Cursor.Position.X - _mouseX;
         }
 
         private void moveFormPnl_MouseUp(object sender, MouseEventArgs e)
         {
-            draggable = false;
+            _draggable = false;
         }
     }
 }

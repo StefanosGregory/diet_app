@@ -128,9 +128,9 @@ namespace DietApp
                 link.Click += (sender, eventArgs) => { link_click(link.Name); };
             }
         }
-        private static void link_click(string date)
+        private void link_click(string date)
         {
-            new DayFormAppoint(date).Show();
+            new DayFormAppoint(date, this).Show();
         }
 
         private DataTable QueryAsDataTable(string sql) 
@@ -140,7 +140,7 @@ namespace DietApp
             IDbDataAdapter da = new NpgsqlDataAdapter();
             da.SelectCommand = selectCommand;
 
-            DataSet ds = new DataSet();
+            var ds = new DataSet();
 
             da.Fill(ds);
 
@@ -178,10 +178,10 @@ namespace DietApp
         /*
           DISPLAY CURRENT DATE METHOD
          */
-        private void DisplayCurrentDate()
+        public void DisplayCurrentDate()
         {
             MonthLbl.Text = _currentDate.ToString("MMMM, yyyy");
-            int firstDayOfMonth = GetFirstDayOfMonth();
+            var firstDayOfMonth = GetFirstDayOfMonth();
             AddLblToFlDay(firstDayOfMonth, GetTotalDays());
             AddAppointmentToFlDay(firstDayOfMonth);
         }   
