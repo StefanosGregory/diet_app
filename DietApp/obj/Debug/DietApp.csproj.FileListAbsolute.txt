@@ -76,3 +76,4 @@ C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.DayFormAppoint.resou
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.DayFormAppoint.resources
 C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.WarningForm.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.WarningForm.resources
+C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.AddAppointmentForm.resources

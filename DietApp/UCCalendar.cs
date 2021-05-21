@@ -30,8 +30,10 @@ namespace DietApp
 
             MonthLbl.Visible = true;
             GenerateDayPanel(36);
+            CreateAddAppointmentLbl();
             AddLblToFlDay(GetFirstDayOfMonth(), GetTotalDays());
             DisplayCurrentDate();
+
         }
 
         /*
@@ -74,6 +76,35 @@ namespace DietApp
                 flDays.Controls.Add(fl);
                 _listFlDay.Add(fl);
             }
+        }
+
+        /*
+         * GENERATE FL DAY PANELS
+         */
+        private void CreateAddAppointmentLbl()
+        {
+            var pnl = new Panel
+            {
+                Name = $"addApponitmentPanel",
+                Size = new Size(128, 104),
+                BackColor = Color.FromArgb(37, 42, 64)
+            };
+            var lbl = new LinkLabel
+            {
+                Name = $"addApponitmentLbl",
+                Size = new Size(128, 104),
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Text = "Click to add new appointment.",
+                LinkColor = Color.FromArgb(158, 161, 176),
+            };
+            flDays.Controls.Add(pnl);
+            pnl.Controls.Add(lbl);
+            lbl.Click += (sender, eventArgs) => { lbl_click(); };
+        }
+        private void lbl_click()
+        {
+            new AddAppointmentForm().ShowDialog();
         }
 
         /*
