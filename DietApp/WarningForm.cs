@@ -7,16 +7,12 @@ namespace DietApp
 {
     public partial class WarningForm : Form
     {
-        private readonly string _cs, _id, _date;
-        private readonly UcCalendar _calendar;
-        private readonly DayFormAppoint _dayFormAppoint;
+        private readonly string _cs, _id;
 
-        public WarningForm(string cs, string id, string date, UcCalendar calendar, DayFormAppoint dayFormAppoint)
+
+        public WarningForm(string cs, string id)
         {
             InitializeComponent();
-            _date = date;
-            _calendar = calendar;
-            _dayFormAppoint = dayFormAppoint;
             _cs = cs;
             _id = id;
         }
@@ -36,9 +32,6 @@ namespace DietApp
                 var command = new NpgsqlCommand(sql, conn);
                 command.ExecuteNonQuery();
                 conn.Close();
-                _dayFormAppoint.Close();
-                new DayFormAppoint(_date, _calendar).Show();
-                _calendar.DisplayCurrentDate();
             }
             catch (SqlException)
             {

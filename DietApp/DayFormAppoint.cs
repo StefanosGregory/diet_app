@@ -27,7 +27,8 @@ namespace DietApp
         }
 
         private void AddAppointmentToFlDay()
-        {   
+        {
+            flAppointments.Controls.Clear();
             var sql = $"select appointments.ID, datetime, fullname from appointments RIGHT OUTER JOIN clients ON clients.ID = appointments.clientsid where datetime::date='{_appointmentDay:yyyy-MM-dd}'";
             var dt = QueryAsDataTable(sql);
             var i = 1;
@@ -92,8 +93,9 @@ namespace DietApp
 
         private void delete_click(string id)
         {
-            var warning = new WarningForm(_cs, id, _date, _calendar, this);
+            var warning = new WarningForm(_cs, id);
             warning.ShowDialog();
+            AddAppointmentToFlDay();
         }
         private static void delete_MouseEnter(PictureBox img)
         {

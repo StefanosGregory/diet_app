@@ -104,7 +104,9 @@ namespace DietApp
         }
         private void lbl_click()
         {
-            new AddAppointmentForm().ShowDialog();
+            new AddAppointmentForm(_cs).ShowDialog();
+            _currentDate = DateTime.Today;
+            DisplayCurrentDate();
         }
 
         /*
@@ -161,7 +163,9 @@ namespace DietApp
         }
         private void link_click(string date)
         {
-            new DayFormAppoint(date, this).Show();
+            new DayFormAppoint(date, this).ShowDialog();
+            _currentDate = DateTime.Today;
+            DisplayCurrentDate();
         }
 
         private DataTable QueryAsDataTable(string sql) 
