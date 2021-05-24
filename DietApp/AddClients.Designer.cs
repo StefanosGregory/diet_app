@@ -56,8 +56,9 @@ namespace DietApp
             this.alergies = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
+            this.editClient_ctn = new System.Windows.Forms.Button();
+            this.cancel_btn = new System.Windows.Forms.Button();
+            this.addClient_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -355,45 +356,62 @@ namespace DietApp
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.BtnBack);
+            this.panel3.Controls.Add(this.editClient_ctn);
+            this.panel3.Controls.Add(this.cancel_btn);
+            this.panel3.Controls.Add(this.addClient_btn);
             this.panel3.Location = new System.Drawing.Point(99, 625);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(339, 67);
             this.panel3.TabIndex = 14;
             // 
-            // button1
+            // editClient_ctn
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.button1.ForeColor = System.Drawing.Color.Tomato;
-            this.button1.Location = new System.Drawing.Point(232, 16);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 40);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Cancel";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.editClient_ctn.FlatAppearance.BorderSize = 0;
+            this.editClient_ctn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editClient_ctn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.editClient_ctn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.editClient_ctn.Location = new System.Drawing.Point(14, 16);
+            this.editClient_ctn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.editClient_ctn.Name = "editClient_ctn";
+            this.editClient_ctn.Size = new System.Drawing.Size(113, 40);
+            this.editClient_ctn.TabIndex = 9;
+            this.editClient_ctn.Text = "Update";
+            this.editClient_ctn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.editClient_ctn.UseVisualStyleBackColor = true;
+            this.editClient_ctn.Visible = false;
             // 
-            // BtnBack
+            // cancel_btn
             // 
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.BtnBack.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
-            this.BtnBack.Location = new System.Drawing.Point(127, 16);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(94, 40);
-            this.BtnBack.TabIndex = 7;
-            this.BtnBack.Text = "Create";
-            this.BtnBack.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnBack.UseVisualStyleBackColor = true;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click_1);
+            this.cancel_btn.FlatAppearance.BorderSize = 0;
+            this.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.cancel_btn.ForeColor = System.Drawing.Color.Tomato;
+            this.cancel_btn.Location = new System.Drawing.Point(232, 16);
+            this.cancel_btn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.cancel_btn.Name = "cancel_btn";
+            this.cancel_btn.Size = new System.Drawing.Size(94, 40);
+            this.cancel_btn.TabIndex = 8;
+            this.cancel_btn.Text = "Cancel";
+            this.cancel_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.Click += new System.EventHandler(this.cancel_btn_Click);
+            // 
+            // addClient_btn
+            // 
+            this.addClient_btn.FlatAppearance.BorderSize = 0;
+            this.addClient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addClient_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.addClient_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.addClient_btn.Location = new System.Drawing.Point(127, 16);
+            this.addClient_btn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.addClient_btn.Name = "addClient_btn";
+            this.addClient_btn.Size = new System.Drawing.Size(94, 40);
+            this.addClient_btn.TabIndex = 7;
+            this.addClient_btn.Text = "Create";
+            this.addClient_btn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.addClient_btn.UseVisualStyleBackColor = true;
+            this.addClient_btn.Click += new System.EventHandler(this.addClient_btn_Click);
             // 
             // AddClients
             // 
@@ -435,6 +453,12 @@ namespace DietApp
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button addClient_btn;
+
+        private System.Windows.Forms.Button editClient_ctn;
+
+        private System.Windows.Forms.Button cancel_btn;
 
         private System.Windows.Forms.ComboBox sex;
 

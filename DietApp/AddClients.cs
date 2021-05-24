@@ -9,7 +9,7 @@ namespace DietApp
 {
     public partial class AddClients : Form
     {
-        private readonly string _cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+        private const string _cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
 
         public AddClients()
         {
@@ -17,22 +17,16 @@ namespace DietApp
         }
 
        
-        private void button1_Click(object sender, EventArgs e)
+        private void cancel_btn_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void BtnBack_Click_1(object sender, EventArgs e)
+        private void addClient_btn_Click(object sender, EventArgs e)
         {
-            if (fullname.Text == "" || sex.SelectedItem == null || age.Text == "" || height.Text == "" || telephone.Text == "" || email.Text == "" || alergies.Text == "" || healthprob.Text == "")
+            if (fullname.Text == "" || sex.SelectedItem == null || age.Text == "" || height.Text == "" || telephone.Text == "" || email.Text == "" || alergies.Text == "" || healthprob.Text == "") MessageBox.Show(@"You must fill all the fields.");
+                else
             {
-
-                MessageBox.Show(@"You must fill all the fields.");
-               
-            }
-            else
-            {
-                
                 if (age.Text.All(char.IsDigit) && height.Text.All(char.IsDigit) && telephone.Text.All(char.IsDigit) && IsValidEmail(email.Text)) AddToDb();
                 else
                 {
@@ -97,7 +91,7 @@ namespace DietApp
                         cmd.Parameters.Add("@sex", NpgsqlDbType.Char).Value = sex.Text;
                         cmd.Parameters.Add("@age", NpgsqlDbType.Integer).Value = short.Parse(age.Text);
                         cmd.Parameters.Add("@height", NpgsqlDbType.Integer).Value = short.Parse(height.Text);
-                        cmd.Parameters.Add("@tel", NpgsqlDbType.Integer).Value = long.Parse(telephone.Text);
+                        cmd.Parameters.Add("@tel", NpgsqlDbType.Bigint).Value = long.Parse(telephone.Text);
                         cmd.Parameters.Add("@email", NpgsqlDbType.Char).Value = email.Text;
                         cmd.Parameters.Add("@alergies", NpgsqlDbType.Char).Value = alergies.Text;
                         cmd.Parameters.Add("@healthprobs", NpgsqlDbType.Char).Value = healthprob.Text;
@@ -106,6 +100,8 @@ namespace DietApp
                             ? @"Client added successfully!"
                             : @"Something went wrong!");
                     }
+                    
+                    conn.Close();
                 }
                 catch (SqlException e)
                 {

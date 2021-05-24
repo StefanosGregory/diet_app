@@ -25,6 +25,7 @@ namespace DietApp
         private void EditClient_btn_Click(object sender, EventArgs e)
         {
             // Code to open edit form.
+            
         }
     }
 }
