@@ -20,45 +20,44 @@ namespace DietApp
         {
             InitializeComponent();
             _cs = cs;
-            fillCustomeCombo();
+            FillCustomCombo();
         }
 
-        private void fillCustomeCombo()
+        private void FillCustomCombo()
         {
             try
             {
                 var con = new NpgsqlConnection(_cs);
                 con.Open();
-                NpgsqlCommand cmd = new NpgsqlCommand("select fullname from clients", con);
-                NpgsqlDataReader Sdr;
-                Sdr = cmd.ExecuteReader();
-                while (Sdr.Read())
+                var cmd = new NpgsqlCommand("select fullname from clients", con);
+                var sdr = cmd.ExecuteReader();
+                while (sdr.Read())
                 {
-                    for (int i = 0; i < Sdr.FieldCount; i++)
+                    for (var i = 0; i < sdr.FieldCount; i++)
                     {
-                        CustomerCBox.Items.Add(Sdr.GetString(i));
+                        CustomerCBox.Items.Add(sdr.GetString(i));
 
                     }
                 }
-                Sdr.Close();
+                sdr.Close();
                 con.Close();
             }catch (Exception e)
             {
-                MessageBox.Show("Error");
-                this.Close();
+                MessageBox.Show(e.Message);
+                Close();
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            int customer = CustomerCBox.SelectedIndex + 1;
-            string date = datePicker.Value.ToString("yyyy-MM-dd");
-            string time = timeCombo.Text.ToString();
+            var customer = CustomerCBox.SelectedIndex + 1;
+            var date = datePicker.Value.ToString("yyyy-MM-dd");
+            var time = timeCombo.Text;
             try
             {
                 var conn = new NpgsqlConnection(_cs);
@@ -71,9 +70,9 @@ namespace DietApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(ex.Message);
             }
-            this.Close();
+            Close();
         }
     }
 }

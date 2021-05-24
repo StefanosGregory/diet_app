@@ -91,11 +91,11 @@ namespace DietApp
             };
             var lbl = new LinkLabel
             {
-                Name = $"addApponitmentLbl",
+                Name = "addApponitmentLbl",
                 Size = new Size(128, 104),
                 AutoSize = false,
                 TextAlign = ContentAlignment.MiddleCenter,
-                Text = "Click to add new appointment.",
+                Text = @"Click to add new appointment.",
                 LinkColor = Color.FromArgb(158, 161, 176),
             };
             flDays.Controls.Add(pnl);
@@ -163,7 +163,7 @@ namespace DietApp
         }
         private void link_click(string date)
         {
-            new DayFormAppoint(date, this).ShowDialog();
+            new DayFormAppoint(date).ShowDialog();
             _currentDate = DateTime.Today;
             DisplayCurrentDate();
         }
@@ -213,7 +213,7 @@ namespace DietApp
         /*
           DISPLAY CURRENT DATE METHOD
          */
-        public void DisplayCurrentDate()
+        private void DisplayCurrentDate()
         {
             MonthLbl.Text = _currentDate.ToString("MMMM, yyyy");
             var firstDayOfMonth = GetFirstDayOfMonth();

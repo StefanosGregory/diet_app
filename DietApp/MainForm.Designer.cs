@@ -42,10 +42,10 @@ namespace DietApp
             this.BtnCloseApp = new System.Windows.Forms.Button();
             this.BtnMinimize = new System.Windows.Forms.Button();
             this.moveFormPnl = new System.Windows.Forms.Panel();
-            this.ucSettings1 = new DietApp.UCSettings();
+            this.ucSettings1 = new DietApp.UcSettings();
             this.ucCalendar1 = new DietApp.UcCalendar();
-            this.ucClients1 = new DietApp.UCClients();
-            this.ucDashboard1 = new DietApp.UCDashboard();
+            this.ucClients1 = new DietApp.UcClients();
+            this.ucDashboard1 = new DietApp.UcDashboard();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -315,10 +315,10 @@ namespace DietApp
         private System.Windows.Forms.Button BtnCalendar;
         private System.Windows.Forms.Button BtnClients;
         private System.Windows.Forms.Panel PnlNav;
-        private UCDashboard ucDashboard1;
-        private UCClients ucClients1;
+        private UcDashboard ucDashboard1;
+        private UcClients ucClients1;
         private UcCalendar ucCalendar1;
-        private UCSettings ucSettings1;
+        private UcSettings ucSettings1;
         private System.Windows.Forms.Button BtnCloseApp;
         private System.Windows.Forms.Button BtnMinimize;
         private System.Windows.Forms.Panel moveFormPnl;

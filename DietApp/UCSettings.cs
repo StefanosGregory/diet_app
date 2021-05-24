@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DietApp
 {
-    public partial class UCSettings : UserControl
+    public partial class UcSettings : UserControl
     {
-        public UCSettings()
+        public UcSettings()
         {
             InitializeComponent();
         }

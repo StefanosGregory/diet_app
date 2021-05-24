@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DietApp
 {
-    public partial class UCDashboard : UserControl
+    public partial class UcDashboard : UserControl
     {
-        public UCDashboard()
+        public UcDashboard()
         {
             InitializeComponent();
         }

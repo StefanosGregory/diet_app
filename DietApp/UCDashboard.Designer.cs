@@ -1,7 +1,7 @@
 ﻿
 namespace DietApp
 {
-    partial class UCDashboard
+    partial class UcDashboard
     {
         /// <summary> 
         /// Required designer variable.
@@ -59,7 +59,7 @@ namespace DietApp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "UCDashboard";
+            this.Name = "UcDashboard";
             this.Size = new System.Drawing.Size(1210, 1243);
             this.ResumeLayout(false);
             this.PerformLayout();

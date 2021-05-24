@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace DietApp
 {
-    public partial class UCClients : UserControl
+    public partial class UcClients : UserControl
     {
-        public UCClients()
+        public UcClients()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddClient_btn_Click(object sender, EventArgs e)
         {
-           
-            AddClients formclients = new AddClients();
-            formclients.Show();
+            new AddClients().Show();
+        }
+
+        private void EditClient_btn_Click(object sender, EventArgs e)
+        {
+            // Code to open edit form.
         }
     }
 }

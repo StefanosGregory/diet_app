@@ -8,16 +8,13 @@ namespace DietApp
 {
     public partial class DayFormAppoint : Form
     {
-        private readonly UcCalendar _calendar;
         private readonly DateTime _appointmentDay;
-        private readonly string _cs, _date;
-        public DayFormAppoint(string date, UcCalendar calendar)
+        private readonly string _cs;
+        public DayFormAppoint(string date)
         {
             InitializeComponent();
-            _date = date;
-            _calendar = calendar;
             _appointmentDay = DateTime.Parse(date);
-            _cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+            _cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
             dateLbl.Text = _appointmentDay.ToString("D");
         }
 
