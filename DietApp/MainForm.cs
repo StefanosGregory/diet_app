@@ -168,6 +168,11 @@ namespace DietApp
             Left = Cursor.Position.X - _mouseX;
         }
 
+        private void ucDashboard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void moveFormPnl_MouseUp(object sender, MouseEventArgs e)
         {
             _draggable = false;

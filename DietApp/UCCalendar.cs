@@ -237,5 +237,9 @@ namespace DietApp
             new ToolTip().SetToolTip(BtnNext, "Next month");
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
