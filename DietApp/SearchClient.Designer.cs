@@ -36,17 +36,13 @@ namespace DietApp
             this.searchClient_btn = new System.Windows.Forms.Button();
             this.email_txt = new System.Windows.Forms.TextBox();
             this.telephone_txt = new System.Windows.Forms.TextBox();
-            this.age_txt = new System.Windows.Forms.TextBox();
             this.fullname_txt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.results_pnl = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.SearchClient_pnl.SuspendLayout();
-            this.results_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchClient_pnl
@@ -55,14 +51,12 @@ namespace DietApp
             this.SearchClient_pnl.Controls.Add(this.searchClient_btn);
             this.SearchClient_pnl.Controls.Add(this.email_txt);
             this.SearchClient_pnl.Controls.Add(this.telephone_txt);
-            this.SearchClient_pnl.Controls.Add(this.age_txt);
             this.SearchClient_pnl.Controls.Add(this.fullname_txt);
             this.SearchClient_pnl.Controls.Add(this.label5);
             this.SearchClient_pnl.Controls.Add(this.label4);
-            this.SearchClient_pnl.Controls.Add(this.label3);
             this.SearchClient_pnl.Controls.Add(this.label2);
             this.SearchClient_pnl.Controls.Add(this.label1);
-            this.SearchClient_pnl.Location = new System.Drawing.Point(41, 23);
+            this.SearchClient_pnl.Location = new System.Drawing.Point(0, 0);
             this.SearchClient_pnl.Name = "SearchClient_pnl";
             this.SearchClient_pnl.Size = new System.Drawing.Size(304, 231);
             this.SearchClient_pnl.TabIndex = 0;
@@ -89,24 +83,17 @@ namespace DietApp
             // 
             // email_txt
             // 
-            this.email_txt.Location = new System.Drawing.Point(154, 122);
+            this.email_txt.Location = new System.Drawing.Point(154, 99);
             this.email_txt.Name = "email_txt";
             this.email_txt.Size = new System.Drawing.Size(100, 20);
             this.email_txt.TabIndex = 8;
             // 
             // telephone_txt
             // 
-            this.telephone_txt.Location = new System.Drawing.Point(154, 99);
+            this.telephone_txt.Location = new System.Drawing.Point(154, 76);
             this.telephone_txt.Name = "telephone_txt";
             this.telephone_txt.Size = new System.Drawing.Size(100, 20);
             this.telephone_txt.TabIndex = 7;
-            // 
-            // age_txt
-            // 
-            this.age_txt.Location = new System.Drawing.Point(154, 76);
-            this.age_txt.Name = "age_txt";
-            this.age_txt.Size = new System.Drawing.Size(100, 20);
-            this.age_txt.TabIndex = 6;
             // 
             // fullname_txt
             // 
@@ -117,7 +104,7 @@ namespace DietApp
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(48, 125);
+            this.label5.Location = new System.Drawing.Point(48, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 4;
@@ -125,19 +112,11 @@ namespace DietApp
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(48, 102);
+            this.label4.Location = new System.Drawing.Point(48, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Telephone:";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(48, 79);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Age:";
             // 
             // label2
             // 
@@ -154,49 +133,35 @@ namespace DietApp
             this.label1.Size = new System.Drawing.Size(200, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Find Client";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // results_pnl
             // 
-            this.results_pnl.Controls.Add(this.label6);
-            this.results_pnl.Location = new System.Drawing.Point(40, 280);
+            this.results_pnl.Location = new System.Drawing.Point(0, 237);
             this.results_pnl.Name = "results_pnl";
-            this.results_pnl.Size = new System.Drawing.Size(304, 358);
+            this.results_pnl.Size = new System.Drawing.Size(304, 414);
             this.results_pnl.TabIndex = 1;
             this.results_pnl.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(55, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 30);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Find Client";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SearchClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 663);
+            this.ClientSize = new System.Drawing.Size(312, 663);
             this.Controls.Add(this.results_pnl);
             this.Controls.Add(this.SearchClient_pnl);
             this.Name = "SearchClient";
             this.Text = "SearchClient";
             this.SearchClient_pnl.ResumeLayout(false);
             this.SearchClient_pnl.PerformLayout();
-            this.results_pnl.ResumeLayout(false);
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel SearchClient_pnl;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox fullname_txt;
-        private System.Windows.Forms.TextBox age_txt;
         private System.Windows.Forms.TextBox telephone_txt;
         private System.Windows.Forms.TextBox email_txt;
         private System.Windows.Forms.Button searchClient_btn;
