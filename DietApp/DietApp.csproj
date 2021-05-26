@@ -86,12 +86,6 @@
     <Compile Include="AddAppointmentForm.Designer.cs">
       <DependentUpon>AddAppointmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddClients.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddClients.Designer.cs">
-      <DependentUpon>AddClients.cs</DependentUpon>
-    </Compile>
     <Compile Include="DayFormAppoint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +102,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundButtons.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SearchClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchClient.Designer.cs">
-      <DependentUpon>SearchClient.cs</DependentUpon>
     </Compile>
     <Compile Include="UCCalendar.cs">
       <SubType>UserControl</SubType>
@@ -148,9 +136,6 @@
     <EmbeddedResource Include="AddAppointmentForm.resx">
       <DependentUpon>AddAppointmentForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddClients.resx">
-      <DependentUpon>AddClients.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DayFormAppoint.resx">
       <DependentUpon>DayFormAppoint.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,9 +152,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SearchClient.resx">
-      <DependentUpon>SearchClient.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UCCalendar.resx">
       <DependentUpon>UCCalendar.cs</DependentUpon>
     </EmbeddedResource>
