@@ -2137,6 +2137,7 @@
         <member name="P:Npgsql.NpgsqlConnectionStringBuilder.CancellationTimeout">
             <summary>
             The time to wait (in milliseconds) while trying to read a response for a cancellation request for a timed out or cancelled query, before terminating the attempt and generating an error.
+            Zero for infinity, -1 to skip the wait.
             Defaults to 2000 milliseconds.
             </summary>
         </member>
