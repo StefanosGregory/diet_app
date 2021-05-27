@@ -12,6 +12,7 @@ namespace DietApp
     public partial class UcClients : UserControl
     {
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+        private int _id;
         public UcClients()
         {
             InitializeComponent();
@@ -31,8 +32,24 @@ namespace DietApp
             AddClient_pnl.Size = new Size(410, 630);
             AddClient_pnl.Location = new Point(3, 80);
             AddClient_pnl.Visible = false;
-        }
 
+            // Set ClientCard_pnl and info_pnl, history_pnl and diet_pnl settings.
+            ClientCard_pnl.Visible = info_pnl.Visible = false;
+            ClientCard_pnl.Location = new Point(3, 80);
+            ClientCard_pnl.Size = new Size(930, 655);
+            /*--- info panel ---*/
+            info_pnl.Size = new Size(930, 600);
+            //disable edit for cb, txts.
+            info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = true;
+            info_sex_cb.Enabled = false;
+            // set location save,close btn
+            info_save_btn.Location = info_edit_btn.Location;
+            info_cancel_btn.Location = info_close_btn.Location;
+        }
+        
+        /*
+         * General methods.
+         */
         private void FillDataGrid()
         {
             var conn = new NpgsqlConnection(Cs);
@@ -40,29 +57,22 @@ namespace DietApp
             var cmd = new NpgsqlCommand
             {
                 Connection = conn,
-                CommandText = "SELECT * FROM CLIENTS;"
+                CommandText = "SELECT id, fullname, sex, tel, email FROM CLIENTS ORDER BY id ASC;"
             };
-            
+
             var dr = cmd.ExecuteReader();
             if (!dr.HasRows) return;
             var dt = new DataTable();
             dt.Load(dr);
             showClients_pnl.DataSource = dt;
-            showClients_pnl.Columns[0].ReadOnly = true;
-            
+            foreach (DataGridViewBand band in showClients_pnl.Columns)
+            {
+                band.ReadOnly = true;
+            }
+
             conn.Dispose();
             conn.Close();
         }
-        
-        private void AddClient_btn_Click(object sender, EventArgs e)
-        {
-            //new AddClients().Show();
-            ShowAll_pnl.Visible = false;
-
-            AddClient_pnl.Visible = true;
-            clients_lbl.Text = @"Add new client";
-        }
-
         private static bool IsValidEmail(string email)
         {
             try
@@ -75,17 +85,17 @@ namespace DietApp
                 return false;
             }
         }
-
-        private void showClients_pnl_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        
+        /*
+         * AddClient_pnl methods.
+         */
+        
+        private void Add_btn_Click(object sender, EventArgs e)
         {
-            // Update client.
-            if (showClients_pnl.CurrentRow == null) return;
-            var clientRow = showClients_pnl.CurrentRow;
-
-            if (clientRow.Cells["fullname"].Value.ToString() == "" || clientRow.Cells["sex"].Value.ToString() == "" || clientRow.Cells["age"].Value.ToString() == "" || clientRow.Cells["height"].Value.ToString() == "" || clientRow.Cells["tel"].Value.ToString() == "" || clientRow.Cells["email"].Value.ToString() == "" || clientRow.Cells["alergies"].Value.ToString() == "" || clientRow.Cells["healthprobs"].Value.ToString() == "") MessageBox.Show(@"You must fill all the fields.");
+            if (fullname_txt.Text == "" || sex_cb.SelectedItem == null || age_txt.Text == "" || height_txt.Text == "" || telephone_txt.Text == "" || email_txt.Text == "" || allergies_txt.Text == "" || healthprob_txt.Text == "") MessageBox.Show(@"You must fill all the fields.");
             else
             {
-                if (clientRow.Cells["age"].Value.ToString().All(char.IsDigit) && clientRow.Cells["height"].Value.ToString().All(char.IsDigit) && clientRow.Cells["tel"].Value.ToString().All(char.IsDigit) && IsValidEmail(email_txt.Text)) UpdateClient(clientRow);
+                if (age_txt.Text.All(char.IsDigit) && height_txt.Text.All(char.IsDigit) && telephone_txt.Text.All(char.IsDigit) && IsValidEmail(email_txt.Text)) AddToDb();
                 else
                 {
                     MessageBox.Show(!IsValidEmail(email_txt.Text)
@@ -93,55 +103,7 @@ namespace DietApp
                         : @"Error age, height, telephone must be integers.");
                 }
             }
-            
         }
-
-        private void UpdateClient(DataGridViewRow clientRow)
-        {
-            try
-            {
-                var conn = new NpgsqlConnection(Cs);
-                conn.Open();
-                var cmd = new NpgsqlCommand
-                {
-                    Connection = conn,
-                    CommandText =
-                        "UPDATE clients SET fullname = @fullname, sex = @sex, age = @age, height = @height, tel = @telephone, email = @email, alergies = @allergies, healthprobs = @healthprobs WHERE id = @id;"
-                };
-
-                cmd.Parameters.Add("@fullname", NpgsqlDbType.Char).Value = clientRow.Cells["fullname"].Value.ToString();
-                cmd.Parameters.Add("@sex", NpgsqlDbType.Char).Value = clientRow.Cells["sex"].Value.ToString();
-                cmd.Parameters.Add("@age", NpgsqlDbType.Integer).Value = short.Parse(clientRow.Cells["age"].Value.ToString());
-                cmd.Parameters.Add("@height", NpgsqlDbType.Integer).Value = short.Parse(clientRow.Cells["height"].Value.ToString());
-                cmd.Parameters.Add("@telephone", NpgsqlDbType.Bigint).Value = long.Parse(clientRow.Cells["tel"].Value.ToString());
-                cmd.Parameters.Add("@email", NpgsqlDbType.Char).Value = clientRow.Cells["email"].Value.ToString();
-                cmd.Parameters.Add("@allergies", NpgsqlDbType.Char).Value = clientRow.Cells["alergies"].Value.ToString();
-                cmd.Parameters.Add("@healthprobs", NpgsqlDbType.Char).Value = clientRow.Cells["healthprobs"].Value.ToString();
-                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = short.Parse(clientRow.Cells["id"].Value.ToString());
-
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    FillDataGrid();
-                    MessageBox.Show(@"Client info updated successfully!");
-                }
-                else MessageBox.Show(@"Something went wrong!");
-
-                conn.Dispose();
-                conn.Close();
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
-
-        private void cancel_btn_Click(object sender, EventArgs e)
-        {
-            ShowAll_pnl.Visible = true;
-            AddClient_pnl.Visible = false;
-            clients_lbl.Text = @"Clients";
-        }
-
         private void AddToDb()
         {
             const string sql = "insert into clients values (default, @fullname, @sex, @age, @height, @tel, @email, @alergies, @healthprobs)";
@@ -166,57 +128,82 @@ namespace DietApp
                         ? @"Client added successfully!"
                         : @"Something went wrong!");
                 }
-                
+
                 conn.Dispose();
                 conn.Close();
-                    
+
                 FillDataGrid();
-                    
-                AddClient_pnl.Visible = false;
-                clients_lbl.Text = @"Clients";
-                ShowAll_pnl.Visible = true;
+
+                ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
+                clients_lbl.Text = @"Client Info";
+                ClientCard_pnl.Visible = true;
             }
             catch (SqlException e)
             {
                 MessageBox.Show(e.Message);
             }
         }
-
-        private void Add_btn_Click(object sender, EventArgs e)
+        private void cancel_btn_Click(object sender, EventArgs e)
         {
-            if (fullname_txt.Text == "" || sex_cb.SelectedItem == null || age_txt.Text == "" || height_txt.Text == "" || telephone_txt.Text == "" || email_txt.Text == "" || allergies_txt.Text == "" || healthprob_txt.Text == "") MessageBox.Show(@"You must fill all the fields.");
-            else
+            ShowAll_pnl.Visible = true;
+            AddClient_pnl.Visible = false;
+            clients_lbl.Text = @"Clients";
+        }
+
+        /*
+         * ShowAll_pnl methods. 
+         */
+        private void AddClient_btn_Click(object sender, EventArgs e)
+        {
+            //new AddClients().Show();
+            ShowAll_pnl.Visible = false;
+
+            AddClient_pnl.Visible = true;
+            clients_lbl.Text = @"Add new client";
+        }
+        private void showClients_pnl_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            clients_lbl.Text = @"Client Info";
+            ClientCard_pnl.Visible = info_pnl.Visible = true;
+            ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
+
+            // Set back color of info_navBar_pnl
+            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            
+            var tmp = showClients_pnl.CurrentCell.RowIndex;
+            _id = short.Parse(showClients_pnl.Rows[tmp].Cells["id"].Value.ToString());
+            try
             {
-                if (age_txt.Text.All(char.IsDigit) && height_txt.Text.All(char.IsDigit) && telephone_txt.Text.All(char.IsDigit) && IsValidEmail(email_txt.Text)) AddToDb();
-                else
+                var conn = new NpgsqlConnection(Cs);
+                conn.Open();
+                var cmd = new NpgsqlCommand
                 {
-                    MessageBox.Show(!IsValidEmail(email_txt.Text)
-                        ? @"Not valid email."
-                        : @"Error age, height, telephone must be integers.");
+                    Connection = conn,
+                    CommandText = "SELECT * FROM clients WHERE id = @id;"
+                };
+                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    info_fullname_txt.Text = reader[1].ToString();
+                    info_sex_cb.Text = reader[2].ToString();
+                    info_age_txt.Text = reader[3].ToString();
+                    info_height_txt.Text = reader[4].ToString();
+                    info_tel_txt.Text = reader[5].ToString();
+                    info_email_txt.Text = reader[6].ToString();
+                    info_allergies_txt.Text = reader[7].ToString();
+                    info_healthprobs_txt.Text = reader[8].ToString();
                 }
+
+                conn.Dispose();
+                conn.Close();
+            }catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-        }
 
-        private void telephone_txt_MouseClick(object sender, MouseEventArgs e)
-        {
-            telephone_txt.Clear();
         }
-
-        private void telephone_txt_MouseLeave(object sender, EventArgs e)
-        {
-            if (telephone_txt.Text == "") telephone_txt.Text = @"69********";
-        }
-
-        private void email_txt_MouseClick(object sender, MouseEventArgs e)
-        {
-            email_txt.Clear();
-        }
-
-        private void email_txt_MouseLeave(object sender, EventArgs e)
-        {
-            if (email_txt.Text == "") email_txt.Text = @"example@example.com";
-        }
-
         private void showClients_pnl_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
             var clientRow = showClients_pnl.CurrentRow;
@@ -254,13 +241,11 @@ namespace DietApp
             }
 
         }
-
         private void clear_btn_Click(object sender, EventArgs e)
         {
             search_txt.Clear();
             searchType_cb.SelectedIndex = 0;
         }
-        
         private void Search_btn_Click(object sender, EventArgs e)
         {
             // 1) Get search type ( name, phone, email )
@@ -287,22 +272,21 @@ namespace DietApp
             switch (type)
             {
                 case "Name":
-                    sql = "SELECT * FROM clients WHERE fullname LIKE @input;";
+                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE fullname LIKE @input; ORDER BY id ASC";
                     break;
                 case "Telephone": 
-                    sql = "SELECT * FROM clients WHERE tel = @input;";
+                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE tel = @input ORDER BY id ASC;";
                     break;
                 case "Email":
-                    sql = "SELECT * FROM clients WHERE email = @input;";
+                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE email = @input ORDER BY id ASC;";
                     break;
                 default:
-                    sql = "SELECT * FROM clients;";
+                    sql = "SELECT id, fullname, sex, tel, email FROM clients;";
                     break;
             };
                 
             SearchWhere(sql, input, type);
         }
-
         private void SearchWhere(string sql, string input, string type)
         {
             MessageBox.Show(sql);
@@ -339,6 +323,129 @@ namespace DietApp
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        
+
+        /*
+         * "Hover" methods on instert client form.
+         */
+        private void telephone_txt_MouseClick(object sender, MouseEventArgs e)
+        {
+            telephone_txt.Clear();
+        }
+        private void telephone_txt_MouseLeave(object sender, EventArgs e)
+        {
+            if (telephone_txt.Text == "") telephone_txt.Text = @"69********";
+        }
+        private void email_txt_MouseClick(object sender, MouseEventArgs e)
+        {
+            email_txt.Clear();
+        }
+        private void email_txt_MouseLeave(object sender, EventArgs e)
+        {
+            if (email_txt.Text == "") email_txt.Text = @"example@example.com";
+        }
+        
+        /*
+         * info_pnl methods.
+         */
+        private void info_lbl_Click(object sender, EventArgs e)
+        {
+            info_pnl.Visible = true;
+            //history_pnl.Visible = diet_pnl.Visible = false;
+            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+        }
+        private void info_edit_btn_Click(object sender, EventArgs e)
+        {
+            // Enable edit for info_txts
+            info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = false;
+            info_sex_cb.Enabled = true;
+
+            // Change visibility of info_edit_btn and info_close_btn buttons to false and true for info_save_btn and info_cancel_btn.
+            info_edit_btn.Visible = info_close_btn.Visible = false;
+
+            info_save_btn.Visible = info_cancel_btn.Visible = true;
+        }
+        private void info_save_btn_Click(object sender, EventArgs e)
+        {
+            if (info_fullname_txt.Text == "" || info_age_txt.Text == "" || info_allergies_txt.Text == "" || info_sex_cb.Text == "" || info_tel_txt.Text == "" || info_email_txt.Text == "" || info_height_txt.Text == "" || info_healthprobs_txt.Text == "") MessageBox.Show(@"You must fill all the fields.");
+            else
+            {
+                if (info_age_txt.Text.All(char.IsDigit) && info_height_txt.Text.All(char.IsDigit) && info_tel_txt.Text.All(char.IsDigit) && IsValidEmail(email_txt.Text)) UpdateClient();
+                else
+                {
+                    MessageBox.Show(!IsValidEmail(info_email_txt.Text)
+                        ? @"Not valid email."
+                        : @"Error age, height, telephone must be integers.");
+                }
+            }
+        }
+        private void UpdateClient()
+        {
+            try
+            {
+                var conn = new NpgsqlConnection(Cs);
+                conn.Open();
+                var cmd = new NpgsqlCommand
+                {
+                    Connection = conn,
+                    CommandText =
+                        "UPDATE clients SET fullname = @fullname, sex = @sex, age = @age, height = @height, tel = @telephone, email = @email, alergies = @allergies, healthprobs = @healthprobs WHERE id = @id;"
+                };
+
+                cmd.Parameters.Add("@fullname", NpgsqlDbType.Char).Value = info_fullname_txt.Text;
+                cmd.Parameters.Add("@sex", NpgsqlDbType.Char).Value = info_sex_cb.Text;
+                cmd.Parameters.Add("@age", NpgsqlDbType.Integer).Value = short.Parse(info_age_txt.Text);
+                cmd.Parameters.Add("@height", NpgsqlDbType.Integer).Value = short.Parse(info_height_txt.Text);
+                cmd.Parameters.Add("@telephone", NpgsqlDbType.Bigint).Value = long.Parse(info_tel_txt.Text);
+                cmd.Parameters.Add("@email", NpgsqlDbType.Char).Value = info_email_txt.Text;
+                cmd.Parameters.Add("@allergies", NpgsqlDbType.Char).Value = info_allergies_txt.Text;
+                cmd.Parameters.Add("@healthprobs", NpgsqlDbType.Char).Value = info_healthprobs_txt.Text;
+                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    FillDataGrid();
+                    MessageBox.Show(@"Client info updated successfully!");
+                }
+                else MessageBox.Show(@"Something went wrong!");
+                
+                // Disable edit for info_txts
+                info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = true;
+                info_sex_cb.Enabled = false ;
+
+                // Change visibility of info_edit_btn and info_close_btn buttons to true and false for info_save_btn and info_cancel_btn.
+                info_edit_btn.Visible = info_close_btn.Visible = true;
+                info_save_btn.Visible = info_cancel_btn.Visible = false;
+                
+                conn.Dispose();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void info_close_btn_Click(object sender, EventArgs e)
+        {
+            // Close ClientCard_pnl and open ShowAll_pnl
+            ClientCard_pnl.Visible = false;
+            ShowAll_pnl.Visible = true;
+
+            // Reset colors and panels and client_lbl text
+            info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_pnl.Visible = false;
+            clients_lbl.Text = @"Clients";
+        }
+        private void info_cancel_btn_Click(object sender, EventArgs e)
+        {
+            // Disable edit for info_txts
+            info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = true;
+            info_sex_cb.Enabled = false ;
+
+            // Change visibility of info_edit_btn and info_close_btn buttons to true and false for info_save_btn and info_cancel_btn.
+            info_edit_btn.Visible = info_close_btn.Visible = true;
+            info_save_btn.Visible = info_cancel_btn.Visible = false;
         }
     }
 }
