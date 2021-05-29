@@ -24,15 +24,22 @@ namespace DietApp
         public MainForm()
         {
             InitializeComponent();
+
+            // Form size and X, _ buttons.
             Size = new Size(1300, 900);
+            BtnCloseApp.Location = new Point(this.Width - BtnCloseApp.Width - 10, 10);
+            BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5, 10);
+
             Region = Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
             PnlNav.Height = BtnDashboard.Height;
             PnlNav.Top = BtnDashboard.Top;
             PnlNav.Left = BtnDashboard.Left;
             BtnDashboard.BackColor = Color.FromArgb(46, 51, 73);
-            ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = ucDashboard1.Location;
-            BtnCloseApp.Location = new Point(this.Width - BtnCloseApp.Width - 10 , 10);
-            BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5 , 10);
+
+            // Location and size for user controls setting, dashboard, calendar, clients.
+            ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = ucDashboard1.Location = new Point(150, 5);
+            ucSettings1.Size = ucCalendar1.Size = ucClients1.Size = ucDashboard1.Size = new Size(1150, 900);
+            
             WelcomeMess();
         }
 

@@ -36,10 +36,10 @@ namespace DietApp
             // Set ClientCard_pnl and info_pnl, history_pnl and diet_pnl settings.
             ClientCard_pnl.Visible = info_pnl.Visible = history_pnl.Visible = diet_pnl.Visible = false;
             ClientCard_pnl.Location = new Point(3, 80);
-            ClientCard_pnl.Size = new Size(930, 655);
+            ClientCard_pnl.Size = new Size(1110, 800);
             
             /*--- info_pnl ---*/
-            info_pnl.Size = new Size(930, 600);
+            info_pnl.Size = new Size(1110, 745);
             info_pnl.Location = new Point(0, 55);
             /* disable edit for cb, txts. */
             info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = true;
@@ -47,15 +47,16 @@ namespace DietApp
             /* set location save,close btn */
             info_save_btn.Location = info_edit_btn.Location;
             info_cancel_btn.Location = info_close_btn.Location;
-            
+
             /*--- history_pnl ---*/
-            history_pnl.Size = new Size(930, 600);
+            history_pnl.Size = new Size(1110, 745);
             history_pnl.Location = new Point(0, 55);
             history_editEntry_btn.Location = history_saveEntry_btn.Location = history_addEntry_btn.Location;
             history_clear_btn.Location = history_close_btn.Location;
+            history_addEntry_btn.Size = history_clear_btn.Size = history_close_btn.Size = history_editEntry_btn.Size = history_saveEntry_btn.Size = history_showgraph_btn.Size = info_edit_btn.Size;
             
             /*--- diet_pnl ---*/
-            diet_pnl.Size = new Size(930, 600);
+            diet_pnl.Size = new Size(1110, 745);
             diet_pnl.Location = new Point(0, 55);
         }
         
@@ -194,7 +195,7 @@ namespace DietApp
             ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
 
             // Set back color of info_navBar_pnl
-            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            info_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
             
             var tmp = showClients_pnl.CurrentCell.RowIndex;
             _height = short.Parse(showClients_pnl.Rows[tmp].Cells["height"].Value.ToString());
@@ -398,7 +399,7 @@ namespace DietApp
             info_pnl.Visible = true;
             history_pnl.Visible = diet_pnl.Visible = false;
             
-            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            info_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
             history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void info_edit_btn_Click(object sender, EventArgs e)
@@ -507,6 +508,7 @@ namespace DietApp
         private void info_lbl_MouseLeave(object sender, EventArgs e)
         {
             if (info_pnl.Visible) return;
+            info_lbl.Cursor = Cursors.Hand;
             info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
@@ -520,7 +522,7 @@ namespace DietApp
             history_pnl.Visible = true;
             info_pnl.Visible = diet_pnl.Visible = false;
             
-            history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            history_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
             info_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void history_lbl_MouseEnter(object sender, EventArgs e)
@@ -536,6 +538,7 @@ namespace DietApp
         private void history_lbl_MouseLeave(object sender, EventArgs e)
         {
             if (history_pnl.Visible) return;
+            history_lbl.Cursor = Cursors.Hand;
             history_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             history_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
@@ -555,9 +558,9 @@ namespace DietApp
                 cmd.Parameters.Add("@datetime", NpgsqlDbType.Timestamp).Value = DateTime.Parse(history_date_cb.Text);
                 
                 var reader = cmd.ExecuteReader();
-                MessageBox.Show(reader.HasRows ? @"rows" : @"no rows");
                 if (reader.HasRows)
                 {
+                    history_entry_lbl.Text = @"Previous Entry";
                     while (reader.Read())
                     {
                         history_weight_txt.Text = reader[3].ToString();
@@ -572,6 +575,7 @@ namespace DietApp
                 }
                 else
                 {
+                    history_entry_lbl.Text = @"New Entry";
                     history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = true;
                     history_addEntry_btn.Text = history_weight_txt.Text = history_fatperc_txt.Text =
                         history_musclemass_txt.Text = history_waterperc_txt.Text = history_visceralfat_txt.Text = "";
@@ -595,6 +599,7 @@ namespace DietApp
             // Reset colors and panels and client_lbl text
             info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             info_pnl.Visible = false;
+            history_entry_lbl.Text = @"New Entry";
             clients_lbl.Text = @"Clients";
         }
         private void history_clear_btn_Click(object sender, EventArgs e)
@@ -718,7 +723,7 @@ namespace DietApp
             diet_pnl.Visible = true;
             info_pnl.Visible = history_pnl.Visible = false;
             
-            diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            diet_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
             history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void diet_lbl_MouseEnter(object sender, EventArgs e)
@@ -734,6 +739,7 @@ namespace DietApp
         private void diet_lbl_MouseLeave(object sender, EventArgs e)
         {
             if (diet_pnl.Visible) return;
+            diet_lbl.Cursor = Cursors.Hand;
             diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
