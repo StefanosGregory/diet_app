@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -29,7 +22,7 @@ namespace DietApp
             {
                 var con = new NpgsqlConnection(_cs);
                 con.Open();
-                var cmd = new NpgsqlCommand("select fullname from clients", con);
+                var cmd = new NpgsqlCommand("select fullname from clients order by id;", con);
                 var sdr = cmd.ExecuteReader();
                 while (sdr.Read())
                 {

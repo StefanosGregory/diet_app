@@ -18,7 +18,7 @@ namespace DietApp
             InitializeComponent();
             _currentDate = DateTime.Today;
             _listFlDay = new List<FlowLayoutPanel>();
-            _cs = $"Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
+            _cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         }
 
 
@@ -131,7 +131,7 @@ namespace DietApp
                     Text = i + @" ",
                     ForeColor = Color.FromArgb(158, 161, 176)
                 };
-                _listFlDay[(i) + startDay - 1].Controls.Add(lbl);
+                _listFlDay[i + startDay - 1].Controls.Add(lbl);
 
             }
         }

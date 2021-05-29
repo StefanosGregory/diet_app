@@ -118,3 +118,4 @@ C:\Users\Styliani\diet_app\DietApp\obj\Debug\DietApp.exe
 C:\Users\Styliani\diet_app\DietApp\obj\Debug\DietApp.pdb
 C:\Users\Styliani\diet_app\DietApp\obj\Debug\DietApp.AddClients.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.AddAppointmentForm.resources
+C:\Users\bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.csprojAssemblyReference.cache

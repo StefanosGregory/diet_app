@@ -12,7 +12,7 @@ namespace DietApp
     public partial class UcClients : UserControl
     {
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
-        private int _id;
+        private int _id, _height;
         public UcClients()
         {
             InitializeComponent();
@@ -34,17 +34,29 @@ namespace DietApp
             AddClient_pnl.Visible = false;
 
             // Set ClientCard_pnl and info_pnl, history_pnl and diet_pnl settings.
-            ClientCard_pnl.Visible = info_pnl.Visible = false;
+            ClientCard_pnl.Visible = info_pnl.Visible = history_pnl.Visible = diet_pnl.Visible = false;
             ClientCard_pnl.Location = new Point(3, 80);
             ClientCard_pnl.Size = new Size(930, 655);
-            /*--- info panel ---*/
+            
+            /*--- info_pnl ---*/
             info_pnl.Size = new Size(930, 600);
-            //disable edit for cb, txts.
+            info_pnl.Location = new Point(0, 55);
+            /* disable edit for cb, txts. */
             info_fullname_txt.ReadOnly = info_age_txt.ReadOnly = info_allergies_txt.ReadOnly = info_tel_txt.ReadOnly = info_email_txt.ReadOnly = info_healthprobs_txt.ReadOnly = true;
             info_sex_cb.Enabled = false;
-            // set location save,close btn
+            /* set location save,close btn */
             info_save_btn.Location = info_edit_btn.Location;
             info_cancel_btn.Location = info_close_btn.Location;
+            
+            /*--- history_pnl ---*/
+            history_pnl.Size = new Size(930, 600);
+            history_pnl.Location = new Point(0, 55);
+            history_editEntry_btn.Location = history_saveEntry_btn.Location = history_addEntry_btn.Location;
+            history_clear_btn.Location = history_close_btn.Location;
+            
+            /*--- diet_pnl ---*/
+            diet_pnl.Size = new Size(930, 600);
+            diet_pnl.Location = new Point(0, 55);
         }
         
         /*
@@ -57,7 +69,7 @@ namespace DietApp
             var cmd = new NpgsqlCommand
             {
                 Connection = conn,
-                CommandText = "SELECT id, fullname, sex, tel, email FROM CLIENTS ORDER BY id ASC;"
+                CommandText = "SELECT id, fullname, height, sex, tel, email FROM CLIENTS ORDER BY id ASC;"
             };
 
             var dr = cmd.ExecuteReader();
@@ -85,11 +97,25 @@ namespace DietApp
                 return false;
             }
         }
+        private void history_checkUnfocus_Leave(object sender, EventArgs e)
+        {
+            if (history_weight_txt.Text.Equals("") && history_fatperc_txt.Text.Equals("") &&
+                history_musclemass_txt.Text.Equals("") && history_visceralfat_txt.Text.Equals("") &&
+                history_waterperc_txt.Text.Equals("")) return;
+            
+            history_close_btn.Visible = false;
+            history_clear_btn.Visible = true;
+            if (!history_weight_txt.Text.All(char.IsDigit) || history_weight_txt.Text.Length == 0) return;
+            var kg = short.Parse(history_weight_txt.Text);
+            var tmp = (double)_height / 100;
+            var sqrHeight = Math.Pow(tmp, 2);
+            var bmi = Math.Ceiling(kg / sqrHeight);
+            history_bmi_txt.Text =  bmi.ToString();
+        }
         
         /*
          * AddClient_pnl methods.
-         */
-        
+         */    
         private void Add_btn_Click(object sender, EventArgs e)
         {
             if (fullname_txt.Text == "" || sex_cb.SelectedItem == null || age_txt.Text == "" || height_txt.Text == "" || telephone_txt.Text == "" || email_txt.Text == "" || allergies_txt.Text == "" || healthprob_txt.Text == "") MessageBox.Show(@"You must fill all the fields.");
@@ -171,6 +197,7 @@ namespace DietApp
             info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             
             var tmp = showClients_pnl.CurrentCell.RowIndex;
+            _height = short.Parse(showClients_pnl.Rows[tmp].Cells["height"].Value.ToString());
             _id = short.Parse(showClients_pnl.Rows[tmp].Cells["id"].Value.ToString());
             try
             {
@@ -183,7 +210,7 @@ namespace DietApp
                 };
                 cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
 
-                NpgsqlDataReader reader = cmd.ExecuteReader();
+                var reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     info_fullname_txt.Text = reader[1].ToString();
@@ -195,7 +222,24 @@ namespace DietApp
                     info_allergies_txt.Text = reader[7].ToString();
                     info_healthprobs_txt.Text = reader[8].ToString();
                 }
+                conn.Dispose();
+                conn.Close();
 
+                conn = new NpgsqlConnection(Cs);
+                conn.Open();
+                cmd = new NpgsqlCommand
+                {
+                    Connection = conn,
+                    CommandText = "SELECT datetime FROM appointments WHERE clientsid = @id;"
+                };
+                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    history_date_cb.Items.Add(reader[0].ToString());
+                }
+
+                history_date_cb.SelectedIndex = history_date_cb.Items.Count -1;
                 conn.Dispose();
                 conn.Close();
             }catch (SqlException ex)
@@ -327,7 +371,7 @@ namespace DietApp
         
 
         /*
-         * "Hover" methods on instert client form.
+         * "Hover" methods on insert client form.
          */
         private void telephone_txt_MouseClick(object sender, MouseEventArgs e)
         {
@@ -352,8 +396,10 @@ namespace DietApp
         private void info_lbl_Click(object sender, EventArgs e)
         {
             info_pnl.Visible = true;
-            //history_pnl.Visible = diet_pnl.Visible = false;
+            history_pnl.Visible = diet_pnl.Visible = false;
+            
             info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void info_edit_btn_Click(object sender, EventArgs e)
         {
@@ -429,8 +475,9 @@ namespace DietApp
         private void info_close_btn_Click(object sender, EventArgs e)
         {
             // Close ClientCard_pnl and open ShowAll_pnl
-            ClientCard_pnl.Visible = false;
-            ShowAll_pnl.Visible = true;
+            ClientCard_pnl.Visible = history_pnl.Visible = diet_pnl.Visible = history_editEntry_btn.Visible = history_saveEntry_btn.Visible = history_showgraph_btn.Visible = false;
+            ShowAll_pnl.Visible = info_pnl.Visible = history_addEntry_btn.Visible = history_close_btn.Visible = true;
+            history_date_cb.Items.Clear();
 
             // Reset colors and panels and client_lbl text
             info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
@@ -446,6 +493,249 @@ namespace DietApp
             // Change visibility of info_edit_btn and info_close_btn buttons to true and false for info_save_btn and info_cancel_btn.
             info_edit_btn.Visible = info_close_btn.Visible = true;
             info_save_btn.Visible = info_cancel_btn.Visible = false;
+        }
+        private void info_lbl_MouseEnter(object sender, EventArgs e)
+        {
+            if (info_pnl.Visible)
+            {
+                info_lbl.Cursor = Cursors.Default;
+                return;
+            }
+            info_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+        }
+        private void info_lbl_MouseLeave(object sender, EventArgs e)
+        {
+            if (info_pnl.Visible) return;
+            info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+        }
+        
+        /*
+         * history_pnl methods.
+         */
+        private void history_lbl_Click(object sender, EventArgs e)
+        {
+            // Setting visibility to true for history_pnl and false for info_pnl and diet_pnl.
+            history_pnl.Visible = true;
+            info_pnl.Visible = diet_pnl.Visible = false;
+            
+            history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            info_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+        }
+        private void history_lbl_MouseEnter(object sender, EventArgs e)
+        {
+            if (history_pnl.Visible)
+            {
+                history_lbl.Cursor = Cursors.Default;
+                return;
+            }
+            history_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            history_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+        }
+        private void history_lbl_MouseLeave(object sender, EventArgs e)
+        {
+            if (history_pnl.Visible) return;
+            history_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            history_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+        }
+        private void history_date_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var conn = new NpgsqlConnection(Cs);
+                conn.Open();
+
+                var cmd = new NpgsqlCommand
+                {
+                    Connection = conn,
+                    CommandText = "SELECT * FROM clientshistory WHERE datetime = @datetime;"
+                };
+
+                cmd.Parameters.Add("@datetime", NpgsqlDbType.Timestamp).Value = DateTime.Parse(history_date_cb.Text);
+                
+                var reader = cmd.ExecuteReader();
+                MessageBox.Show(reader.HasRows ? @"rows" : @"no rows");
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        history_weight_txt.Text = reader[3].ToString();
+                        history_fatperc_txt.Text = reader[4].ToString();
+                        history_musclemass_txt.Text = reader[5].ToString();
+                        history_bmi_txt.Text = reader[6].ToString();
+                        history_visceralfat_txt.Text = reader[7].ToString();
+                        history_waterperc_txt.Text = reader[8].ToString();
+                    }
+                    
+                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = false;
+                }
+                else
+                {
+                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = true;
+                    history_addEntry_btn.Text = history_weight_txt.Text = history_fatperc_txt.Text =
+                        history_musclemass_txt.Text = history_waterperc_txt.Text = history_visceralfat_txt.Text = "";
+                }
+
+                conn.Dispose();
+                conn.Close();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void history_close_btn_Click(object sender, EventArgs e)
+        {
+            // Close ClientCard_pnl and open ShowAll_pnl
+            ClientCard_pnl.Visible = history_pnl.Visible = diet_pnl.Visible = history_editEntry_btn.Visible = history_saveEntry_btn.Visible = history_showgraph_btn.Visible = false;
+            ShowAll_pnl.Visible = info_pnl.Visible = history_addEntry_btn.Visible = history_close_btn.Visible = true;
+            history_date_cb.Items.Clear();
+
+            // Reset colors and panels and client_lbl text
+            info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_pnl.Visible = false;
+            clients_lbl.Text = @"Clients";
+        }
+        private void history_clear_btn_Click(object sender, EventArgs e)
+        {
+            history_weight_txt.Text = history_fatperc_txt.Text = history_musclemass_txt.Text = history_visceralfat_txt.Text = history_waterperc_txt.Text = history_bmi_txt.Text = "";
+
+            history_clear_btn.Visible = false;
+            history_close_btn.Visible = true;
+        }
+        private void history_addEntry_btn_Click(object sender, EventArgs e)
+        {
+            if (history_weight_txt.Text.Equals("") || history_fatperc_txt.Text.Equals("") || history_musclemass_txt.Text.Equals("") || history_visceralfat_txt.Text.Equals("") || history_waterperc_txt.Text.Equals("")) MessageBox.Show(@"You must fill all textbox!");
+            else
+            {
+                if (history_weight_txt.Text.All(char.IsDigit) && history_bmi_txt.Text.All(char.IsDigit) && history_fatperc_txt.Text.All(char.IsDigit) && history_musclemass_txt.Text.All(char.IsDigit) && history_visceralfat_txt.Text.All(char.IsDigit) && history_waterperc_txt.Text.All(char.IsDigit)) history_addEntry();
+            }
+        }
+        private void history_addEntry()
+        {
+            try
+            {
+                var conn = new NpgsqlConnection(Cs);
+                conn.Open();
+
+                var cmd = new NpgsqlCommand()
+                {
+                    Connection = conn,
+                    CommandText =
+                        "INSERT INTO clientshistory VALUES(default, @id, @datetime, @kg, @fatperc, @musclemass, @bmi, @visceralfat, @waterperc);"
+                };
+                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+                cmd.Parameters.Add("@datetime", NpgsqlDbType.Timestamp).Value = DateTime.Parse(history_date_cb.Text);
+                cmd.Parameters.Add("@kg", NpgsqlDbType.Integer).Value = short.Parse(history_weight_txt.Text);
+                cmd.Parameters.Add("@fatperc", NpgsqlDbType.Integer).Value = short.Parse(history_fatperc_txt.Text);
+                cmd.Parameters.Add("@musclemass", NpgsqlDbType.Integer).Value = short.Parse(history_musclemass_txt.Text);
+                cmd.Parameters.Add("@bmi", NpgsqlDbType.Integer).Value = short.Parse(history_bmi_txt.Text);
+                cmd.Parameters.Add("@visceralfat", NpgsqlDbType.Integer).Value =
+                    short.Parse(history_visceralfat_txt.Text);
+                cmd.Parameters.Add("@waterperc", NpgsqlDbType.Integer).Value = short.Parse(history_waterperc_txt.Text);
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show(@"Entry added successfully!");
+                    history_close_btn.Visible = history_editEntry_btn.Visible = true;
+                    history_clear_btn.Visible = history_addEntry_btn.Visible = false;
+                    history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = false;
+                }
+                else
+                {
+                    MessageBox.Show(@"Something went wrong!");
+                }
+
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+        private void history_editEntry_btn_Click(object sender, EventArgs e)
+        {
+            history_clear_btn.Visible = history_editEntry_btn.Visible = false;
+            history_close_btn.Visible = history_saveEntry_btn.Visible = true;
+            history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = true;
+        }
+        private void history_saveEntry_btn_Click(object sender, EventArgs e)
+        {
+            if (history_weight_txt.Text.Equals("") || history_fatperc_txt.Text.Equals("") || history_musclemass_txt.Text.Equals("") || history_visceralfat_txt.Text.Equals("") || history_waterperc_txt.Text.Equals("")) MessageBox.Show(@"You must fill all textbox!");
+            else
+            {
+                if (history_weight_txt.Text.All(char.IsDigit) && history_bmi_txt.Text.All(char.IsDigit) && history_fatperc_txt.Text.All(char.IsDigit) && history_musclemass_txt.Text.All(char.IsDigit) && history_visceralfat_txt.Text.All(char.IsDigit) && history_waterperc_txt.Text.All(char.IsDigit)) history_updateEntry();
+            }
+        }
+        private void history_updateEntry()
+        {
+            try
+            {
+                var conn = new NpgsqlConnection(Cs);
+                conn.Open();
+
+                var cmd = new NpgsqlCommand
+                {
+                    Connection = conn,
+                    CommandText =
+                        "UPDATE clientshistory SET kg = @kg, fatperc = @fatperc, musclemass = @musclemass, bmi = @bmi, visceralfat = @visceralfat, waterperc = @waterperc WHERE clientsid = @id;"
+                };
+                cmd.Parameters.Add("@kg", NpgsqlDbType.Integer).Value = short.Parse(history_weight_txt.Text);
+                cmd.Parameters.Add("@fatperc", NpgsqlDbType.Integer).Value = short.Parse(history_fatperc_txt.Text);
+                cmd.Parameters.Add("@musclemass", NpgsqlDbType.Integer).Value =
+                    short.Parse(history_musclemass_txt.Text);
+                cmd.Parameters.Add("@bmi", NpgsqlDbType.Integer).Value = short.Parse(history_bmi_txt.Text);
+                cmd.Parameters.Add("@visceralfat", NpgsqlDbType.Integer).Value =
+                    short.Parse(history_visceralfat_txt.Text);
+                cmd.Parameters.Add("@waterperc", NpgsqlDbType.Integer).Value = short.Parse(history_waterperc_txt.Text);
+                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show(@"Entry updated successfully!");
+                    history_addEntry_btn.Visible = true;
+                    history_addEntry_btn.Enabled = history_saveEntry_btn.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show(@"Something went wrong!");
+                }
+                
+                conn.Dispose();
+                conn.Close();
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        /*
+         * diet_pnl methods.
+         */
+        private void diet_lbl_Click(object sender, EventArgs e)
+        {
+            diet_pnl.Visible = true;
+            info_pnl.Visible = history_pnl.Visible = false;
+            
+            diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+        }
+        private void diet_lbl_MouseEnter(object sender, EventArgs e)
+        {
+            if (diet_pnl.Visible)
+            {
+                diet_lbl.Cursor = Cursors.Default;
+                return;
+            }
+            diet_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+        }
+        private void diet_lbl_MouseLeave(object sender, EventArgs e)
+        {
+            if (diet_pnl.Visible) return;
+            diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
     }
 }
