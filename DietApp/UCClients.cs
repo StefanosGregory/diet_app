@@ -400,7 +400,7 @@ namespace DietApp
             info_pnl.Visible = true;
             history_pnl.Visible = diet_pnl.Visible = false;
             
-            info_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
+            info_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
             history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void info_edit_btn_Click(object sender, EventArgs e)
@@ -523,7 +523,7 @@ namespace DietApp
             history_pnl.Visible = true;
             info_pnl.Visible = diet_pnl.Visible = false;
             
-            history_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
+            history_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
             info_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void history_lbl_MouseEnter(object sender, EventArgs e)
@@ -724,7 +724,7 @@ namespace DietApp
             diet_pnl.Visible = true;
             info_pnl.Visible = history_pnl.Visible = false;
             
-            diet_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
+            diet_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
             history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
         private void diet_lbl_MouseEnter(object sender, EventArgs e)
