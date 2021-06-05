@@ -238,9 +238,10 @@ namespace DietApp
                 while (reader.Read())
                 {
                     history_date_cb.Items.Add(reader[0].ToString());
+                    diet_date_cb.Items.Add(reader[0].ToString());
                 }
 
-                history_date_cb.SelectedIndex = history_date_cb.Items.Count -1;
+                history_date_cb.SelectedIndex = diet_date_cb.SelectedIndex = history_date_cb.Items.Count -1;
                 conn.Dispose();
                 conn.Close();
             }catch (SqlException ex)
@@ -743,5 +744,30 @@ namespace DietApp
             diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
+        private void diet_gendiet_btn_Click(object sender, EventArgs e)
+        {
+            diet_plan_pnl.Visible = true;
+        }
+        private void diet_close_btn_Click(object sender, EventArgs e)
+        {
+            // Close ClientCard_pnl and open ShowAll_pnl
+            ClientCard_pnl.Visible = info_pnl.Visible = history_pnl.Visible = diet_pnl.Visible = history_editEntry_btn.Visible = history_saveEntry_btn.Visible = history_showgraph_btn.Visible = diet_plan_pnl.Visible = false;
+            ShowAll_pnl.Visible = info_pnl.Visible = history_addEntry_btn.Visible = history_close_btn.Visible = true;
+            history_date_cb.Items.Clear();
+            diet_date_cb.Items.Clear();
+
+            // Reset colors and panels and client_lbl text
+            info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            history_entry_lbl.Text = @"New Entry";
+            clients_lbl.Text = @"Clients";
+        }
+        private void diet_date_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // if selected date is already registered in db display entry on diet_plan_pnl.
+
+            // if new create a new diet plan.
+        }
+
+        
     }
 }

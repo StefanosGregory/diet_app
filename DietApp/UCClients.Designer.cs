@@ -29,10 +29,10 @@ namespace DietApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clients_lbl = new System.Windows.Forms.Label();
             this.ShowAll_pnl = new System.Windows.Forms.Panel();
             this.showClients_pnl = new System.Windows.Forms.DataGridView();
@@ -69,12 +69,31 @@ namespace DietApp
             this.label3 = new System.Windows.Forms.Label();
             this.ClientCard_pnl = new System.Windows.Forms.Panel();
             this.history_pnl = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.history_visceralfat_txt = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.history_waterperc_txt = new System.Windows.Forms.TextBox();
-            this.history_musclemass_txt = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.history_musclemass_txt = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.history_fatperc_txt = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.history_weight_txt = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.history_bmi_txt = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.history_date_cb = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.history_entry_lbl = new System.Windows.Forms.Label();
             this.info_pnl = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -94,6 +113,30 @@ namespace DietApp
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.diet_pnl = new System.Windows.Forms.Panel();
+            this.diet_plan_pnl = new System.Windows.Forms.TableLayoutPanel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.diet_diettype_cb = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.diet_type_cb = new System.Windows.Forms.ComboBox();
+            this.diet_date_cb = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.navBar_pnl = new System.Windows.Forms.Panel();
             this.diet_navBar_pnl = new System.Windows.Forms.Panel();
             this.diet_lbl = new System.Windows.Forms.Label();
@@ -101,26 +144,6 @@ namespace DietApp
             this.history_lbl = new System.Windows.Forms.Label();
             this.info_navBar_pnl = new System.Windows.Forms.Panel();
             this.info_lbl = new System.Windows.Forms.Label();
-            this.diet_pnl = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.history_date_cb = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.history_weight_txt = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.history_bmi_txt = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.history_fatperc_txt = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.history_visceralfat_txt = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.history_showgraph_btn = new DietApp.RoundButtons();
             this.history_saveEntry_btn = new DietApp.RoundButtons();
             this.history_clear_btn = new DietApp.RoundButtons();
@@ -131,9 +154,11 @@ namespace DietApp
             this.info_save_btn = new DietApp.RoundButtons();
             this.info_close_btn = new DietApp.RoundButtons();
             this.info_edit_btn = new DietApp.RoundButtons();
+            this.diet_gendiet_btn = new DietApp.RoundButtons();
             this.clear_btn = new DietApp.RoundButtons();
             this.Search_btn = new DietApp.RoundButtons();
             this.AddClient_btn = new DietApp.RoundButtons();
+            this.diet_close_btn = new DietApp.RoundButtons();
             this.ShowAll_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showClients_pnl)).BeginInit();
             this.AddClient_pnl.SuspendLayout();
@@ -148,18 +173,21 @@ namespace DietApp
             this.panel10.SuspendLayout();
             this.ClientCard_pnl.SuspendLayout();
             this.history_pnl.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.info_pnl.SuspendLayout();
+            this.diet_pnl.SuspendLayout();
+            this.diet_plan_pnl.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.navBar_pnl.SuspendLayout();
             this.diet_navBar_pnl.SuspendLayout();
             this.history_navBar_pnl.SuspendLayout();
             this.info_navBar_pnl.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // clients_lbl
@@ -182,7 +210,7 @@ namespace DietApp
             this.ShowAll_pnl.Controls.Add(this.clear_btn);
             this.ShowAll_pnl.Controls.Add(this.Search_btn);
             this.ShowAll_pnl.Controls.Add(this.AddClient_btn);
-            this.ShowAll_pnl.Location = new System.Drawing.Point(223, 3);
+            this.ShowAll_pnl.Location = new System.Drawing.Point(1201, 24);
             this.ShowAll_pnl.Name = "ShowAll_pnl";
             this.ShowAll_pnl.Size = new System.Drawing.Size(156, 69);
             this.ShowAll_pnl.TabIndex = 3;
@@ -192,49 +220,50 @@ namespace DietApp
             // 
             this.showClients_pnl.AllowUserToAddRows = false;
             this.showClients_pnl.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.showClients_pnl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.showClients_pnl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.showClients_pnl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.showClients_pnl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.showClients_pnl.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.showClients_pnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.showClients_pnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.showClients_pnl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.DefaultCellStyle = dataGridViewCellStyle15;
             this.showClients_pnl.EnableHeadersVisualStyles = false;
             this.showClients_pnl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.showClients_pnl.Location = new System.Drawing.Point(25, 80);
             this.showClients_pnl.Name = "showClients_pnl";
             this.showClients_pnl.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.showClients_pnl.RowHeadersWidth = 51;
             this.showClients_pnl.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.showClients_pnl.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.showClients_pnl.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,7 +312,7 @@ namespace DietApp
             this.AddClient_pnl.Controls.Add(this.panel5);
             this.AddClient_pnl.Controls.Add(this.panel4);
             this.AddClient_pnl.Controls.Add(this.panel10);
-            this.AddClient_pnl.Location = new System.Drawing.Point(407, 3);
+            this.AddClient_pnl.Location = new System.Drawing.Point(1385, 24);
             this.AddClient_pnl.Name = "AddClient_pnl";
             this.AddClient_pnl.Size = new System.Drawing.Size(149, 73);
             this.AddClient_pnl.TabIndex = 4;
@@ -614,7 +643,7 @@ namespace DietApp
             this.ClientCard_pnl.Controls.Add(this.info_pnl);
             this.ClientCard_pnl.Controls.Add(this.diet_pnl);
             this.ClientCard_pnl.Controls.Add(this.navBar_pnl);
-            this.ClientCard_pnl.Location = new System.Drawing.Point(28, 80);
+            this.ClientCard_pnl.Location = new System.Drawing.Point(23, 63);
             this.ClientCard_pnl.Name = "ClientCard_pnl";
             this.ClientCard_pnl.Size = new System.Drawing.Size(1110, 800);
             this.ClientCard_pnl.TabIndex = 5;
@@ -644,25 +673,44 @@ namespace DietApp
             this.history_pnl.TabIndex = 7;
             this.history_pnl.Visible = false;
             // 
-            // label29
+            // panel16
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(223, 16);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(27, 22);
-            this.label29.TabIndex = 17;
-            this.label29.Text = "%";
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel16.Controls.Add(this.history_visceralfat_txt);
+            this.panel16.Controls.Add(this.label27);
+            this.panel16.Location = new System.Drawing.Point(356, 496);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(392, 63);
+            this.panel16.TabIndex = 33;
             // 
-            // label28
+            // history_visceralfat_txt
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(220, 22);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(34, 22);
-            this.label28.TabIndex = 16;
-            this.label28.Text = "Kg";
+            this.history_visceralfat_txt.Location = new System.Drawing.Point(169, 18);
+            this.history_visceralfat_txt.Name = "history_visceralfat_txt";
+            this.history_visceralfat_txt.Size = new System.Drawing.Size(45, 29);
+            this.history_visceralfat_txt.TabIndex = 16;
+            this.history_visceralfat_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label27.Location = new System.Drawing.Point(75, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(97, 46);
+            this.label27.TabIndex = 15;
+            this.label27.Text = "Visceral Fat:";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel15.Controls.Add(this.history_waterperc_txt);
+            this.panel15.Controls.Add(this.label24);
+            this.panel15.Controls.Add(this.label29);
+            this.panel15.Location = new System.Drawing.Point(356, 427);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(392, 63);
+            this.panel15.TabIndex = 32;
             // 
             // history_waterperc_txt
             // 
@@ -671,14 +719,6 @@ namespace DietApp
             this.history_waterperc_txt.Size = new System.Drawing.Size(45, 29);
             this.history_waterperc_txt.TabIndex = 11;
             this.history_waterperc_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
-            // 
-            // history_musclemass_txt
-            // 
-            this.history_musclemass_txt.Location = new System.Drawing.Point(169, 19);
-            this.history_musclemass_txt.Name = "history_musclemass_txt";
-            this.history_musclemass_txt.Size = new System.Drawing.Size(45, 29);
-            this.history_musclemass_txt.TabIndex = 10;
-            this.history_musclemass_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
             // 
             // label24
             // 
@@ -691,6 +731,35 @@ namespace DietApp
             this.label24.TabIndex = 4;
             this.label24.Text = "Water %:";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(223, 16);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(27, 22);
+            this.label29.TabIndex = 17;
+            this.label29.Text = "%";
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel14.Controls.Add(this.history_musclemass_txt);
+            this.panel14.Controls.Add(this.label23);
+            this.panel14.Controls.Add(this.label28);
+            this.panel14.Location = new System.Drawing.Point(356, 358);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(392, 63);
+            this.panel14.TabIndex = 31;
+            // 
+            // history_musclemass_txt
+            // 
+            this.history_musclemass_txt.Location = new System.Drawing.Point(169, 19);
+            this.history_musclemass_txt.Name = "history_musclemass_txt";
+            this.history_musclemass_txt.Size = new System.Drawing.Size(45, 29);
+            this.history_musclemass_txt.TabIndex = 10;
+            this.history_musclemass_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
+            // 
             // label23
             // 
             this.label23.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -700,6 +769,159 @@ namespace DietApp
             this.label23.Size = new System.Drawing.Size(76, 48);
             this.label23.TabIndex = 3;
             this.label23.Text = "Muscle Mass:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(220, 22);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(34, 22);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "Kg";
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel13.Controls.Add(this.label30);
+            this.panel13.Controls.Add(this.history_fatperc_txt);
+            this.panel13.Controls.Add(this.label26);
+            this.panel13.Location = new System.Drawing.Point(356, 289);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(392, 63);
+            this.panel13.TabIndex = 30;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(220, 18);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(27, 22);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "%";
+            // 
+            // history_fatperc_txt
+            // 
+            this.history_fatperc_txt.Location = new System.Drawing.Point(169, 15);
+            this.history_fatperc_txt.Name = "history_fatperc_txt";
+            this.history_fatperc_txt.Size = new System.Drawing.Size(45, 29);
+            this.history_fatperc_txt.TabIndex = 20;
+            this.history_fatperc_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label26.Location = new System.Drawing.Point(75, 18);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(64, 22);
+            this.label26.TabIndex = 19;
+            this.label26.Text = "Fat %:";
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel12.Controls.Add(this.history_weight_txt);
+            this.panel12.Controls.Add(this.label22);
+            this.panel12.Controls.Add(this.label19);
+            this.panel12.Location = new System.Drawing.Point(356, 220);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(392, 63);
+            this.panel12.TabIndex = 29;
+            // 
+            // history_weight_txt
+            // 
+            this.history_weight_txt.Location = new System.Drawing.Point(169, 15);
+            this.history_weight_txt.Name = "history_weight_txt";
+            this.history_weight_txt.Size = new System.Drawing.Size(45, 29);
+            this.history_weight_txt.TabIndex = 17;
+            this.history_weight_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label22.Location = new System.Drawing.Point(75, 18);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 22);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "Weight:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(220, 18);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 22);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "Kg";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.history_bmi_txt);
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Location = new System.Drawing.Point(356, 151);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(392, 63);
+            this.panel2.TabIndex = 28;
+            // 
+            // history_bmi_txt
+            // 
+            this.history_bmi_txt.Enabled = false;
+            this.history_bmi_txt.Location = new System.Drawing.Point(169, 15);
+            this.history_bmi_txt.Name = "history_bmi_txt";
+            this.history_bmi_txt.ReadOnly = true;
+            this.history_bmi_txt.Size = new System.Drawing.Size(45, 29);
+            this.history_bmi_txt.TabIndex = 14;
+            this.history_bmi_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label25.Location = new System.Drawing.Point(75, 18);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(49, 22);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "BMI:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.history_date_cb);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Location = new System.Drawing.Point(356, 79);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(392, 63);
+            this.panel1.TabIndex = 25;
+            // 
+            // history_date_cb
+            // 
+            this.history_date_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.history_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.history_date_cb.FormattingEnabled = true;
+            this.history_date_cb.Location = new System.Drawing.Point(169, 17);
+            this.history_date_cb.Name = "history_date_cb";
+            this.history_date_cb.Size = new System.Drawing.Size(190, 26);
+            this.history_date_cb.TabIndex = 27;
+            this.history_date_cb.SelectedIndexChanged += new System.EventHandler(this.history_date_cb_SelectedIndexChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label21.Location = new System.Drawing.Point(75, 17);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 22);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Date:";
             // 
             // history_entry_lbl
             // 
@@ -738,7 +960,7 @@ namespace DietApp
             this.info_pnl.Controls.Add(this.label1);
             this.info_pnl.Location = new System.Drawing.Point(17, 55);
             this.info_pnl.Name = "info_pnl";
-            this.info_pnl.Size = new System.Drawing.Size(17, 13);
+            this.info_pnl.Size = new System.Drawing.Size(13, 13);
             this.info_pnl.TabIndex = 6;
             // 
             // label18
@@ -909,6 +1131,313 @@ namespace DietApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Fullname:";
             // 
+            // diet_pnl
+            // 
+            this.diet_pnl.BackColor = System.Drawing.Color.SteelBlue;
+            this.diet_pnl.Controls.Add(this.diet_plan_pnl);
+            this.diet_pnl.Controls.Add(this.panel18);
+            this.diet_pnl.Location = new System.Drawing.Point(0, 55);
+            this.diet_pnl.Name = "diet_pnl";
+            this.diet_pnl.Size = new System.Drawing.Size(1110, 745);
+            this.diet_pnl.TabIndex = 8;
+            this.diet_pnl.Visible = false;
+            // 
+            // diet_plan_pnl
+            // 
+            this.diet_plan_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_plan_pnl.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.diet_plan_pnl.ColumnCount = 8;
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.Controls.Add(this.label32, 0, 0);
+            this.diet_plan_pnl.Controls.Add(this.label34, 1, 0);
+            this.diet_plan_pnl.Controls.Add(this.label35, 2, 0);
+            this.diet_plan_pnl.Controls.Add(this.label36, 3, 0);
+            this.diet_plan_pnl.Controls.Add(this.label37, 4, 0);
+            this.diet_plan_pnl.Controls.Add(this.label38, 5, 0);
+            this.diet_plan_pnl.Controls.Add(this.label39, 6, 0);
+            this.diet_plan_pnl.Controls.Add(this.label40, 7, 0);
+            this.diet_plan_pnl.Controls.Add(this.label41, 0, 1);
+            this.diet_plan_pnl.Controls.Add(this.label42, 0, 2);
+            this.diet_plan_pnl.Controls.Add(this.label43, 0, 3);
+            this.diet_plan_pnl.Controls.Add(this.label44, 0, 4);
+            this.diet_plan_pnl.Controls.Add(this.label45, 0, 5);
+            this.diet_plan_pnl.Controls.Add(this.label46, 0, 6);
+            this.diet_plan_pnl.Controls.Add(this.label47, 0, 7);
+            this.diet_plan_pnl.ForeColor = System.Drawing.Color.White;
+            this.diet_plan_pnl.Location = new System.Drawing.Point(92, 166);
+            this.diet_plan_pnl.Name = "diet_plan_pnl";
+            this.diet_plan_pnl.RowCount = 8;
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.diet_plan_pnl.Size = new System.Drawing.Size(911, 512);
+            this.diet_plan_pnl.TabIndex = 3;
+            this.diet_plan_pnl.Visible = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label32.Location = new System.Drawing.Point(4, 1);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(106, 62);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Time";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label34.Location = new System.Drawing.Point(117, 1);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(106, 62);
+            this.label34.TabIndex = 1;
+            this.label34.Text = "Monday";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label35.Location = new System.Drawing.Point(230, 1);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(106, 62);
+            this.label35.TabIndex = 2;
+            this.label35.Text = "Thuesday";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label36.Location = new System.Drawing.Point(343, 1);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(106, 62);
+            this.label36.TabIndex = 3;
+            this.label36.Text = "Wednesday";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label37.Location = new System.Drawing.Point(456, 1);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(106, 62);
+            this.label37.TabIndex = 4;
+            this.label37.Text = "Thursday";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label38.Location = new System.Drawing.Point(569, 1);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(106, 62);
+            this.label38.TabIndex = 5;
+            this.label38.Text = "Friday";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label39.Location = new System.Drawing.Point(682, 1);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(106, 62);
+            this.label39.TabIndex = 6;
+            this.label39.Text = "Saturday";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label40.Location = new System.Drawing.Point(795, 1);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(112, 62);
+            this.label40.TabIndex = 7;
+            this.label40.Text = "Sunday";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label41.Location = new System.Drawing.Point(4, 64);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(106, 62);
+            this.label41.TabIndex = 8;
+            this.label41.Text = "10:00";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label42.Location = new System.Drawing.Point(4, 127);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(106, 62);
+            this.label42.TabIndex = 9;
+            this.label42.Text = "12:00";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label43.Location = new System.Drawing.Point(4, 190);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(106, 62);
+            this.label43.TabIndex = 10;
+            this.label43.Text = "14:00";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label44.Location = new System.Drawing.Point(4, 253);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(106, 62);
+            this.label44.TabIndex = 11;
+            this.label44.Text = "16:00";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label45.Location = new System.Drawing.Point(4, 316);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(106, 62);
+            this.label45.TabIndex = 12;
+            this.label45.Text = "18:00";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label46.Location = new System.Drawing.Point(4, 379);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(106, 62);
+            this.label46.TabIndex = 13;
+            this.label46.Text = "20:00";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label47.Location = new System.Drawing.Point(4, 442);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(106, 69);
+            this.label47.TabIndex = 14;
+            this.label47.Text = "22:00";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel18.Controls.Add(this.diet_close_btn);
+            this.panel18.Controls.Add(this.diet_gendiet_btn);
+            this.panel18.Controls.Add(this.diet_diettype_cb);
+            this.panel18.Controls.Add(this.label33);
+            this.panel18.Controls.Add(this.diet_type_cb);
+            this.panel18.Controls.Add(this.diet_date_cb);
+            this.panel18.Controls.Add(this.label31);
+            this.panel18.Controls.Add(this.label20);
+            this.panel18.Location = new System.Drawing.Point(133, 31);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(820, 116);
+            this.panel18.TabIndex = 2;
+            // 
+            // diet_diettype_cb
+            // 
+            this.diet_diettype_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_diettype_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_diettype_cb.FormattingEnabled = true;
+            this.diet_diettype_cb.Location = new System.Drawing.Point(521, 23);
+            this.diet_diettype_cb.Margin = new System.Windows.Forms.Padding(2);
+            this.diet_diettype_cb.Name = "diet_diettype_cb";
+            this.diet_diettype_cb.Size = new System.Drawing.Size(137, 26);
+            this.diet_diettype_cb.TabIndex = 7;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label33.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(361, 24);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(105, 24);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Diet Type:";
+            // 
+            // diet_type_cb
+            // 
+            this.diet_type_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_type_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_type_cb.FormattingEnabled = true;
+            this.diet_type_cb.Location = new System.Drawing.Point(145, 73);
+            this.diet_type_cb.Margin = new System.Windows.Forms.Padding(2);
+            this.diet_type_cb.Name = "diet_type_cb";
+            this.diet_type_cb.Size = new System.Drawing.Size(137, 26);
+            this.diet_type_cb.TabIndex = 5;
+            // 
+            // diet_date_cb
+            // 
+            this.diet_date_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_date_cb.FormattingEnabled = true;
+            this.diet_date_cb.Location = new System.Drawing.Point(145, 23);
+            this.diet_date_cb.Margin = new System.Windows.Forms.Padding(2);
+            this.diet_date_cb.Name = "diet_date_cb";
+            this.diet_date_cb.Size = new System.Drawing.Size(137, 26);
+            this.diet_date_cb.TabIndex = 4;
+            this.diet_date_cb.SelectedIndexChanged += new System.EventHandler(this.diet_date_cb_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label31.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(38, 72);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(61, 24);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "Type:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(36, 22);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 24);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Date:";
+            // 
             // navBar_pnl
             // 
             this.navBar_pnl.Controls.Add(this.diet_navBar_pnl);
@@ -993,208 +1522,6 @@ namespace DietApp
             this.info_lbl.Click += new System.EventHandler(this.info_lbl_Click);
             this.info_lbl.MouseEnter += new System.EventHandler(this.info_lbl_MouseEnter);
             this.info_lbl.MouseLeave += new System.EventHandler(this.info_lbl_MouseLeave);
-            // 
-            // diet_pnl
-            // 
-            this.diet_pnl.BackColor = System.Drawing.Color.SteelBlue;
-            this.diet_pnl.Location = new System.Drawing.Point(1095, 783);
-            this.diet_pnl.Name = "diet_pnl";
-            this.diet_pnl.Size = new System.Drawing.Size(15, 17);
-            this.diet_pnl.TabIndex = 8;
-            this.diet_pnl.Visible = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.history_date_cb);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Location = new System.Drawing.Point(356, 79);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 63);
-            this.panel1.TabIndex = 25;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label21.Location = new System.Drawing.Point(75, 17);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(55, 22);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Date:";
-            // 
-            // history_date_cb
-            // 
-            this.history_date_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.history_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history_date_cb.FormattingEnabled = true;
-            this.history_date_cb.Location = new System.Drawing.Point(169, 17);
-            this.history_date_cb.Name = "history_date_cb";
-            this.history_date_cb.Size = new System.Drawing.Size(190, 26);
-            this.history_date_cb.TabIndex = 27;
-            this.history_date_cb.SelectedIndexChanged += new System.EventHandler(this.history_date_cb_SelectedIndexChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.history_bmi_txt);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Location = new System.Drawing.Point(356, 151);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(392, 63);
-            this.panel2.TabIndex = 28;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel12.Controls.Add(this.history_weight_txt);
-            this.panel12.Controls.Add(this.label22);
-            this.panel12.Controls.Add(this.label19);
-            this.panel12.Location = new System.Drawing.Point(356, 220);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(392, 63);
-            this.panel12.TabIndex = 29;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel13.Controls.Add(this.label30);
-            this.panel13.Controls.Add(this.history_fatperc_txt);
-            this.panel13.Controls.Add(this.label26);
-            this.panel13.Location = new System.Drawing.Point(356, 289);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(392, 63);
-            this.panel13.TabIndex = 30;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel14.Controls.Add(this.history_musclemass_txt);
-            this.panel14.Controls.Add(this.label23);
-            this.panel14.Controls.Add(this.label28);
-            this.panel14.Location = new System.Drawing.Point(356, 358);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(392, 63);
-            this.panel14.TabIndex = 31;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel15.Controls.Add(this.history_waterperc_txt);
-            this.panel15.Controls.Add(this.label24);
-            this.panel15.Controls.Add(this.label29);
-            this.panel15.Location = new System.Drawing.Point(356, 427);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(392, 63);
-            this.panel15.TabIndex = 32;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.panel16.Controls.Add(this.history_visceralfat_txt);
-            this.panel16.Controls.Add(this.label27);
-            this.panel16.Location = new System.Drawing.Point(356, 496);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(392, 63);
-            this.panel16.TabIndex = 33;
-            // 
-            // history_weight_txt
-            // 
-            this.history_weight_txt.Location = new System.Drawing.Point(169, 15);
-            this.history_weight_txt.Name = "history_weight_txt";
-            this.history_weight_txt.Size = new System.Drawing.Size(45, 29);
-            this.history_weight_txt.TabIndex = 17;
-            this.history_weight_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label22.Location = new System.Drawing.Point(75, 18);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(75, 22);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Weight:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(220, 18);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 22);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "Kg";
-            // 
-            // history_bmi_txt
-            // 
-            this.history_bmi_txt.Enabled = false;
-            this.history_bmi_txt.Location = new System.Drawing.Point(169, 15);
-            this.history_bmi_txt.Name = "history_bmi_txt";
-            this.history_bmi_txt.ReadOnly = true;
-            this.history_bmi_txt.Size = new System.Drawing.Size(45, 29);
-            this.history_bmi_txt.TabIndex = 14;
-            this.history_bmi_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label25.Location = new System.Drawing.Point(75, 18);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(49, 22);
-            this.label25.TabIndex = 13;
-            this.label25.Text = "BMI:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(220, 18);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(27, 22);
-            this.label30.TabIndex = 21;
-            this.label30.Text = "%";
-            // 
-            // history_fatperc_txt
-            // 
-            this.history_fatperc_txt.Location = new System.Drawing.Point(169, 15);
-            this.history_fatperc_txt.Name = "history_fatperc_txt";
-            this.history_fatperc_txt.Size = new System.Drawing.Size(45, 29);
-            this.history_fatperc_txt.TabIndex = 20;
-            this.history_fatperc_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label26.Location = new System.Drawing.Point(75, 18);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(64, 22);
-            this.label26.TabIndex = 19;
-            this.label26.Text = "Fat %:";
-            // 
-            // history_visceralfat_txt
-            // 
-            this.history_visceralfat_txt.Location = new System.Drawing.Point(169, 18);
-            this.history_visceralfat_txt.Name = "history_visceralfat_txt";
-            this.history_visceralfat_txt.Size = new System.Drawing.Size(45, 29);
-            this.history_visceralfat_txt.TabIndex = 16;
-            this.history_visceralfat_txt.Leave += new System.EventHandler(this.history_checkUnfocus_Leave);
-            // 
-            // label27
-            // 
-            this.label27.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label27.Location = new System.Drawing.Point(75, 10);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(97, 46);
-            this.label27.TabIndex = 15;
-            this.label27.Text = "Visceral Fat:";
             // 
             // history_showgraph_btn
             // 
@@ -1422,6 +1749,28 @@ namespace DietApp
             this.info_edit_btn.UseVisualStyleBackColor = true;
             this.info_edit_btn.Click += new System.EventHandler(this.info_edit_btn_Click);
             // 
+            // diet_gendiet_btn
+            // 
+            this.diet_gendiet_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.diet_gendiet_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.diet_gendiet_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_gendiet_btn.FlatAppearance.BorderSize = 0;
+            this.diet_gendiet_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_gendiet_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_gendiet_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_gendiet_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_gendiet_btn.Location = new System.Drawing.Point(332, 69);
+            this.diet_gendiet_btn.Name = "diet_gendiet_btn";
+            this.diet_gendiet_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_gendiet_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_gendiet_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.diet_gendiet_btn.Size = new System.Drawing.Size(165, 34);
+            this.diet_gendiet_btn.TabIndex = 4;
+            this.diet_gendiet_btn.Text = "Generate Diet";
+            this.diet_gendiet_btn.TextColor = System.Drawing.Color.White;
+            this.diet_gendiet_btn.UseVisualStyleBackColor = true;
+            this.diet_gendiet_btn.Click += new System.EventHandler(this.diet_gendiet_btn_Click);
+            // 
             // clear_btn
             // 
             this.clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
@@ -1488,6 +1837,28 @@ namespace DietApp
             this.AddClient_btn.UseVisualStyleBackColor = true;
             this.AddClient_btn.Click += new System.EventHandler(this.AddClient_btn_Click);
             // 
+            // diet_close_btn
+            // 
+            this.diet_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.diet_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.diet_close_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_close_btn.FlatAppearance.BorderSize = 0;
+            this.diet_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_close_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_close_btn.Location = new System.Drawing.Point(526, 69);
+            this.diet_close_btn.Name = "diet_close_btn";
+            this.diet_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_close_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.diet_close_btn.Size = new System.Drawing.Size(165, 34);
+            this.diet_close_btn.TabIndex = 8;
+            this.diet_close_btn.Text = "Close";
+            this.diet_close_btn.TextColor = System.Drawing.Color.White;
+            this.diet_close_btn.UseVisualStyleBackColor = true;
+            this.diet_close_btn.Click += new System.EventHandler(this.diet_close_btn_Click);
+            // 
             // UcClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1526,26 +1897,31 @@ namespace DietApp
             this.ClientCard_pnl.ResumeLayout(false);
             this.history_pnl.ResumeLayout(false);
             this.history_pnl.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.info_pnl.ResumeLayout(false);
             this.info_pnl.PerformLayout();
+            this.diet_pnl.ResumeLayout(false);
+            this.diet_plan_pnl.ResumeLayout(false);
+            this.diet_plan_pnl.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.navBar_pnl.ResumeLayout(false);
             this.diet_navBar_pnl.ResumeLayout(false);
             this.history_navBar_pnl.ResumeLayout(false);
             this.info_navBar_pnl.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1657,5 +2033,30 @@ namespace DietApp
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox history_bmi_txt;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.ComboBox diet_diettype_cb;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox diet_type_cb;
+        private System.Windows.Forms.ComboBox diet_date_cb;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label20;
+        private RoundButtons diet_gendiet_btn;
+        private System.Windows.Forms.TableLayoutPanel diet_plan_pnl;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private RoundButtons diet_close_btn;
     }
 }
