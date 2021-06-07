@@ -195,7 +195,7 @@ namespace DietApp
             ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
 
             // Set back color of info_navBar_pnl
-            info_navBar_pnl.BackColor = Color.FromArgb(70, 130, 180);
+            info_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
             
             var tmp = showClients_pnl.CurrentCell.RowIndex;
             _height = short.Parse(showClients_pnl.Rows[tmp].Cells["height"].Value.ToString());
@@ -503,7 +503,7 @@ namespace DietApp
                 info_lbl.Cursor = Cursors.Default;
                 return;
             }
-            info_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
         }
         private void info_lbl_MouseLeave(object sender, EventArgs e)
@@ -533,7 +533,7 @@ namespace DietApp
                 history_lbl.Cursor = Cursors.Default;
                 return;
             }
-            history_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             history_lbl.ForeColor = Color.FromArgb(15, 82, 186);
         }
         private void history_lbl_MouseLeave(object sender, EventArgs e)
@@ -734,7 +734,7 @@ namespace DietApp
                 diet_lbl.Cursor = Cursors.Default;
                 return;
             }
-            diet_navBar_pnl.BackColor = Color.FromArgb(0, 128, 255);
+            diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
         }
         private void diet_lbl_MouseLeave(object sender, EventArgs e)
