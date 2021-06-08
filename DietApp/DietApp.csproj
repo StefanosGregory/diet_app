@@ -92,6 +92,7 @@
     <Compile Include="DayFormAppoint.Designer.cs">
       <DependentUpon>DayFormAppoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerationOfDiet.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

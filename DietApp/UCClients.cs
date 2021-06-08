@@ -250,43 +250,6 @@ namespace DietApp
             }
 
         }
-        private void showClients_pnl_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            var clientRow = showClients_pnl.CurrentRow;
-            if (clientRow != null && clientRow.Cells["id"].Value == null) return;
-            if (MessageBox.Show(@"Are you sure you want to delete the selected client?", @"Warning",
-                MessageBoxButtons.YesNo) != DialogResult.Yes) return;
-            try
-            {
-                var conn = new NpgsqlConnection(Cs);
-                conn.Open();
-
-                var cmd = new NpgsqlCommand
-                {
-                    Connection = conn,
-                    CommandText = "DELETE FROM clients WHERE id = @id;"
-                };
-                if (clientRow != null)
-                    cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value =
-                        short.Parse(clientRow.Cells["id"].Value.ToString());
-
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show(@"Client deleted successfully!");
-
-                    // Reset sequence.
-                    new NpgsqlCommand("ALTER SEQUENCE appointments_id_seq RESTART;", conn).ExecuteNonQuery();
-                    new NpgsqlCommand("UPDATE appointments SET id = DEFAULT;", conn).ExecuteNonQuery();
-                }
-                else MessageBox.Show(@"Something went wrong! Please try again later.");
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
         private void clear_btn_Click(object sender, EventArgs e)
         {
             search_txt.Clear();
@@ -746,7 +709,11 @@ namespace DietApp
         }
         private void diet_gendiet_btn_Click(object sender, EventArgs e)
         {
+            if (diet_date_cb.Text.Equals("") || diet_diettype_cb.Text.Equals("") || diet_type_cb.Text.Equals("")) return;
+            // return diet and display it on diet_plan_pnl.
+            var diet = new GenerationOfDiet(diet_diettype_cb.Text, diet_type_cb.Text, _height, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id).dietGeneration();
             diet_plan_pnl.Visible = true;
+            
         }
         private void diet_close_btn_Click(object sender, EventArgs e)
         {
