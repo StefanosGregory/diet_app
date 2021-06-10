@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using Npgsql;
 using NpgsqlTypes;
 
@@ -9,20 +12,35 @@ namespace DietApp
     public class GenerationOfDiet
     {
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
-        private DateTime _dateTime;
-        private string _clientType, _dietType, _sex;
-        private int _bmi, _height, _age, _id;
+        private readonly DateTime _dateTime;
+        private List<NutritionInfo> _monday = new List<NutritionInfo>(), _tuesday = new List<NutritionInfo>(), _wednesday = new List<NutritionInfo>(), _thursday = new List<NutritionInfo>(), _friday = new List<NutritionInfo>(), _saturday = new List<NutritionInfo>(), _sunday = new List<NutritionInfo>();
+        private ClientCalories _clientCalories = null;
+        private readonly string _clientType, _dietType, _sex;
+        private readonly int _age, _id, _clientshistoryid;
 
-        public GenerationOfDiet(string clientType, string dietType, int height, DateTime dateTime, int age, string sex, int id)
+        public GenerationOfDiet()
+        {
+            
+        }
+        public GenerationOfDiet(string clientType, string dietType, DateTime dateTime, int age, string sex, int id, int clientshistoryid)
         {
             _clientType = clientType;
             _dietType = dietType;
-            _height = height;
             _dateTime = dateTime;
             _age = age;
             _sex = sex;
             _id = id;
+            _clientshistoryid = clientshistoryid;
+        }
 
+        private void getCaloriesInfo()
+        {
+            //
+            _clientCalories = new ClientCalories(_clientType, _age);
+        }
+
+        public NutritionInfo getOldDiet()
+        {
             try
             {
                 var conn = new NpgsqlConnection(Cs);
@@ -30,36 +48,42 @@ namespace DietApp
 
                 var cmd = new NpgsqlCommand
                 {
-                    CommandText = "SELECT bmi FROM clientshistory WHERE datetime = @datetime AND id = @id;",
+                    CommandText = "SELECT typesa, diet_type, monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM clientdiet WHERE clientsid = @clientsid AND datetime = @datetime AND clientshistoryid = @clientshistoryid;",
                     Connection = conn
                 };
+                cmd.Parameters.Add("@clientsid", NpgsqlDbType.Integer).Value = _id;
                 cmd.Parameters.Add("@datetime", NpgsqlDbType.Date).Value = _dateTime;
-                cmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+                cmd.Parameters.Add("@clientshistoryid", NpgsqlDbType.Integer).Value = _clientshistoryid;
+
                 var reader = cmd.ExecuteReader();
-                while (reader.Read())
+                if (reader.HasRows)
                 {
-                    _bmi = short.Parse(reader[0].ToString());
+                    while (reader.Read())
+                    {
+                        //
+                        
+                    }
                 }
-                conn.Dispose();
-                conn.Close();
-                
+                else
+                {
+                    MessageBox.Show(@"No diet found for the selected date.");
+                }
             }
             catch (SqlException e)
             {
-                //
+                MessageBox.Show(e.Message);
             }
+            return null;
         }
-
-        public string dietGeneration()
+        public NutritionInfo DietGeneration()
         {
-            string diet;
-            var main = new string[2];  
             var conn = new NpgsqlConnection(Cs);
             var cmdMain = new NpgsqlCommand
             {
-                CommandText = "SELECT * FROM food_options WHERE type = 'Main';",
+                CommandText = "SELECT * FROM food_options WHERE id = @id and type = 'Main';",
                 Connection = conn 
             };
+            cmdMain.Parameters.Add("@id", NpgsqlDbType.Integer).Value = "";
             var reader = cmdMain.ExecuteReader();
             var i = 0;
             while (reader.Read())

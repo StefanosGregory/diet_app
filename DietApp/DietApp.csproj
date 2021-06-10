@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -86,6 +87,8 @@
     <Compile Include="AddAppointmentForm.Designer.cs">
       <DependentUpon>AddAppointmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientCalories.cs" />
+    <Compile Include="NutritionInfo.cs" />
     <Compile Include="DayFormAppoint.cs">
       <SubType>Form</SubType>
     </Compile>

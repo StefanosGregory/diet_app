@@ -12,7 +12,7 @@ namespace DietApp
     public partial class UcClients : UserControl
     {
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
-        private int _id, _height;
+        private int _id, _height, _clienthistoryid;
         public UcClients()
         {
             InitializeComponent();
@@ -58,6 +58,7 @@ namespace DietApp
             /*--- diet_pnl ---*/
             diet_pnl.Size = new Size(1110, 745);
             diet_pnl.Location = new Point(0, 55);
+            diet_diettype_cb.SelectedIndex = diet_type_cb.SelectedIndex = 0;
         }
         
         /*
@@ -527,6 +528,7 @@ namespace DietApp
                     history_entry_lbl.Text = @"Previous Entry";
                     while (reader.Read())
                     {
+                        _clienthistoryid = short.Parse(reader[0].ToString());
                         history_weight_txt.Text = reader[3].ToString();
                         history_fatperc_txt.Text = reader[4].ToString();
                         history_musclemass_txt.Text = reader[5].ToString();
@@ -711,7 +713,7 @@ namespace DietApp
         {
             if (diet_date_cb.Text.Equals("") || diet_diettype_cb.Text.Equals("") || diet_type_cb.Text.Equals("")) return;
             // return diet and display it on diet_plan_pnl.
-            var diet = new GenerationOfDiet(diet_diettype_cb.Text, diet_type_cb.Text, _height, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id).dietGeneration();
+            //var diet = new GenerationOfDiet(diet_diettype_cb.Text, diet_type_cb.Text, _height, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid).DietGeneration();
             diet_plan_pnl.Visible = true;
             
         }
@@ -732,7 +734,13 @@ namespace DietApp
         {
             // if selected date is already registered in db display entry on diet_plan_pnl.
 
-            // if new create a new diet plan.
+            // if new create a new diet plan
+            //var olddiet = new GenerationOfDiet()
+        }
+
+        private void displayDiet()
+        {
+            // display old or new generated diet.
         }
 
         
