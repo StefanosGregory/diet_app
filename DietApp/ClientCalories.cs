@@ -9,7 +9,7 @@ namespace DietApp
     {
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         private readonly int _id, _calories;
-        public ClientCalories(string type, int age)
+        public ClientCalories(string type, int age, string sex)
         {
             //
             try
@@ -20,10 +20,11 @@ namespace DietApp
                 var cmd = new NpgsqlCommand
                 {
                     Connection = conn,
-                    CommandText = "SELECT id, standard, active athletic FROM caloriesinfo WHERE type = @type AND (agemin >= @age OR agemax <= @age);"
+                    CommandText = "SELECT id, standard, active athletic FROM caloriesinfo WHERE type = @type AND (agemin >= @age AND agemax <= @age) AND sex = @sex;"
                 };
                 cmd.Parameters.Add("@type", NpgsqlDbType.Char).Value = type;
                 cmd.Parameters.Add("@age", NpgsqlDbType.Integer).Value = age;
+                cmd.Parameters.Add("@sex", NpgsqlDbType.Char).Value = sex;
                 
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -48,7 +49,7 @@ namespace DietApp
             
         }
 
-        public int getID() { return _id; }
-        public int getCalories() { return _calories; }
+        public int GetId() { return _id; }
+        public int GetCalories() { return _calories; }
     }
 }

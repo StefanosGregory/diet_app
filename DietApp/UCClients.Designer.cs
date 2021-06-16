@@ -38,9 +38,6 @@ namespace DietApp
             this.showClients_pnl = new System.Windows.Forms.DataGridView();
             this.searchType_cb = new System.Windows.Forms.ComboBox();
             this.search_txt = new System.Windows.Forms.TextBox();
-            this.clear_btn = new DietApp.RoundButtons();
-            this.Search_btn = new DietApp.RoundButtons();
-            this.AddClient_btn = new DietApp.RoundButtons();
             this.AddClient_pnl = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -97,18 +94,8 @@ namespace DietApp
             this.panel1 = new System.Windows.Forms.Panel();
             this.history_date_cb = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.history_showgraph_btn = new DietApp.RoundButtons();
-            this.history_saveEntry_btn = new DietApp.RoundButtons();
-            this.history_clear_btn = new DietApp.RoundButtons();
-            this.history_editEntry_btn = new DietApp.RoundButtons();
-            this.history_close_btn = new DietApp.RoundButtons();
-            this.history_addEntry_btn = new DietApp.RoundButtons();
             this.history_entry_lbl = new System.Windows.Forms.Label();
             this.info_pnl = new System.Windows.Forms.Panel();
-            this.info_cancel_btn = new DietApp.RoundButtons();
-            this.info_save_btn = new DietApp.RoundButtons();
-            this.info_close_btn = new DietApp.RoundButtons();
-            this.info_edit_btn = new DietApp.RoundButtons();
             this.label18 = new System.Windows.Forms.Label();
             this.info_sex_cb = new System.Windows.Forms.ComboBox();
             this.info_healthprobs_txt = new System.Windows.Forms.RichTextBox();
@@ -135,17 +122,13 @@ namespace DietApp
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.diet_close_btn = new DietApp.RoundButtons();
-            this.diet_gendiet_btn = new DietApp.RoundButtons();
             this.diet_diettype_cb = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.diet_type_cb = new System.Windows.Forms.ComboBox();
@@ -159,7 +142,23 @@ namespace DietApp
             this.history_lbl = new System.Windows.Forms.Label();
             this.info_navBar_pnl = new System.Windows.Forms.Panel();
             this.info_lbl = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.history_showgraph_btn = new DietApp.RoundButtons();
+            this.history_saveEntry_btn = new DietApp.RoundButtons();
+            this.history_clear_btn = new DietApp.RoundButtons();
+            this.history_editEntry_btn = new DietApp.RoundButtons();
+            this.history_close_btn = new DietApp.RoundButtons();
+            this.history_addEntry_btn = new DietApp.RoundButtons();
+            this.info_cancel_btn = new DietApp.RoundButtons();
+            this.info_save_btn = new DietApp.RoundButtons();
+            this.info_close_btn = new DietApp.RoundButtons();
+            this.info_edit_btn = new DietApp.RoundButtons();
+            this.diet_close_btn = new DietApp.RoundButtons();
+            this.diet_gendiet_btn = new DietApp.RoundButtons();
+            this.clear_btn = new DietApp.RoundButtons();
+            this.Search_btn = new DietApp.RoundButtons();
+            this.AddClient_btn = new DietApp.RoundButtons();
+            this.label47 = new System.Windows.Forms.Label();
             this.ShowAll_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showClients_pnl)).BeginInit();
             this.AddClient_pnl.SuspendLayout();
@@ -301,72 +300,6 @@ namespace DietApp
             this.search_txt.Name = "search_txt";
             this.search_txt.Size = new System.Drawing.Size(125, 23);
             this.search_txt.TabIndex = 15;
-            // 
-            // clear_btn
-            // 
-            this.clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.clear_btn.FlatAppearance.BorderSize = 0;
-            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_btn.Location = new System.Drawing.Point(672, 30);
-            this.clear_btn.Name = "clear_btn";
-            this.clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.clear_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.clear_btn.Size = new System.Drawing.Size(89, 23);
-            this.clear_btn.TabIndex = 14;
-            this.clear_btn.Text = "Clear";
-            this.clear_btn.TextColor = System.Drawing.Color.White;
-            this.clear_btn.UseVisualStyleBackColor = true;
-            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
-            // 
-            // Search_btn
-            // 
-            this.Search_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
-            this.Search_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
-            this.Search_btn.FlatAppearance.BorderSize = 0;
-            this.Search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Search_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_btn.ForeColor = System.Drawing.Color.White;
-            this.Search_btn.Location = new System.Drawing.Point(577, 30);
-            this.Search_btn.Name = "Search_btn";
-            this.Search_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
-            this.Search_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
-            this.Search_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.Search_btn.Size = new System.Drawing.Size(89, 23);
-            this.Search_btn.TabIndex = 13;
-            this.Search_btn.Text = "Search";
-            this.Search_btn.TextColor = System.Drawing.Color.White;
-            this.Search_btn.UseVisualStyleBackColor = true;
-            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
-            // 
-            // AddClient_btn
-            // 
-            this.AddClient_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.AddClient_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.AddClient_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.AddClient_btn.FlatAppearance.BorderSize = 0;
-            this.AddClient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.AddClient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.AddClient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddClient_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddClient_btn.ForeColor = System.Drawing.Color.White;
-            this.AddClient_btn.Location = new System.Drawing.Point(25, 26);
-            this.AddClient_btn.Name = "AddClient_btn";
-            this.AddClient_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.AddClient_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.AddClient_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.AddClient_btn.Size = new System.Drawing.Size(118, 23);
-            this.AddClient_btn.TabIndex = 12;
-            this.AddClient_btn.Text = "Add New";
-            this.AddClient_btn.TextColor = System.Drawing.Color.White;
-            this.AddClient_btn.UseVisualStyleBackColor = true;
-            this.AddClient_btn.Click += new System.EventHandler(this.AddClient_btn_Click);
             // 
             // AddClient_pnl
             // 
@@ -990,138 +923,6 @@ namespace DietApp
             this.label21.TabIndex = 26;
             this.label21.Text = "Date:";
             // 
-            // history_showgraph_btn
-            // 
-            this.history_showgraph_btn.BorderColor = System.Drawing.Color.Silver;
-            this.history_showgraph_btn.ButtonColor = System.Drawing.Color.Red;
-            this.history_showgraph_btn.FlatAppearance.BorderSize = 0;
-            this.history_showgraph_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_showgraph_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_showgraph_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_showgraph_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_showgraph_btn.Location = new System.Drawing.Point(472, 592);
-            this.history_showgraph_btn.Name = "history_showgraph_btn";
-            this.history_showgraph_btn.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.history_showgraph_btn.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.history_showgraph_btn.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.history_showgraph_btn.Size = new System.Drawing.Size(145, 35);
-            this.history_showgraph_btn.TabIndex = 24;
-            this.history_showgraph_btn.Text = "Show Graph";
-            this.history_showgraph_btn.TextColor = System.Drawing.Color.White;
-            this.history_showgraph_btn.UseVisualStyleBackColor = true;
-            this.history_showgraph_btn.Visible = false;
-            // 
-            // history_saveEntry_btn
-            // 
-            this.history_saveEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_saveEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_saveEntry_btn.FlatAppearance.BorderSize = 0;
-            this.history_saveEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_saveEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_saveEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_saveEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_saveEntry_btn.ForeColor = System.Drawing.Color.White;
-            this.history_saveEntry_btn.Location = new System.Drawing.Point(281, 676);
-            this.history_saveEntry_btn.Name = "history_saveEntry_btn";
-            this.history_saveEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_saveEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_saveEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.history_saveEntry_btn.Size = new System.Drawing.Size(122, 35);
-            this.history_saveEntry_btn.TabIndex = 23;
-            this.history_saveEntry_btn.Text = "Save";
-            this.history_saveEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_saveEntry_btn.UseVisualStyleBackColor = true;
-            this.history_saveEntry_btn.Visible = false;
-            this.history_saveEntry_btn.Click += new System.EventHandler(this.history_saveEntry_btn_Click);
-            // 
-            // history_clear_btn
-            // 
-            this.history_clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_clear_btn.FlatAppearance.BorderSize = 0;
-            this.history_clear_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_clear_btn.Location = new System.Drawing.Point(653, 634);
-            this.history_clear_btn.Name = "history_clear_btn";
-            this.history_clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_clear_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.history_clear_btn.Size = new System.Drawing.Size(122, 35);
-            this.history_clear_btn.TabIndex = 22;
-            this.history_clear_btn.Text = "Clear";
-            this.history_clear_btn.TextColor = System.Drawing.Color.White;
-            this.history_clear_btn.UseVisualStyleBackColor = true;
-            this.history_clear_btn.Visible = false;
-            this.history_clear_btn.Click += new System.EventHandler(this.history_clear_btn_Click);
-            // 
-            // history_editEntry_btn
-            // 
-            this.history_editEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_editEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_editEntry_btn.FlatAppearance.BorderSize = 0;
-            this.history_editEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_editEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_editEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_editEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_editEntry_btn.ForeColor = System.Drawing.Color.White;
-            this.history_editEntry_btn.Location = new System.Drawing.Point(281, 635);
-            this.history_editEntry_btn.Name = "history_editEntry_btn";
-            this.history_editEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_editEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_editEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.history_editEntry_btn.Size = new System.Drawing.Size(122, 35);
-            this.history_editEntry_btn.TabIndex = 21;
-            this.history_editEntry_btn.Text = "Edit";
-            this.history_editEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_editEntry_btn.UseVisualStyleBackColor = true;
-            this.history_editEntry_btn.Visible = false;
-            this.history_editEntry_btn.Click += new System.EventHandler(this.history_editEntry_btn_Click);
-            // 
-            // history_close_btn
-            // 
-            this.history_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_close_btn.FlatAppearance.BorderSize = 0;
-            this.history_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_close_btn.Location = new System.Drawing.Point(653, 592);
-            this.history_close_btn.Name = "history_close_btn";
-            this.history_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_close_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.history_close_btn.Size = new System.Drawing.Size(122, 35);
-            this.history_close_btn.TabIndex = 20;
-            this.history_close_btn.Text = "Close";
-            this.history_close_btn.TextColor = System.Drawing.Color.White;
-            this.history_close_btn.UseVisualStyleBackColor = true;
-            this.history_close_btn.Click += new System.EventHandler(this.history_close_btn_Click);
-            // 
-            // history_addEntry_btn
-            // 
-            this.history_addEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_addEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_addEntry_btn.FlatAppearance.BorderSize = 0;
-            this.history_addEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_addEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_addEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_addEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.history_addEntry_btn.ForeColor = System.Drawing.Color.White;
-            this.history_addEntry_btn.Location = new System.Drawing.Point(281, 592);
-            this.history_addEntry_btn.Name = "history_addEntry_btn";
-            this.history_addEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_addEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_addEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.history_addEntry_btn.Size = new System.Drawing.Size(122, 35);
-            this.history_addEntry_btn.TabIndex = 19;
-            this.history_addEntry_btn.Text = "Add";
-            this.history_addEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_addEntry_btn.UseVisualStyleBackColor = true;
-            this.history_addEntry_btn.Click += new System.EventHandler(this.history_addEntry_btn_Click);
-            // 
             // history_entry_lbl
             // 
             this.history_entry_lbl.AutoSize = true;
@@ -1161,100 +962,6 @@ namespace DietApp
             this.info_pnl.Name = "info_pnl";
             this.info_pnl.Size = new System.Drawing.Size(13, 10);
             this.info_pnl.TabIndex = 6;
-            // 
-            // info_cancel_btn
-            // 
-            this.info_cancel_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_cancel_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_cancel_btn.FlatAppearance.BorderSize = 0;
-            this.info_cancel_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_cancel_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_cancel_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_cancel_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_cancel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_cancel_btn.Location = new System.Drawing.Point(593, 552);
-            this.info_cancel_btn.Name = "info_cancel_btn";
-            this.info_cancel_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_cancel_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_cancel_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.info_cancel_btn.Size = new System.Drawing.Size(169, 57);
-            this.info_cancel_btn.TabIndex = 20;
-            this.info_cancel_btn.Text = "Cancel";
-            this.info_cancel_btn.TextColor = System.Drawing.Color.White;
-            this.info_cancel_btn.UseVisualStyleBackColor = true;
-            this.info_cancel_btn.Visible = false;
-            this.info_cancel_btn.Click += new System.EventHandler(this.info_cancel_btn_Click);
-            // 
-            // info_save_btn
-            // 
-            this.info_save_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_save_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_save_btn.FlatAppearance.BorderSize = 0;
-            this.info_save_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.Location = new System.Drawing.Point(305, 552);
-            this.info_save_btn.Name = "info_save_btn";
-            this.info_save_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_save_btn.Size = new System.Drawing.Size(169, 57);
-            this.info_save_btn.TabIndex = 19;
-            this.info_save_btn.Text = "Save";
-            this.info_save_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.UseVisualStyleBackColor = true;
-            this.info_save_btn.Visible = false;
-            this.info_save_btn.Click += new System.EventHandler(this.info_save_btn_Click);
-            // 
-            // info_close_btn
-            // 
-            this.info_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_close_btn.FlatAppearance.BorderSize = 0;
-            this.info_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_close_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_close_btn.Location = new System.Drawing.Point(593, 489);
-            this.info_close_btn.Name = "info_close_btn";
-            this.info_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_close_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.info_close_btn.Size = new System.Drawing.Size(169, 57);
-            this.info_close_btn.TabIndex = 18;
-            this.info_close_btn.Text = "Close";
-            this.info_close_btn.TextColor = System.Drawing.Color.White;
-            this.info_close_btn.UseVisualStyleBackColor = true;
-            this.info_close_btn.Click += new System.EventHandler(this.info_close_btn_Click);
-            // 
-            // info_edit_btn
-            // 
-            this.info_edit_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_edit_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_edit_btn.FlatAppearance.BorderSize = 0;
-            this.info_edit_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_edit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_edit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_edit_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_edit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.Location = new System.Drawing.Point(305, 489);
-            this.info_edit_btn.Name = "info_edit_btn";
-            this.info_edit_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_edit_btn.Size = new System.Drawing.Size(169, 57);
-            this.info_edit_btn.TabIndex = 17;
-            this.info_edit_btn.Text = "Edit";
-            this.info_edit_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.UseVisualStyleBackColor = true;
-            this.info_edit_btn.Click += new System.EventHandler(this.info_edit_btn_Click);
             // 
             // label18
             // 
@@ -1455,19 +1162,18 @@ namespace DietApp
             this.diet_plan_pnl.Controls.Add(this.label37, 4, 0);
             this.diet_plan_pnl.Controls.Add(this.label38, 5, 0);
             this.diet_plan_pnl.Controls.Add(this.label39, 6, 0);
-            this.diet_plan_pnl.Controls.Add(this.label40, 7, 0);
             this.diet_plan_pnl.Controls.Add(this.label41, 0, 1);
             this.diet_plan_pnl.Controls.Add(this.label42, 0, 2);
             this.diet_plan_pnl.Controls.Add(this.label43, 0, 3);
             this.diet_plan_pnl.Controls.Add(this.label44, 0, 4);
             this.diet_plan_pnl.Controls.Add(this.label45, 0, 5);
             this.diet_plan_pnl.Controls.Add(this.label46, 0, 6);
-            this.diet_plan_pnl.Controls.Add(this.label47, 0, 7);
-            this.diet_plan_pnl.Controls.Add(this.label48, 0, 8);
+            this.diet_plan_pnl.Controls.Add(this.label40, 0, 7);
+            this.diet_plan_pnl.Controls.Add(this.label47, 7, 0);
             this.diet_plan_pnl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.diet_plan_pnl.Location = new System.Drawing.Point(92, 166);
             this.diet_plan_pnl.Name = "diet_plan_pnl";
-            this.diet_plan_pnl.RowCount = 9;
+            this.diet_plan_pnl.RowCount = 8;
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -1476,7 +1182,6 @@ namespace DietApp
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.diet_plan_pnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.diet_plan_pnl.Size = new System.Drawing.Size(911, 557);
             this.diet_plan_pnl.TabIndex = 3;
             this.diet_plan_pnl.Visible = false;
@@ -1487,7 +1192,7 @@ namespace DietApp
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label32.Location = new System.Drawing.Point(4, 1);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(106, 65);
+            this.label32.Size = new System.Drawing.Size(106, 68);
             this.label32.TabIndex = 0;
             this.label32.Text = "Time";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1498,7 +1203,7 @@ namespace DietApp
             this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label34.Location = new System.Drawing.Point(117, 1);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(106, 65);
+            this.label34.Size = new System.Drawing.Size(106, 68);
             this.label34.TabIndex = 1;
             this.label34.Text = "Monday";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1509,7 +1214,7 @@ namespace DietApp
             this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label35.Location = new System.Drawing.Point(230, 1);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(106, 65);
+            this.label35.Size = new System.Drawing.Size(106, 68);
             this.label35.TabIndex = 2;
             this.label35.Text = "Tuesday";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1520,7 +1225,7 @@ namespace DietApp
             this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label36.Location = new System.Drawing.Point(343, 1);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(106, 65);
+            this.label36.Size = new System.Drawing.Size(106, 68);
             this.label36.TabIndex = 3;
             this.label36.Text = "Wednesday";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1531,7 +1236,7 @@ namespace DietApp
             this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label37.Location = new System.Drawing.Point(456, 1);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(106, 65);
+            this.label37.Size = new System.Drawing.Size(106, 68);
             this.label37.TabIndex = 4;
             this.label37.Text = "Thursday";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1542,7 +1247,7 @@ namespace DietApp
             this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label38.Location = new System.Drawing.Point(569, 1);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(106, 65);
+            this.label38.Size = new System.Drawing.Size(106, 68);
             this.label38.TabIndex = 5;
             this.label38.Text = "Friday";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1553,29 +1258,18 @@ namespace DietApp
             this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label39.Location = new System.Drawing.Point(682, 1);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(106, 65);
+            this.label39.Size = new System.Drawing.Size(106, 68);
             this.label39.TabIndex = 6;
             this.label39.Text = "Saturday";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(795, 1);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(112, 65);
-            this.label40.TabIndex = 7;
-            this.label40.Text = "Sunday";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Location = new System.Drawing.Point(4, 67);
+            this.label41.Location = new System.Drawing.Point(4, 70);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(106, 65);
+            this.label41.Size = new System.Drawing.Size(106, 68);
             this.label41.TabIndex = 8;
             this.label41.Text = "10:00";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1584,9 +1278,9 @@ namespace DietApp
             // 
             this.label42.AutoSize = true;
             this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Location = new System.Drawing.Point(4, 133);
+            this.label42.Location = new System.Drawing.Point(4, 139);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(106, 65);
+            this.label42.Size = new System.Drawing.Size(106, 68);
             this.label42.TabIndex = 9;
             this.label42.Text = "12:00";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1595,9 +1289,9 @@ namespace DietApp
             // 
             this.label43.AutoSize = true;
             this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Location = new System.Drawing.Point(4, 199);
+            this.label43.Location = new System.Drawing.Point(4, 208);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(106, 65);
+            this.label43.Size = new System.Drawing.Size(106, 68);
             this.label43.TabIndex = 10;
             this.label43.Text = "14:00";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1606,9 +1300,9 @@ namespace DietApp
             // 
             this.label44.AutoSize = true;
             this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Location = new System.Drawing.Point(4, 265);
+            this.label44.Location = new System.Drawing.Point(4, 277);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(106, 65);
+            this.label44.Size = new System.Drawing.Size(106, 68);
             this.label44.TabIndex = 11;
             this.label44.Text = "16:00";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1617,9 +1311,9 @@ namespace DietApp
             // 
             this.label45.AutoSize = true;
             this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Location = new System.Drawing.Point(4, 331);
+            this.label45.Location = new System.Drawing.Point(4, 346);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(106, 65);
+            this.label45.Size = new System.Drawing.Size(106, 68);
             this.label45.TabIndex = 12;
             this.label45.Text = "18:00";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1628,23 +1322,12 @@ namespace DietApp
             // 
             this.label46.AutoSize = true;
             this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Location = new System.Drawing.Point(4, 397);
+            this.label46.Location = new System.Drawing.Point(4, 415);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(106, 65);
+            this.label46.Size = new System.Drawing.Size(106, 68);
             this.label46.TabIndex = 13;
             this.label46.Text = "20:00";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label47.Location = new System.Drawing.Point(4, 463);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(106, 65);
-            this.label47.TabIndex = 14;
-            this.label47.Text = "22:00";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel18
             // 
@@ -1662,53 +1345,6 @@ namespace DietApp
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(911, 116);
             this.panel18.TabIndex = 2;
-            // 
-            // diet_close_btn
-            // 
-            this.diet_close_btn.BorderColor = System.Drawing.Color.Red;
-            this.diet_close_btn.ButtonColor = System.Drawing.Color.Red;
-            this.diet_close_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_close_btn.FlatAppearance.BorderSize = 0;
-            this.diet_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_close_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diet_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.diet_close_btn.Location = new System.Drawing.Point(189, 73);
-            this.diet_close_btn.Name = "diet_close_btn";
-            this.diet_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.diet_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.diet_close_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.diet_close_btn.Size = new System.Drawing.Size(96, 35);
-            this.diet_close_btn.TabIndex = 8;
-            this.diet_close_btn.Text = "Close";
-            this.diet_close_btn.TextColor = System.Drawing.Color.White;
-            this.diet_close_btn.UseVisualStyleBackColor = true;
-            this.diet_close_btn.Click += new System.EventHandler(this.diet_close_btn_Click);
-            // 
-            // diet_gendiet_btn
-            // 
-            this.diet_gendiet_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.diet_gendiet_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.diet_gendiet_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.FlatAppearance.BorderSize = 0;
-            this.diet_gendiet_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_gendiet_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diet_gendiet_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.diet_gendiet_btn.Location = new System.Drawing.Point(35, 73);
-            this.diet_gendiet_btn.Name = "diet_gendiet_btn";
-            this.diet_gendiet_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.diet_gendiet_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.diet_gendiet_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.diet_gendiet_btn.Size = new System.Drawing.Size(143, 35);
-            this.diet_gendiet_btn.TabIndex = 4;
-            this.diet_gendiet_btn.Text = "Generate Diet";
-            this.diet_gendiet_btn.TextColor = System.Drawing.Color.White;
-            this.diet_gendiet_btn.UseVisualStyleBackColor = false;
-            this.diet_gendiet_btn.Click += new System.EventHandler(this.diet_gendiet_btn_Click);
             // 
             // diet_diettype_cb
             // 
@@ -1877,16 +1513,366 @@ namespace DietApp
             this.info_lbl.MouseEnter += new System.EventHandler(this.info_lbl_MouseEnter);
             this.info_lbl.MouseLeave += new System.EventHandler(this.info_lbl_MouseLeave);
             // 
-            // label48
+            // label40
             // 
-            this.label48.AutoSize = true;
-            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label48.Location = new System.Drawing.Point(4, 529);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(106, 27);
-            this.label48.TabIndex = 15;
-            this.label48.Text = "Total Calories";
-            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label40.Location = new System.Drawing.Point(4, 484);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(106, 72);
+            this.label40.TabIndex = 14;
+            this.label40.Text = "Total Calories";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // history_showgraph_btn
+            // 
+            this.history_showgraph_btn.BorderColor = System.Drawing.Color.Silver;
+            this.history_showgraph_btn.ButtonColor = System.Drawing.Color.Red;
+            this.history_showgraph_btn.FlatAppearance.BorderSize = 0;
+            this.history_showgraph_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_showgraph_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_showgraph_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_showgraph_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_showgraph_btn.Location = new System.Drawing.Point(472, 592);
+            this.history_showgraph_btn.Name = "history_showgraph_btn";
+            this.history_showgraph_btn.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.history_showgraph_btn.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.history_showgraph_btn.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.history_showgraph_btn.Size = new System.Drawing.Size(145, 35);
+            this.history_showgraph_btn.TabIndex = 24;
+            this.history_showgraph_btn.Text = "Show Graph";
+            this.history_showgraph_btn.TextColor = System.Drawing.Color.White;
+            this.history_showgraph_btn.UseVisualStyleBackColor = true;
+            this.history_showgraph_btn.Visible = false;
+            // 
+            // history_saveEntry_btn
+            // 
+            this.history_saveEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_saveEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_saveEntry_btn.FlatAppearance.BorderSize = 0;
+            this.history_saveEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_saveEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_saveEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_saveEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_saveEntry_btn.ForeColor = System.Drawing.Color.White;
+            this.history_saveEntry_btn.Location = new System.Drawing.Point(281, 676);
+            this.history_saveEntry_btn.Name = "history_saveEntry_btn";
+            this.history_saveEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_saveEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_saveEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_saveEntry_btn.Size = new System.Drawing.Size(122, 35);
+            this.history_saveEntry_btn.TabIndex = 23;
+            this.history_saveEntry_btn.Text = "Save";
+            this.history_saveEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_saveEntry_btn.UseVisualStyleBackColor = true;
+            this.history_saveEntry_btn.Visible = false;
+            this.history_saveEntry_btn.Click += new System.EventHandler(this.history_saveEntry_btn_Click);
+            // 
+            // history_clear_btn
+            // 
+            this.history_clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_clear_btn.FlatAppearance.BorderSize = 0;
+            this.history_clear_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_clear_btn.Location = new System.Drawing.Point(653, 634);
+            this.history_clear_btn.Name = "history_clear_btn";
+            this.history_clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_clear_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.history_clear_btn.Size = new System.Drawing.Size(122, 35);
+            this.history_clear_btn.TabIndex = 22;
+            this.history_clear_btn.Text = "Clear";
+            this.history_clear_btn.TextColor = System.Drawing.Color.White;
+            this.history_clear_btn.UseVisualStyleBackColor = true;
+            this.history_clear_btn.Visible = false;
+            this.history_clear_btn.Click += new System.EventHandler(this.history_clear_btn_Click);
+            // 
+            // history_editEntry_btn
+            // 
+            this.history_editEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_editEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_editEntry_btn.FlatAppearance.BorderSize = 0;
+            this.history_editEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_editEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_editEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_editEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_editEntry_btn.ForeColor = System.Drawing.Color.White;
+            this.history_editEntry_btn.Location = new System.Drawing.Point(281, 635);
+            this.history_editEntry_btn.Name = "history_editEntry_btn";
+            this.history_editEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_editEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_editEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_editEntry_btn.Size = new System.Drawing.Size(122, 35);
+            this.history_editEntry_btn.TabIndex = 21;
+            this.history_editEntry_btn.Text = "Edit";
+            this.history_editEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_editEntry_btn.UseVisualStyleBackColor = true;
+            this.history_editEntry_btn.Visible = false;
+            this.history_editEntry_btn.Click += new System.EventHandler(this.history_editEntry_btn_Click);
+            // 
+            // history_close_btn
+            // 
+            this.history_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_close_btn.FlatAppearance.BorderSize = 0;
+            this.history_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_close_btn.Location = new System.Drawing.Point(653, 592);
+            this.history_close_btn.Name = "history_close_btn";
+            this.history_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_close_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.history_close_btn.Size = new System.Drawing.Size(122, 35);
+            this.history_close_btn.TabIndex = 20;
+            this.history_close_btn.Text = "Close";
+            this.history_close_btn.TextColor = System.Drawing.Color.White;
+            this.history_close_btn.UseVisualStyleBackColor = true;
+            this.history_close_btn.Click += new System.EventHandler(this.history_close_btn_Click);
+            // 
+            // history_addEntry_btn
+            // 
+            this.history_addEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_addEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_addEntry_btn.FlatAppearance.BorderSize = 0;
+            this.history_addEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.history_addEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_addEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_addEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.history_addEntry_btn.ForeColor = System.Drawing.Color.White;
+            this.history_addEntry_btn.Location = new System.Drawing.Point(281, 592);
+            this.history_addEntry_btn.Name = "history_addEntry_btn";
+            this.history_addEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_addEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_addEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_addEntry_btn.Size = new System.Drawing.Size(122, 35);
+            this.history_addEntry_btn.TabIndex = 19;
+            this.history_addEntry_btn.Text = "Add";
+            this.history_addEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_addEntry_btn.UseVisualStyleBackColor = true;
+            this.history_addEntry_btn.Click += new System.EventHandler(this.history_addEntry_btn_Click);
+            // 
+            // info_cancel_btn
+            // 
+            this.info_cancel_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_cancel_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_cancel_btn.FlatAppearance.BorderSize = 0;
+            this.info_cancel_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.info_cancel_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_cancel_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_cancel_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_cancel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_cancel_btn.Location = new System.Drawing.Point(593, 552);
+            this.info_cancel_btn.Name = "info_cancel_btn";
+            this.info_cancel_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_cancel_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_cancel_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.info_cancel_btn.Size = new System.Drawing.Size(169, 57);
+            this.info_cancel_btn.TabIndex = 20;
+            this.info_cancel_btn.Text = "Cancel";
+            this.info_cancel_btn.TextColor = System.Drawing.Color.White;
+            this.info_cancel_btn.UseVisualStyleBackColor = true;
+            this.info_cancel_btn.Visible = false;
+            this.info_cancel_btn.Click += new System.EventHandler(this.info_cancel_btn_Click);
+            // 
+            // info_save_btn
+            // 
+            this.info_save_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_save_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_save_btn.FlatAppearance.BorderSize = 0;
+            this.info_save_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.info_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.Location = new System.Drawing.Point(305, 552);
+            this.info_save_btn.Name = "info_save_btn";
+            this.info_save_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_save_btn.Size = new System.Drawing.Size(169, 57);
+            this.info_save_btn.TabIndex = 19;
+            this.info_save_btn.Text = "Save";
+            this.info_save_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.UseVisualStyleBackColor = true;
+            this.info_save_btn.Visible = false;
+            this.info_save_btn.Click += new System.EventHandler(this.info_save_btn_Click);
+            // 
+            // info_close_btn
+            // 
+            this.info_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_close_btn.FlatAppearance.BorderSize = 0;
+            this.info_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.info_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_close_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_close_btn.Location = new System.Drawing.Point(593, 489);
+            this.info_close_btn.Name = "info_close_btn";
+            this.info_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_close_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.info_close_btn.Size = new System.Drawing.Size(169, 57);
+            this.info_close_btn.TabIndex = 18;
+            this.info_close_btn.Text = "Close";
+            this.info_close_btn.TextColor = System.Drawing.Color.White;
+            this.info_close_btn.UseVisualStyleBackColor = true;
+            this.info_close_btn.Click += new System.EventHandler(this.info_close_btn_Click);
+            // 
+            // info_edit_btn
+            // 
+            this.info_edit_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_edit_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_edit_btn.FlatAppearance.BorderSize = 0;
+            this.info_edit_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.info_edit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_edit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.info_edit_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_edit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.Location = new System.Drawing.Point(305, 489);
+            this.info_edit_btn.Name = "info_edit_btn";
+            this.info_edit_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_edit_btn.Size = new System.Drawing.Size(169, 57);
+            this.info_edit_btn.TabIndex = 17;
+            this.info_edit_btn.Text = "Edit";
+            this.info_edit_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.UseVisualStyleBackColor = true;
+            this.info_edit_btn.Click += new System.EventHandler(this.info_edit_btn_Click);
+            // 
+            // diet_close_btn
+            // 
+            this.diet_close_btn.BorderColor = System.Drawing.Color.Red;
+            this.diet_close_btn.ButtonColor = System.Drawing.Color.Red;
+            this.diet_close_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_close_btn.FlatAppearance.BorderSize = 0;
+            this.diet_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_close_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.diet_close_btn.Location = new System.Drawing.Point(189, 73);
+            this.diet_close_btn.Name = "diet_close_btn";
+            this.diet_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.diet_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.diet_close_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.diet_close_btn.Size = new System.Drawing.Size(96, 35);
+            this.diet_close_btn.TabIndex = 8;
+            this.diet_close_btn.Text = "Close";
+            this.diet_close_btn.TextColor = System.Drawing.Color.White;
+            this.diet_close_btn.UseVisualStyleBackColor = true;
+            this.diet_close_btn.Click += new System.EventHandler(this.diet_close_btn_Click);
+            // 
+            // diet_gendiet_btn
+            // 
+            this.diet_gendiet_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_gendiet_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.diet_gendiet_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.FlatAppearance.BorderSize = 0;
+            this.diet_gendiet_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diet_gendiet_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_gendiet_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.diet_gendiet_btn.Location = new System.Drawing.Point(35, 73);
+            this.diet_gendiet_btn.Name = "diet_gendiet_btn";
+            this.diet_gendiet_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.diet_gendiet_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.diet_gendiet_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.diet_gendiet_btn.Size = new System.Drawing.Size(143, 35);
+            this.diet_gendiet_btn.TabIndex = 4;
+            this.diet_gendiet_btn.Text = "Generate Diet";
+            this.diet_gendiet_btn.TextColor = System.Drawing.Color.White;
+            this.diet_gendiet_btn.UseVisualStyleBackColor = false;
+            this.diet_gendiet_btn.Click += new System.EventHandler(this.diet_gendiet_btn_Click);
+            // 
+            // clear_btn
+            // 
+            this.clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.clear_btn.FlatAppearance.BorderSize = 0;
+            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_btn.Location = new System.Drawing.Point(672, 30);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.clear_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.clear_btn.Size = new System.Drawing.Size(89, 23);
+            this.clear_btn.TabIndex = 14;
+            this.clear_btn.Text = "Clear";
+            this.clear_btn.TextColor = System.Drawing.Color.White;
+            this.clear_btn.UseVisualStyleBackColor = true;
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
+            // 
+            // Search_btn
+            // 
+            this.Search_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
+            this.Search_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
+            this.Search_btn.FlatAppearance.BorderSize = 0;
+            this.Search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_btn.ForeColor = System.Drawing.Color.White;
+            this.Search_btn.Location = new System.Drawing.Point(577, 30);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
+            this.Search_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
+            this.Search_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.Search_btn.Size = new System.Drawing.Size(89, 23);
+            this.Search_btn.TabIndex = 13;
+            this.Search_btn.Text = "Search";
+            this.Search_btn.TextColor = System.Drawing.Color.White;
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.Search_btn_Click);
+            // 
+            // AddClient_btn
+            // 
+            this.AddClient_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.AddClient_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.AddClient_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.AddClient_btn.FlatAppearance.BorderSize = 0;
+            this.AddClient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.AddClient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.AddClient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddClient_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddClient_btn.ForeColor = System.Drawing.Color.White;
+            this.AddClient_btn.Location = new System.Drawing.Point(25, 26);
+            this.AddClient_btn.Name = "AddClient_btn";
+            this.AddClient_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.AddClient_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.AddClient_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.AddClient_btn.Size = new System.Drawing.Size(118, 23);
+            this.AddClient_btn.TabIndex = 12;
+            this.AddClient_btn.Text = "Add New";
+            this.AddClient_btn.TextColor = System.Drawing.Color.White;
+            this.AddClient_btn.UseVisualStyleBackColor = true;
+            this.AddClient_btn.Click += new System.EventHandler(this.AddClient_btn_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label47.Location = new System.Drawing.Point(795, 1);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(112, 68);
+            this.label47.TabIndex = 15;
+            this.label47.Text = "Sunday";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UcClients
             // 
@@ -2078,15 +2064,14 @@ namespace DietApp
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
         private DietApp.RoundButtons diet_close_btn;
-        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label47;
     }
 }

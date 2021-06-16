@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 using Npgsql;
 using NpgsqlTypes;
@@ -689,6 +692,8 @@ namespace DietApp
             diet_pnl.Visible = true;
             info_pnl.Visible = history_pnl.Visible = false;
             
+            
+            
             diet_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
             history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
         }
@@ -711,11 +716,16 @@ namespace DietApp
         }
         private void diet_gendiet_btn_Click(object sender, EventArgs e)
         {
+            /*
+             * If diet_date.cb, diet_diettype_cb and diet_type_cb are empty return.
+             * Create new diet plan.
+             * Display diet plan.
+             */
             if (diet_date_cb.Text.Equals("") || diet_diettype_cb.Text.Equals("") || diet_type_cb.Text.Equals("")) return;
-            // return diet and display it on diet_plan_pnl.
-            //var diet = new GenerationOfDiet(diet_diettype_cb.Text, diet_type_cb.Text, _height, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid).DietGeneration();
+            var diet = new GenerationOfDiet(diet_type_cb.Text, diet_diettype_cb.Text, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid);
+
+            DisplayDiet(diet.GetDays());
             diet_plan_pnl.Visible = true;
-            
         }
         private void diet_close_btn_Click(object sender, EventArgs e)
         {
@@ -732,17 +742,68 @@ namespace DietApp
         }
         private void diet_date_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // if selected date is already registered in db display entry on diet_plan_pnl.
+            /*
+             * If selected date is already registered in db display entry on diet_plan_pnl.
+             * We need to display diet_type_cb and diet_diettype_cb of old diet plan.
+             * If diet+plan_pnl.Visible is false then SelectedIndexChanged wont be executed.
+             * If returned value of _clientType and _dietType are null that means no data is stored for this date.
+             * diet_type_cb and diet_diettype_cb must be disabled.
+             * Calling DisplayDiet method to display diet plan.
+             */
+            if (!diet_pnl.Visible) return;
+            var showOld = new GenerationOfDiet(_id, _clienthistoryid, DateTime.Parse(diet_date_cb.Text));
+            if (showOld.GetClientType() == null || showOld.GetDietType() == null)
+            {
+                diet_plan_pnl.Visible = false;
+                MessageBox.Show(@"No diet found for the selected date.");
+                diet_gendiet_btn.Enabled = true;
+                return;
+            }
+            diet_diettype_cb.Enabled = diet_type_cb.Enabled = diet_gendiet_btn.Enabled = false;
+            diet_diettype_cb.Text = showOld.GetDietType();
+            diet_type_cb.Text = showOld.GetClientType();
+            DisplayDiet(showOld.GetDays());
+            diet_plan_pnl.Visible = true;
 
             // if new create a new diet plan
-            //var olddiet = new GenerationOfDiet()
-        }
 
-        private void displayDiet()
+        }
+        private void DisplayDiet(IEnumerable<List<NutritionInfo>> days) 
         {
-            // display old or new generated diet.
+            /*
+             * Reset controls of diet_plan_pnl.
+             * Display old or new generated diet.
+             * For display old and new diet plan,
+             * both methods must give as a parameter a list of list of NutritionInfo type.
+             */
+            diet_plan_pnl.Visible = false;
+            for (var row = 1; row < diet_plan_pnl.RowCount; row++)
+            {
+                for (var col = 1; col < diet_plan_pnl.ColumnCount; col++)
+                {
+                    diet_plan_pnl.Controls.Remove(diet_plan_pnl.GetControlFromPosition(col, row));
+                }
+            }
+            var column = 1;
+            foreach (var day in days)
+            {
+                var row = 1;
+                foreach (var details in day)
+                {
+                    var lbl = new Label
+                    {
+                        Dock = DockStyle.Fill,
+                        TextAlign = ContentAlignment.MiddleCenter,
+                        Text = row == 7
+                            ? details.GetTotalCalories().ToString(CultureInfo.InvariantCulture)
+                            : details.GetFoodName(),
+                    };
+                    
+                    diet_plan_pnl.Controls.Add(lbl, column, row);
+                    row++;
+                }
+                column++;
+            }
         }
-
-        
     }
 }
