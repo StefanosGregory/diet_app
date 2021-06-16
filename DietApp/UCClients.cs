@@ -197,9 +197,19 @@ namespace DietApp
             clients_lbl.Text = @"Client Info";
             ClientCard_pnl.Visible = info_pnl.Visible = true;
             ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
+            
+            // Reset controls of info_pnl, history_pnl, diet_pnl.
+            history_bmi_txt.Text = "";
+            history_date_cb.Items.Clear();
+            diet_date_cb.Items.Clear();
+            history_pnl.Visible = diet_plan_pnl.Visible = diet_pnl.Visible = false;
 
-            // Set back color of info_navBar_pnl
-            info_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            // Set back color of info_navBar_pnl, history_navBar_pnl and diet_navBar_pnl.
+            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+            history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            history_lbl.ForeColor = diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+            
             
             var tmp = showClients_pnl.CurrentCell.RowIndex;
             _height = short.Parse(showClients_pnl.Rows[tmp].Cells["height"].Value.ToString());
@@ -367,8 +377,27 @@ namespace DietApp
             info_pnl.Visible = true;
             history_pnl.Visible = diet_pnl.Visible = false;
             
-            info_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
             history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            history_lbl.ForeColor = diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+        }
+        private void info_lbl_MouseEnter(object sender, EventArgs e)
+        {
+            if (info_pnl.Visible)
+            {
+                info_lbl.Cursor = Cursors.Default;
+                return;
+            }
+            info_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+        }
+        private void info_lbl_MouseLeave(object sender, EventArgs e)
+        {
+            if (info_pnl.Visible) return;
+            info_lbl.Cursor = Cursors.Hand;
+            info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
         private void info_edit_btn_Click(object sender, EventArgs e)
         {
@@ -450,6 +479,7 @@ namespace DietApp
 
             // Reset colors and panels and client_lbl text
             info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_lbl.ForeColor = history_lbl.ForeColor = diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
             info_pnl.Visible = false;
             clients_lbl.Text = @"Clients";
         }
@@ -463,23 +493,7 @@ namespace DietApp
             info_edit_btn.Visible = info_close_btn.Visible = true;
             info_save_btn.Visible = info_cancel_btn.Visible = false;
         }
-        private void info_lbl_MouseEnter(object sender, EventArgs e)
-        {
-            if (info_pnl.Visible)
-            {
-                info_lbl.Cursor = Cursors.Default;
-                return;
-            }
-            info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
-            info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
-        }
-        private void info_lbl_MouseLeave(object sender, EventArgs e)
-        {
-            if (info_pnl.Visible) return;
-            info_lbl.Cursor = Cursors.Hand;
-            info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
-            info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
-        }
+        
         
         /*
          * history_pnl methods.
@@ -490,8 +504,10 @@ namespace DietApp
             history_pnl.Visible = true;
             info_pnl.Visible = diet_pnl.Visible = false;
             
-            history_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            history_lbl.ForeColor = Color.FromArgb(15, 82, 186);
             info_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_pnl.ForeColor = diet_pnl.ForeColor = Color.FromArgb(0, 126, 249);
         }
         private void history_lbl_MouseEnter(object sender, EventArgs e)
         {
@@ -500,8 +516,8 @@ namespace DietApp
                 history_lbl.Cursor = Cursors.Default;
                 return;
             }
-            history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
-            history_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+            history_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            history_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
         private void history_lbl_MouseLeave(object sender, EventArgs e)
         {
@@ -540,14 +556,14 @@ namespace DietApp
                         history_waterperc_txt.Text = reader[8].ToString();
                     }
                     
-                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = false;
+                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = history_saveEntry_btn.Visible = false;
+                    history_editEntry_btn.Visible = history_close_btn.Visible = true;
                 }
                 else
                 {
                     history_entry_lbl.Text = @"New Entry";
-                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = true;
-                    history_addEntry_btn.Text = history_weight_txt.Text = history_fatperc_txt.Text =
-                        history_musclemass_txt.Text = history_waterperc_txt.Text = history_visceralfat_txt.Text = "";
+                    history_addEntry_btn.Enabled = history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = true; 
+                    history_weight_txt.Text = history_fatperc_txt.Text = history_musclemass_txt.Text = history_waterperc_txt.Text = history_visceralfat_txt.Text = "";
                 }
 
                 conn.Dispose();
@@ -567,6 +583,7 @@ namespace DietApp
 
             // Reset colors and panels and client_lbl text
             info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_lbl.ForeColor = history_lbl.ForeColor = diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
             info_pnl.Visible = false;
             history_entry_lbl.Text = @"New Entry";
             clients_lbl.Text = @"Clients";
@@ -691,11 +708,11 @@ namespace DietApp
         {
             diet_pnl.Visible = true;
             info_pnl.Visible = history_pnl.Visible = false;
-            
-            
-            
-            diet_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+
+            diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
+            diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
             history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            history_lbl.ForeColor = info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
         private void diet_lbl_MouseEnter(object sender, EventArgs e)
         {
@@ -704,8 +721,8 @@ namespace DietApp
                 diet_lbl.Cursor = Cursors.Default;
                 return;
             }
-            diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
-            diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
+            diet_navBar_pnl.BackColor = Color.FromArgb(37, 42, 64);
+            diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
         }
         private void diet_lbl_MouseLeave(object sender, EventArgs e)
         {
@@ -725,6 +742,7 @@ namespace DietApp
             var diet = new GenerationOfDiet(diet_type_cb.Text, diet_diettype_cb.Text, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid);
 
             DisplayDiet(diet.GetDays());
+            diet_gendiet_btn.Enabled = false;
             diet_plan_pnl.Visible = true;
         }
         private void diet_close_btn_Click(object sender, EventArgs e)
@@ -737,6 +755,7 @@ namespace DietApp
 
             // Reset colors and panels and client_lbl text
             info_navBar_pnl.BackColor = history_navBar_pnl.BackColor = diet_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
+            info_lbl.ForeColor = history_lbl.ForeColor = diet_lbl.ForeColor = Color.FromArgb(0, 126, 249);
             history_entry_lbl.Text = @"New Entry";
             clients_lbl.Text = @"Clients";
         }
