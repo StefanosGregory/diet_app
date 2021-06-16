@@ -290,29 +290,18 @@ namespace DietApp
             }
 
             // 3) sql select command. Results in showClients_pnl
-            if (input.Equals("")) return;
-            var sql = "";
-            switch (type)
+            var sql = type switch
             {
-                case "Name":
-                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE fullname LIKE @input; ORDER BY id ASC";
-                    break;
-                case "Telephone": 
-                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE tel = @input ORDER BY id ASC;";
-                    break;
-                case "Email":
-                    sql = "SELECT id, fullname, sex, tel, email FROM clients WHERE email = @input ORDER BY id ASC;";
-                    break;
-                default:
-                    sql = "SELECT id, fullname, sex, tel, email FROM clients;";
-                    break;
+                "Name" => "SELECT id, fullname, sex, tel, email FROM clients WHERE fullname ~*@input ORDER BY id ASC",
+                "Telephone" => "SELECT id, fullname, sex, tel, email FROM clients WHERE tel = @input ORDER BY id ASC;",
+                "Email" => "SELECT id, fullname, sex, tel, email FROM clients WHERE email = @input ORDER BY id ASC;",
+                _ => "SELECT id, fullname, sex, tel, email FROM clients ORDER BY id ASC;"
             };
-                
+
             SearchWhere(sql, input, type);
         }
         private void SearchWhere(string sql, string input, string type)
         {
-            MessageBox.Show(sql);
             try
             {
                 var conn = new NpgsqlConnection(Cs);
