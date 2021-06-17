@@ -2,18 +2,20 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using Npgsql;
+using NpgsqlTypes;
 
 namespace DietApp
 {
     public partial class WarningForm : Form
     {
-        private readonly string _cs, _id;
+        private readonly string _cs;
+        private readonly int _id;
         
         public WarningForm(string cs, string id)
         {
             InitializeComponent();
             _cs = cs;
-            _id = id;
+            _id = short.Parse(id);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,21 +29,27 @@ namespace DietApp
             {
                 var conn = new NpgsqlConnection(_cs);
                 conn.Open();
-                var sql = $"DELETE FROM appointments WHERE id= '{_id}';";
-                var command = new NpgsqlCommand(sql, conn);
-                command.ExecuteNonQuery();
+                var command = new NpgsqlCommand
+                {
+                    Connection = conn,
+                    CommandText = "DELETE FROM appointments WHERE id = @id;"
+                };
+                command.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+                if (command.ExecuteNonQuery() > 0)
+                {
+                    // Reset sequence.
+                    const string resetseq = "ALTER SEQUENCE appointments_id_seq RESTART;";
+                    new NpgsqlCommand(resetseq, conn).ExecuteNonQuery();
+                    const string updateseq = "UPDATE appointments SET id = DEFAULT;";
+                    new NpgsqlCommand(updateseq, conn).ExecuteNonQuery();
+                }
                 
-                // Reset sequence.
-                const string resetseq = "ALTER SEQUENCE appointments_id_seq RESTART;";
-                new NpgsqlCommand(resetseq, conn).ExecuteNonQuery();
-                const string updateseq = "UPDATE appointments SET id = DEFAULT;";
-                new NpgsqlCommand(updateseq, conn).ExecuteNonQuery();
-                
+                conn.Dispose();
                 conn.Close();
             }
-            catch (SqlException)
+            catch (Exception)
             {
-                Console.WriteLine(@"ERROR!");
+                MessageBox.Show(@"You cannot delete this entry.");
             }
             Close();
         }

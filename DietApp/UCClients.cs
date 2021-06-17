@@ -205,6 +205,7 @@ namespace DietApp
             history_date_cb.Items.Clear();
             diet_date_cb.Items.Clear();
             history_pnl.Visible = diet_plan_pnl.Visible = diet_pnl.Visible = false;
+            diet_gendiet_btn.Enabled = true;
 
             // Set back color of info_navBar_pnl, history_navBar_pnl and diet_navBar_pnl.
             info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
@@ -785,13 +786,13 @@ namespace DietApp
              * Calling DisplayDiet method to display diet plan.
              */
             if (!diet_pnl.Visible) return;
+            diet_gendiet_btn.Enabled = true;
             var showOld = new GenerationOfDiet(_id, _clienthistoryid, DateTime.Parse(diet_date_cb.Text));
             if (diet_date_cb.SelectedIndex == diet_date_cb.Items.Count - 1 && showOld.GetClientType() == null && showOld.GetDietType() == null) return;
             if (showOld.GetClientType() == null || showOld.GetDietType() == null)
             {
                 diet_plan_pnl.Visible = false;
                 MessageBox.Show(@"No diet found for the selected date.");
-                diet_gendiet_btn.Enabled = true;
                 return;
             }
             diet_diettype_cb.Enabled = diet_type_cb.Enabled = diet_gendiet_btn.Enabled = false;
