@@ -834,17 +834,12 @@ namespace DietApp
                             : details.GetFoodName(),
                         Cursor = Cursors.Hand
                     };
-                    lbl.Click += (sender, args) => { diet_lbl_click(details); };
+                    lbl.Click += (sender, args) => { new FoodInfoForm(details).Show(); };
                     diet_plan_pnl.Controls.Add(lbl, column, row);
                     row++;
                 }
                 column++;
             }
-        }
-
-        private static void diet_lbl_click(NutritionInfo details)
-        {
-            new FoodInfoForm(details).Show();
         }
     }
 }
