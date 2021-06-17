@@ -5,10 +5,12 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Windows.Forms;
 using Npgsql;
 using NpgsqlTypes;
+using Label = System.Windows.Forms.Label;
 
 namespace DietApp
 {
@@ -621,12 +623,31 @@ namespace DietApp
                     history_close_btn.Visible = history_editEntry_btn.Visible = true;
                     history_clear_btn.Visible = history_addEntry_btn.Visible = false;
                     history_weight_txt.Enabled = history_fatperc_txt.Enabled = history_musclemass_txt.Enabled = history_waterperc_txt.Enabled = history_visceralfat_txt.Enabled = false;
-                }
-                else
-                {
-                    MessageBox.Show(@"Something went wrong!");
-                }
 
+                    var tmpConn = new NpgsqlConnection(Cs);
+                    tmpConn.Open();
+
+                    var tmpCmd = new NpgsqlCommand
+                    {
+                        Connection = tmpConn,
+                        CommandText = "SELECT id FROM clientshistory WHERE datetime = @datetime and clientsid = @id;"
+                    };
+                    tmpCmd.Parameters.Add("@datetime", NpgsqlDbType.Timestamp).Value =
+                        DateTime.Parse(history_date_cb.Text);
+                    tmpCmd.Parameters.Add("@id", NpgsqlDbType.Integer).Value = _id;
+
+                    var reader = tmpCmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        _clienthistoryid = short.Parse(reader[0].ToString());
+                    }
+                    tmpConn.Dispose();
+                    tmpConn.Close();
+                }
+                
+                
+                conn.Dispose();
+                conn.Close();
             }
             catch (SqlException e)
             {
@@ -702,6 +723,10 @@ namespace DietApp
             diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
             history_navBar_pnl.BackColor = info_navBar_pnl.BackColor = Color.FromArgb(20, 30, 54);
             history_lbl.ForeColor = info_lbl.ForeColor = Color.FromArgb(0, 126, 249);
+            
+            // Change data of clientshistoryid in case of measures did not exist while creating new diet plan.
+            
+            diet_date_cb_SelectedIndexChanged(null, null);
         }
         private void diet_lbl_MouseEnter(object sender, EventArgs e)
         {
@@ -729,7 +754,8 @@ namespace DietApp
              */
             if (diet_date_cb.Text.Equals("") || diet_diettype_cb.Text.Equals("") || diet_type_cb.Text.Equals("")) return;
             var diet = new GenerationOfDiet(diet_type_cb.Text, diet_diettype_cb.Text, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid);
-
+            
+            if (diet.GetClientType() == null && diet.GetDietType() == null) return;
             DisplayDiet(diet.GetDays());
             diet_gendiet_btn.Enabled = false;
             diet_plan_pnl.Visible = true;
@@ -760,6 +786,7 @@ namespace DietApp
              */
             if (!diet_pnl.Visible) return;
             var showOld = new GenerationOfDiet(_id, _clienthistoryid, DateTime.Parse(diet_date_cb.Text));
+            if (diet_date_cb.SelectedIndex == diet_date_cb.Items.Count - 1 && showOld.GetClientType() == null && showOld.GetDietType() == null) return;
             if (showOld.GetClientType() == null || showOld.GetDietType() == null)
             {
                 diet_plan_pnl.Visible = false;

@@ -41,6 +41,12 @@ namespace DietApp
         }
         public GenerationOfDiet(string clientType, string dietType, DateTime dateTime, int age, string sex, int id, int clientshistoryid)
         {
+            if (clientshistoryid == 0)
+            {
+                MessageBox.Show(@"Client hasn't been measured for the select date " + dateTime);
+                return;
+            }
+            
             _clientType = clientType;
             _dietType = dietType;
             _dateTime = dateTime;
@@ -49,11 +55,7 @@ namespace DietApp
             _id = id;
             _clientshistoryid = clientshistoryid;
 
-            if (_clientshistoryid == 0)
-            {
-                MessageBox.Show(@"Client hasn't been measured for the select date " + _dateTime);
-                return;
-            }
+            
             DietGeneration();
         }
 
