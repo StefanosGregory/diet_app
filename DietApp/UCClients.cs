@@ -832,13 +832,19 @@ namespace DietApp
                         Text = row == 7
                             ? details.GetTotalCalories().ToString(CultureInfo.InvariantCulture)
                             : details.GetFoodName(),
+                        Cursor = Cursors.Hand
                     };
-                    
+                    lbl.Click += (sender, args) => { diet_lbl_click(details); };
                     diet_plan_pnl.Controls.Add(lbl, column, row);
                     row++;
                 }
                 column++;
             }
+        }
+
+        private static void diet_lbl_click(NutritionInfo details)
+        {
+            new FoodInfoForm(details).Show();
         }
     }
 }

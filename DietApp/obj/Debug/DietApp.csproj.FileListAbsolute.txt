@@ -200,3 +200,4 @@ C:\Users\Styliani\Desktop\diet_app\DietApp\obj\Debug\DietApp.csproj.CopyComplete
 C:\Users\Styliani\Desktop\diet_app\DietApp\obj\Debug\DietApp.exe
 C:\Users\Styliani\Desktop\diet_app\DietApp\obj\Debug\DietApp.pdb
 C:\Users\Styliani\Desktop\diet_app\DietApp\obj\Debug\DietApp.FoodInfoForm.resources
+C:\Users\bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.FoodInfoForm.resources
