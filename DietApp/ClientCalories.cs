@@ -20,7 +20,7 @@ namespace DietApp
                 var cmd = new NpgsqlCommand
                 {
                     Connection = conn,
-                    CommandText = "SELECT id, standard, active athletic FROM caloriesinfo WHERE type = @type AND (agemin >= @age AND agemax <= @age) AND sex = @sex;"
+                    CommandText = "SELECT id, calories FROM caloriesinfo WHERE type = @type AND (agemin >= @age AND agemax <= @age) AND sex = @sex;"
                 };
                 cmd.Parameters.Add("@type", NpgsqlDbType.Char).Value = type;
                 cmd.Parameters.Add("@age", NpgsqlDbType.Integer).Value = age;
@@ -30,13 +30,7 @@ namespace DietApp
                 while (reader.Read())
                 {
                     _id = short.Parse(reader[0].ToString());
-                    _calories = type switch
-                    {
-                        "Standard" => short.Parse(reader[1].ToString()),
-                        "Active" => short.Parse(reader[2].ToString()),
-                        "Athletic" => short.Parse(reader[3].ToString()),
-                        _ => _calories
-                    };
+                    _calories = short.Parse(reader[1].ToString());
                 }
                 
                 conn.Dispose();

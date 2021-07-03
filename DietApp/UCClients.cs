@@ -800,9 +800,6 @@ namespace DietApp
             diet_type_cb.Text = showOld.GetClientType();
             DisplayDiet(showOld.GetDays());
             diet_plan_pnl.Visible = true;
-
-            // if new create a new diet plan
-
         }
         private void DisplayDiet(IEnumerable<List<NutritionInfo>> days) 
         {

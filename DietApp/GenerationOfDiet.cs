@@ -55,7 +55,7 @@ namespace DietApp
             _id = id;
             _clientshistoryid = clientshistoryid;
 
-            
+            GetClientCaloriesInfo();
             DietGeneration();
         }
 
@@ -221,13 +221,15 @@ namespace DietApp
             
             conn.Dispose();
             conn.Close();
-
         }
         private void DietGeneration()
         {
             string[] breakfast = new string[7], main = new string[14], snack = new string[21];
-            
-            for (var i = 0; i < 7; i++)
+
+            switch (_dietType)
+            {
+                default: 
+                    for (var i = 0; i < 7; i++)
             {
                 var conn = new NpgsqlConnection(Cs);
                 conn.Open();
@@ -249,7 +251,7 @@ namespace DietApp
                 conn.Dispose();
                 conn.Close();
             }
-            for (var i = 0; i < 14; i++)
+                    for (var i = 0; i < 14; i++)
             {
                 var conn = new NpgsqlConnection(Cs);
                 conn.Open();
@@ -270,7 +272,7 @@ namespace DietApp
                 conn.Dispose();
                 conn.Close();
             }
-            for (var i = 0; i < 21; i++)
+                    for (var i = 0; i < 21; i++)
             {
                 var conn = new NpgsqlConnection(Cs);
                 conn.Open();
@@ -290,6 +292,118 @@ namespace DietApp
                 }
                 conn.Dispose();
                 conn.Close();
+            }
+
+                    break;
+                case "Muscle Gain":
+                    /*
+                     * For random:
+                     *      create a new array and insert ids ,
+                     *      2 loops, 2 queries:
+                     *          1) sql to insert ids
+                     *          2) sql to select random given number from ids
+                     */
+                    string[] type = {"Breakfast", "Main", "Snack"};
+                    var breakfastIds = new List<int>();
+                    var mainIds = new List<int>();
+                    var snacksIds = new List<int>();
+                    
+                    foreach (var s in type)
+                    {
+                        var connTmp = new NpgsqlConnection(Cs);
+                        connTmp.Open();
+                        var sql = new NpgsqlCommand
+                        {
+                            CommandText =
+                                "SELECT id FROM food_options WHERE protein > 15 and type = @type;",
+                            Connection = connTmp
+                        };
+
+                        sql.Parameters.Add("@type", NpgsqlDbType.Char).Value = s;
+                        var reader = sql.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            switch (s)
+                            {
+                                case "Breakfast":
+                                    breakfastIds.Add(short.Parse(reader[0].ToString()));
+                                    break;
+                                case "Main":
+                                    mainIds.Add(short.Parse(reader[0].ToString()));
+                                    break;
+                                case "Snack":
+                                    snacksIds.Add(short.Parse(reader[0].ToString()));
+                                    break;
+                            }
+                        }
+                        
+                        connTmp.Dispose();
+                        connTmp.Close();
+                    }
+                    for (var i = 0; i < 7; i++)
+                    {
+                        var conn = new NpgsqlConnection(Cs);
+                        conn.Open();
+                        var cmdBreakfast = new NpgsqlCommand
+                        {
+                            CommandText = "SELECT * FROM food_options WHERE id = @id and type = 'Breakfast' order by id;",
+                            Connection = conn 
+                        };
+                        cmdBreakfast.Parameters.Add("@id", NpgsqlDbType.Integer).Value = breakfastIds[_r.Next(breakfastIds.Count)];
+                        var reader = cmdBreakfast.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            // FoodName_FoodType_{calories-fat-proteins-carbohydrates-carbs},...,totalCalories
+                            var str = reader[1] + "_" + reader[2] + "_{" + reader[3] + "_" + reader[4] + "_" + reader[5] + "_" + reader[6] + "_" + reader[7] + "},";
+
+                            breakfast[i] = str;
+                        }
+                        conn.Dispose();
+                        conn.Close();
+                    }
+                    for (var i = 0; i < 14; i++)
+                    {
+                        var conn = new NpgsqlConnection(Cs);
+                        conn.Open();
+                        var cmdMain = new NpgsqlCommand
+                        {
+                            CommandText = "SELECT * FROM food_options WHERE id = @id and type = 'Main' order by id;",
+                            Connection = conn 
+                        };
+                        cmdMain.Parameters.Add("@id", NpgsqlDbType.Integer).Value = mainIds[_r.Next(mainIds.Count)];
+                        var reader = cmdMain.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            // FoodName_FoodType_{calories-fat-proteins-carbohydrates-carbs},...,totalCalories
+                            var str = reader[1] + "_" + reader[2] + "_{" + reader[3] + "_" + reader[4] + "_" + reader[5] + "_" + reader[6] + "_" + reader[7] + "},";
+
+                            main[i] = str;
+                        }
+                        conn.Dispose();
+                        conn.Close();
+                    }
+                    for (var i = 0; i < 21; i++)
+                    {
+                        var conn = new NpgsqlConnection(Cs);
+                        conn.Open();
+                        var cmdSnack = new NpgsqlCommand
+                        {
+                            CommandText = "SELECT * FROM food_options WHERE id = @id and type = 'Snack' order by id;",
+                            Connection = conn 
+                        };
+                        cmdSnack.Parameters.Add("@id", NpgsqlDbType.Integer).Value = snacksIds[_r.Next(0, snacksIds.Count)];
+                        var reader = cmdSnack.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            // FoodName_FoodType_{calories-fat-proteins-carbohydrates-carbs},...,totalCalories
+                            var str = reader[1] + "_" + reader[2] + "_{" + reader[3] + "_" + reader[4] + "_" + reader[5] + "_" + reader[6] + "_" + reader[7] + "},";
+
+                            snack[i] = str;
+                        }
+                        conn.Dispose();
+                        conn.Close();
+                    }
+                    break;
             }
 
             // Create days string 
@@ -316,7 +430,6 @@ namespace DietApp
                 // Sunday
                 DayStringCreation(breakfast[6] + snack[18] + main[12] + snack[19] + snack[20] + main[13])
             };
-
             
             // Add to _days
             SplitDietProgram(days);

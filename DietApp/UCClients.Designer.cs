@@ -29,10 +29,10 @@ namespace DietApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clients_lbl = new System.Windows.Forms.Label();
             this.ShowAll_pnl = new System.Windows.Forms.Panel();
             this.showClients_pnl = new System.Windows.Forms.DataGridView();
@@ -160,7 +160,7 @@ namespace DietApp
             this.info_navBar_pnl = new System.Windows.Forms.Panel();
             this.info_lbl = new System.Windows.Forms.Label();
             this.ShowAll_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showClients_pnl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.showClients_pnl)).BeginInit();
             this.AddClient_pnl.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -193,8 +193,8 @@ namespace DietApp
             // clients_lbl
             // 
             this.clients_lbl.AutoSize = true;
-            this.clients_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clients_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.clients_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.clients_lbl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.clients_lbl.Location = new System.Drawing.Point(22, 24);
             this.clients_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.clients_lbl.Name = "clients_lbl";
@@ -221,56 +221,56 @@ namespace DietApp
             this.showClients_pnl.AllowUserToAddRows = false;
             this.showClients_pnl.AllowUserToDeleteRows = false;
             this.showClients_pnl.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.showClients_pnl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.showClients_pnl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.showClients_pnl.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.showClients_pnl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.showClients_pnl.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.showClients_pnl.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.showClients_pnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.showClients_pnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.showClients_pnl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.DefaultCellStyle = dataGridViewCellStyle3;
             this.showClients_pnl.EnableHeadersVisualStyles = false;
-            this.showClients_pnl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.showClients_pnl.GridColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.showClients_pnl.Location = new System.Drawing.Point(25, 80);
             this.showClients_pnl.Name = "showClients_pnl";
             this.showClients_pnl.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showClients_pnl.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showClients_pnl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.showClients_pnl.RowHeadersWidth = 51;
             this.showClients_pnl.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.showClients_pnl.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.showClients_pnl.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showClients_pnl.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.showClients_pnl.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.showClients_pnl.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.showClients_pnl.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.showClients_pnl.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.showClients_pnl.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.showClients_pnl.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.showClients_pnl.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.showClients_pnl.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.showClients_pnl.Size = new System.Drawing.Size(898, 453);
             this.showClients_pnl.TabIndex = 17;
@@ -281,12 +281,9 @@ namespace DietApp
             this.searchType_cb.DisplayMember = "Name";
             this.searchType_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.searchType_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchType_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchType_cb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.searchType_cb.FormattingEnabled = true;
-            this.searchType_cb.Items.AddRange(new object[] {
-            "Name",
-            "Telephone",
-            "Email"});
+            this.searchType_cb.Items.AddRange(new object[] {"Name", "Telephone", "Email"});
             this.searchType_cb.Location = new System.Drawing.Point(366, 30);
             this.searchType_cb.Name = "searchType_cb";
             this.searchType_cb.Size = new System.Drawing.Size(74, 21);
@@ -295,7 +292,7 @@ namespace DietApp
             // 
             // search_txt
             // 
-            this.search_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.search_txt.Location = new System.Drawing.Point(446, 30);
             this.search_txt.Name = "search_txt";
             this.search_txt.Size = new System.Drawing.Size(125, 23);
@@ -303,17 +300,17 @@ namespace DietApp
             // 
             // clear_btn
             // 
-            this.clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
+            this.clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
             this.clear_btn.FlatAppearance.BorderSize = 0;
-            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.clear_btn.Location = new System.Drawing.Point(672, 30);
             this.clear_btn.Name = "clear_btn";
-            this.clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
+            this.clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
             this.clear_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.clear_btn.Size = new System.Drawing.Size(89, 23);
             this.clear_btn.TabIndex = 14;
@@ -324,18 +321,18 @@ namespace DietApp
             // 
             // Search_btn
             // 
-            this.Search_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
-            this.Search_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(198)))), ((int)(((byte)(208)))));
+            this.Search_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (197)))), ((int) (((byte) (198)))), ((int) (((byte) (208)))));
+            this.Search_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (197)))), ((int) (((byte) (198)))), ((int) (((byte) (208)))));
             this.Search_btn.FlatAppearance.BorderSize = 0;
-            this.Search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Search_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.Search_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.Search_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Search_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Search_btn.ForeColor = System.Drawing.Color.White;
             this.Search_btn.Location = new System.Drawing.Point(577, 30);
             this.Search_btn.Name = "Search_btn";
-            this.Search_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
-            this.Search_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(89)))), ((int)(((byte)(103)))));
+            this.Search_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (89)))), ((int) (((byte) (103)))));
+            this.Search_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (101)))), ((int) (((byte) (89)))), ((int) (((byte) (103)))));
             this.Search_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.Search_btn.Size = new System.Drawing.Size(89, 23);
             this.Search_btn.TabIndex = 13;
@@ -346,19 +343,19 @@ namespace DietApp
             // 
             // AddClient_btn
             // 
-            this.AddClient_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.AddClient_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.AddClient_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.AddClient_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            this.AddClient_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            this.AddClient_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.AddClient_btn.FlatAppearance.BorderSize = 0;
-            this.AddClient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.AddClient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.AddClient_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.AddClient_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.AddClient_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddClient_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddClient_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.AddClient_btn.ForeColor = System.Drawing.Color.White;
             this.AddClient_btn.Location = new System.Drawing.Point(25, 26);
             this.AddClient_btn.Name = "AddClient_btn";
-            this.AddClient_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.AddClient_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.AddClient_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.AddClient_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
             this.AddClient_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.AddClient_btn.Size = new System.Drawing.Size(118, 23);
             this.AddClient_btn.TabIndex = 12;
@@ -386,7 +383,7 @@ namespace DietApp
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel11.Controls.Add(this.label2);
             this.panel11.Controls.Add(this.fullname_txt);
             this.panel11.Location = new System.Drawing.Point(36, 7);
@@ -398,8 +395,8 @@ namespace DietApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label2.Location = new System.Drawing.Point(11, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -417,7 +414,7 @@ namespace DietApp
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel3.Controls.Add(this.cancel_btn);
             this.panel3.Controls.Add(this.Add_btn);
             this.panel3.Location = new System.Drawing.Point(36, 549);
@@ -430,7 +427,7 @@ namespace DietApp
             // 
             this.cancel_btn.FlatAppearance.BorderSize = 0;
             this.cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancel_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.cancel_btn.ForeColor = System.Drawing.Color.Tomato;
             this.cancel_btn.Location = new System.Drawing.Point(178, 16);
             this.cancel_btn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
@@ -446,8 +443,8 @@ namespace DietApp
             // 
             this.Add_btn.FlatAppearance.BorderSize = 0;
             this.Add_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.Add_btn.Font = new System.Drawing.Font("Nirmala UI", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.Add_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.Add_btn.Location = new System.Drawing.Point(61, 16);
             this.Add_btn.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.Add_btn.Name = "Add_btn";
@@ -460,7 +457,7 @@ namespace DietApp
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel9.Controls.Add(this.allergies_txt);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Location = new System.Drawing.Point(36, 397);
@@ -480,8 +477,8 @@ namespace DietApp
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label9.Location = new System.Drawing.Point(10, 23);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
@@ -491,7 +488,7 @@ namespace DietApp
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel8.Controls.Add(this.healthprob_txt);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Location = new System.Drawing.Point(36, 462);
@@ -511,8 +508,8 @@ namespace DietApp
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label8.Location = new System.Drawing.Point(2, 23);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
@@ -522,7 +519,7 @@ namespace DietApp
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel7.Controls.Add(this.email_txt);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Location = new System.Drawing.Point(36, 332);
@@ -546,8 +543,8 @@ namespace DietApp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label7.Location = new System.Drawing.Point(10, 23);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
@@ -557,7 +554,7 @@ namespace DietApp
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel6.Controls.Add(this.telephone_txt);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Location = new System.Drawing.Point(36, 267);
@@ -581,8 +578,8 @@ namespace DietApp
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label6.Location = new System.Drawing.Point(10, 23);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
@@ -592,7 +589,7 @@ namespace DietApp
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.height_txt);
             this.panel5.Controls.Add(this.label5);
@@ -605,8 +602,8 @@ namespace DietApp
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label10.Location = new System.Drawing.Point(202, 23);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
@@ -625,8 +622,8 @@ namespace DietApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label5.Location = new System.Drawing.Point(10, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -636,7 +633,7 @@ namespace DietApp
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel4.Controls.Add(this.age_txt);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(36, 137);
@@ -656,8 +653,8 @@ namespace DietApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label4.Location = new System.Drawing.Point(10, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -667,7 +664,7 @@ namespace DietApp
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel10.Controls.Add(this.sex_cb);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Location = new System.Drawing.Point(36, 72);
@@ -678,13 +675,9 @@ namespace DietApp
             // 
             // sex_cb
             // 
-            this.sex_cb.AutoCompleteCustomSource.AddRange(new string[] {
-            "Male",
-            "Female"});
+            this.sex_cb.AutoCompleteCustomSource.AddRange(new string[] {"Male", "Female"});
             this.sex_cb.FormattingEnabled = true;
-            this.sex_cb.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            this.sex_cb.Items.AddRange(new object[] {"Male", "Female"});
             this.sex_cb.Location = new System.Drawing.Point(151, 23);
             this.sex_cb.Margin = new System.Windows.Forms.Padding(2);
             this.sex_cb.Name = "sex_cb";
@@ -694,8 +687,8 @@ namespace DietApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label3.Location = new System.Drawing.Point(10, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -717,7 +710,7 @@ namespace DietApp
             // 
             // history_pnl
             // 
-            this.history_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_pnl.Controls.Add(this.panel16);
             this.history_pnl.Controls.Add(this.panel15);
             this.history_pnl.Controls.Add(this.panel14);
@@ -732,7 +725,7 @@ namespace DietApp
             this.history_pnl.Controls.Add(this.history_close_btn);
             this.history_pnl.Controls.Add(this.history_addEntry_btn);
             this.history_pnl.Controls.Add(this.history_entry_lbl);
-            this.history_pnl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.history_pnl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.history_pnl.Location = new System.Drawing.Point(0, 55);
             this.history_pnl.Name = "history_pnl";
             this.history_pnl.Size = new System.Drawing.Size(1110, 745);
@@ -741,7 +734,7 @@ namespace DietApp
             // 
             // panel16
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel16.Controls.Add(this.history_visceralfat_txt);
             this.panel16.Controls.Add(this.label27);
             this.panel16.Location = new System.Drawing.Point(356, 496);
@@ -759,8 +752,8 @@ namespace DietApp
             // 
             // label27
             // 
-            this.label27.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label27.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label27.Location = new System.Drawing.Point(75, 10);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(97, 46);
@@ -769,7 +762,7 @@ namespace DietApp
             // 
             // panel15
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel15.Controls.Add(this.history_waterperc_txt);
             this.panel15.Controls.Add(this.label24);
             this.panel15.Controls.Add(this.label29);
@@ -789,8 +782,8 @@ namespace DietApp
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label24.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label24.Location = new System.Drawing.Point(75, 16);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(87, 22);
@@ -800,7 +793,7 @@ namespace DietApp
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label29.Location = new System.Drawing.Point(223, 16);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(27, 22);
@@ -809,7 +802,7 @@ namespace DietApp
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel14.Controls.Add(this.history_musclemass_txt);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Controls.Add(this.label28);
@@ -828,8 +821,8 @@ namespace DietApp
             // 
             // label23
             // 
-            this.label23.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label23.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label23.Location = new System.Drawing.Point(75, 7);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(76, 48);
@@ -839,7 +832,7 @@ namespace DietApp
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label28.Location = new System.Drawing.Point(220, 22);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(34, 22);
@@ -848,7 +841,7 @@ namespace DietApp
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel13.Controls.Add(this.label30);
             this.panel13.Controls.Add(this.history_fatperc_txt);
             this.panel13.Controls.Add(this.label26);
@@ -860,7 +853,7 @@ namespace DietApp
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label30.Location = new System.Drawing.Point(220, 18);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(27, 22);
@@ -878,8 +871,8 @@ namespace DietApp
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label26.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label26.Location = new System.Drawing.Point(75, 18);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(64, 22);
@@ -888,7 +881,7 @@ namespace DietApp
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel12.Controls.Add(this.history_weight_txt);
             this.panel12.Controls.Add(this.label22);
             this.panel12.Controls.Add(this.label19);
@@ -908,8 +901,8 @@ namespace DietApp
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label22.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label22.Location = new System.Drawing.Point(75, 18);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(75, 22);
@@ -919,7 +912,7 @@ namespace DietApp
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label19.Location = new System.Drawing.Point(220, 18);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(34, 22);
@@ -928,7 +921,7 @@ namespace DietApp
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel2.Controls.Add(this.history_bmi_txt);
             this.panel2.Controls.Add(this.label25);
             this.panel2.Location = new System.Drawing.Point(356, 151);
@@ -949,8 +942,8 @@ namespace DietApp
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label25.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label25.Location = new System.Drawing.Point(75, 18);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 22);
@@ -959,7 +952,7 @@ namespace DietApp
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel1.Controls.Add(this.history_date_cb);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Location = new System.Drawing.Point(356, 79);
@@ -970,7 +963,7 @@ namespace DietApp
             // history_date_cb
             // 
             this.history_date_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.history_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.history_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.history_date_cb.FormattingEnabled = true;
             this.history_date_cb.Location = new System.Drawing.Point(169, 17);
             this.history_date_cb.Name = "history_date_cb";
@@ -981,8 +974,8 @@ namespace DietApp
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label21.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label21.Location = new System.Drawing.Point(75, 17);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(55, 22);
@@ -995,8 +988,8 @@ namespace DietApp
             this.history_showgraph_btn.ButtonColor = System.Drawing.Color.Red;
             this.history_showgraph_btn.FlatAppearance.BorderSize = 0;
             this.history_showgraph_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_showgraph_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_showgraph_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_showgraph_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_showgraph_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_showgraph_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_showgraph_btn.Location = new System.Drawing.Point(472, 592);
             this.history_showgraph_btn.Name = "history_showgraph_btn";
@@ -1012,40 +1005,40 @@ namespace DietApp
             // 
             // history_saveEntry_btn
             // 
-            this.history_saveEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_saveEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_saveEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.history_saveEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.history_saveEntry_btn.FlatAppearance.BorderSize = 0;
             this.history_saveEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_saveEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_saveEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_saveEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_saveEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_saveEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_saveEntry_btn.ForeColor = System.Drawing.Color.White;
             this.history_saveEntry_btn.Location = new System.Drawing.Point(281, 676);
             this.history_saveEntry_btn.Name = "history_saveEntry_btn";
-            this.history_saveEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_saveEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_saveEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_saveEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_saveEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_saveEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
             this.history_saveEntry_btn.Size = new System.Drawing.Size(122, 35);
             this.history_saveEntry_btn.TabIndex = 23;
             this.history_saveEntry_btn.Text = "Save";
-            this.history_saveEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_saveEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
             this.history_saveEntry_btn.UseVisualStyleBackColor = true;
             this.history_saveEntry_btn.Visible = false;
             this.history_saveEntry_btn.Click += new System.EventHandler(this.history_saveEntry_btn_Click);
             // 
             // history_clear_btn
             // 
-            this.history_clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_clear_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
+            this.history_clear_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
             this.history_clear_btn.FlatAppearance.BorderSize = 0;
             this.history_clear_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_clear_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_clear_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_clear_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_clear_btn.Location = new System.Drawing.Point(653, 634);
             this.history_clear_btn.Name = "history_clear_btn";
-            this.history_clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_clear_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
+            this.history_clear_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
             this.history_clear_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.history_clear_btn.Size = new System.Drawing.Size(122, 35);
             this.history_clear_btn.TabIndex = 22;
@@ -1057,40 +1050,40 @@ namespace DietApp
             // 
             // history_editEntry_btn
             // 
-            this.history_editEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_editEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_editEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.history_editEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.history_editEntry_btn.FlatAppearance.BorderSize = 0;
             this.history_editEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_editEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_editEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_editEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_editEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_editEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_editEntry_btn.ForeColor = System.Drawing.Color.White;
             this.history_editEntry_btn.Location = new System.Drawing.Point(281, 635);
             this.history_editEntry_btn.Name = "history_editEntry_btn";
-            this.history_editEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_editEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_editEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_editEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_editEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_editEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
             this.history_editEntry_btn.Size = new System.Drawing.Size(122, 35);
             this.history_editEntry_btn.TabIndex = 21;
             this.history_editEntry_btn.Text = "Edit";
-            this.history_editEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_editEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
             this.history_editEntry_btn.UseVisualStyleBackColor = true;
             this.history_editEntry_btn.Visible = false;
             this.history_editEntry_btn.Click += new System.EventHandler(this.history_editEntry_btn_Click);
             // 
             // history_close_btn
             // 
-            this.history_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.history_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.history_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
+            this.history_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
             this.history_close_btn.FlatAppearance.BorderSize = 0;
             this.history_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_close_btn.Location = new System.Drawing.Point(653, 592);
             this.history_close_btn.Name = "history_close_btn";
-            this.history_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.history_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.history_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
+            this.history_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
             this.history_close_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.history_close_btn.Size = new System.Drawing.Size(122, 35);
             this.history_close_btn.TabIndex = 20;
@@ -1101,31 +1094,31 @@ namespace DietApp
             // 
             // history_addEntry_btn
             // 
-            this.history_addEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.history_addEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_addEntry_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.history_addEntry_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.history_addEntry_btn.FlatAppearance.BorderSize = 0;
             this.history_addEntry_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.history_addEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.history_addEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.history_addEntry_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.history_addEntry_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.history_addEntry_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history_addEntry_btn.ForeColor = System.Drawing.Color.White;
             this.history_addEntry_btn.Location = new System.Drawing.Point(281, 592);
             this.history_addEntry_btn.Name = "history_addEntry_btn";
-            this.history_addEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_addEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.history_addEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
+            this.history_addEntry_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_addEntry_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.history_addEntry_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
             this.history_addEntry_btn.Size = new System.Drawing.Size(122, 35);
             this.history_addEntry_btn.TabIndex = 19;
             this.history_addEntry_btn.Text = "Add";
-            this.history_addEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.history_addEntry_btn.TextColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
             this.history_addEntry_btn.UseVisualStyleBackColor = true;
             this.history_addEntry_btn.Click += new System.EventHandler(this.history_addEntry_btn_Click);
             // 
             // history_entry_lbl
             // 
             this.history_entry_lbl.AutoSize = true;
-            this.history_entry_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history_entry_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.history_entry_lbl.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.history_entry_lbl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.history_entry_lbl.Location = new System.Drawing.Point(489, 29);
             this.history_entry_lbl.Name = "history_entry_lbl";
             this.history_entry_lbl.Size = new System.Drawing.Size(110, 24);
@@ -1134,7 +1127,7 @@ namespace DietApp
             // 
             // info_pnl
             // 
-            this.info_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.info_pnl.Controls.Add(this.info_cancel_btn);
             this.info_pnl.Controls.Add(this.info_save_btn);
             this.info_pnl.Controls.Add(this.info_close_btn);
@@ -1163,19 +1156,19 @@ namespace DietApp
             // 
             // info_cancel_btn
             // 
-            this.info_cancel_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_cancel_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_cancel_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
+            this.info_cancel_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
             this.info_cancel_btn.FlatAppearance.BorderSize = 0;
             this.info_cancel_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_cancel_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_cancel_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_cancel_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.info_cancel_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.info_cancel_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_cancel_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_cancel_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_cancel_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.info_cancel_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_cancel_btn.Location = new System.Drawing.Point(593, 552);
             this.info_cancel_btn.Name = "info_cancel_btn";
-            this.info_cancel_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_cancel_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_cancel_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
+            this.info_cancel_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
             this.info_cancel_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.info_cancel_btn.Size = new System.Drawing.Size(169, 57);
             this.info_cancel_btn.TabIndex = 20;
@@ -1187,43 +1180,43 @@ namespace DietApp
             // 
             // info_save_btn
             // 
-            this.info_save_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_save_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_save_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.info_save_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.info_save_btn.FlatAppearance.BorderSize = 0;
             this.info_save_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_save_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.info_save_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.info_save_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.info_save_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_save_btn.Location = new System.Drawing.Point(305, 552);
             this.info_save_btn.Name = "info_save_btn";
-            this.info_save_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_save_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_save_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.info_save_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.info_save_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.info_save_btn.Size = new System.Drawing.Size(169, 57);
             this.info_save_btn.TabIndex = 19;
             this.info_save_btn.Text = "Save";
-            this.info_save_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_save_btn.TextColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_save_btn.UseVisualStyleBackColor = true;
             this.info_save_btn.Visible = false;
             this.info_save_btn.Click += new System.EventHandler(this.info_save_btn_Click);
             // 
             // info_close_btn
             // 
-            this.info_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.info_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.info_close_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
+            this.info_close_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (86)))), ((int) (((byte) (76)))), ((int) (((byte) (77)))));
             this.info_close_btn.FlatAppearance.BorderSize = 0;
             this.info_close_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.info_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.info_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_close_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_close_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.info_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_close_btn.Location = new System.Drawing.Point(593, 489);
             this.info_close_btn.Name = "info_close_btn";
-            this.info_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
-            this.info_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(10)))), ((int)(((byte)(2)))));
+            this.info_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
+            this.info_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (124)))), ((int) (((byte) (10)))), ((int) (((byte) (2)))));
             this.info_close_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.info_close_btn.Size = new System.Drawing.Size(169, 57);
             this.info_close_btn.TabIndex = 18;
@@ -1234,31 +1227,31 @@ namespace DietApp
             // 
             // info_edit_btn
             // 
-            this.info_edit_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.info_edit_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_edit_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
+            this.info_edit_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.info_edit_btn.FlatAppearance.BorderSize = 0;
             this.info_edit_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.info_edit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.info_edit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.info_edit_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
+            this.info_edit_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.info_edit_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.info_edit_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_edit_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.info_edit_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_edit_btn.Location = new System.Drawing.Point(305, 489);
             this.info_edit_btn.Name = "info_edit_btn";
-            this.info_edit_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.info_edit_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_edit_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.info_edit_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
+            this.info_edit_btn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.info_edit_btn.Size = new System.Drawing.Size(169, 57);
             this.info_edit_btn.TabIndex = 17;
             this.info_edit_btn.Text = "Edit";
-            this.info_edit_btn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_edit_btn.TextColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_edit_btn.UseVisualStyleBackColor = true;
             this.info_edit_btn.Click += new System.EventHandler(this.info_edit_btn_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label18.Location = new System.Drawing.Point(813, 198);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(37, 24);
@@ -1268,11 +1261,9 @@ namespace DietApp
             // info_sex_cb
             // 
             this.info_sex_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.info_sex_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_sex_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_sex_cb.FormattingEnabled = true;
-            this.info_sex_cb.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            this.info_sex_cb.Items.AddRange(new object[] {"Male", "Female"});
             this.info_sex_cb.Location = new System.Drawing.Point(315, 127);
             this.info_sex_cb.Name = "info_sex_cb";
             this.info_sex_cb.Size = new System.Drawing.Size(80, 26);
@@ -1280,7 +1271,7 @@ namespace DietApp
             // 
             // info_healthprobs_txt
             // 
-            this.info_healthprobs_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_healthprobs_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_healthprobs_txt.Location = new System.Drawing.Point(746, 264);
             this.info_healthprobs_txt.Name = "info_healthprobs_txt";
             this.info_healthprobs_txt.Size = new System.Drawing.Size(149, 96);
@@ -1289,7 +1280,7 @@ namespace DietApp
             // 
             // info_allergies_txt
             // 
-            this.info_allergies_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_allergies_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_allergies_txt.Location = new System.Drawing.Point(315, 264);
             this.info_allergies_txt.Name = "info_allergies_txt";
             this.info_allergies_txt.Size = new System.Drawing.Size(149, 96);
@@ -1298,7 +1289,7 @@ namespace DietApp
             // 
             // info_height_txt
             // 
-            this.info_height_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_height_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_height_txt.Location = new System.Drawing.Point(746, 199);
             this.info_height_txt.Name = "info_height_txt";
             this.info_height_txt.Size = new System.Drawing.Size(61, 26);
@@ -1306,7 +1297,7 @@ namespace DietApp
             // 
             // info_email_txt
             // 
-            this.info_email_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_email_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_email_txt.Location = new System.Drawing.Point(746, 127);
             this.info_email_txt.Name = "info_email_txt";
             this.info_email_txt.Size = new System.Drawing.Size(149, 26);
@@ -1314,7 +1305,7 @@ namespace DietApp
             // 
             // info_tel_txt
             // 
-            this.info_tel_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_tel_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_tel_txt.Location = new System.Drawing.Point(746, 68);
             this.info_tel_txt.Name = "info_tel_txt";
             this.info_tel_txt.Size = new System.Drawing.Size(149, 26);
@@ -1322,7 +1313,7 @@ namespace DietApp
             // 
             // info_age_txt
             // 
-            this.info_age_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_age_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_age_txt.Location = new System.Drawing.Point(315, 199);
             this.info_age_txt.Name = "info_age_txt";
             this.info_age_txt.Size = new System.Drawing.Size(80, 26);
@@ -1330,7 +1321,7 @@ namespace DietApp
             // 
             // info_fullname_txt
             // 
-            this.info_fullname_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.info_fullname_txt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.info_fullname_txt.Location = new System.Drawing.Point(315, 68);
             this.info_fullname_txt.Name = "info_fullname_txt";
             this.info_fullname_txt.Size = new System.Drawing.Size(149, 26);
@@ -1338,8 +1329,8 @@ namespace DietApp
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label17.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label17.Location = new System.Drawing.Point(589, 263);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(88, 55);
@@ -1349,8 +1340,8 @@ namespace DietApp
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label16.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label16.Location = new System.Drawing.Point(589, 198);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 24);
@@ -1360,8 +1351,8 @@ namespace DietApp
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label15.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label15.Location = new System.Drawing.Point(589, 126);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 24);
@@ -1371,8 +1362,8 @@ namespace DietApp
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label14.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label14.Location = new System.Drawing.Point(589, 67);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(111, 24);
@@ -1382,8 +1373,8 @@ namespace DietApp
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label13.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label13.Location = new System.Drawing.Point(187, 263);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 24);
@@ -1393,8 +1384,8 @@ namespace DietApp
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label12.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label12.Location = new System.Drawing.Point(187, 198);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 24);
@@ -1404,8 +1395,8 @@ namespace DietApp
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label11.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label11.Location = new System.Drawing.Point(187, 126);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 24);
@@ -1415,8 +1406,8 @@ namespace DietApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label1.Location = new System.Drawing.Point(187, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 24);
@@ -1425,7 +1416,7 @@ namespace DietApp
             // 
             // diet_pnl
             // 
-            this.diet_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.diet_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.diet_pnl.Controls.Add(this.diet_plan_pnl);
             this.diet_pnl.Controls.Add(this.panel18);
             this.diet_pnl.Location = new System.Drawing.Point(36, 56);
@@ -1436,7 +1427,7 @@ namespace DietApp
             // 
             // diet_plan_pnl
             // 
-            this.diet_plan_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_plan_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.diet_plan_pnl.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.diet_plan_pnl.ColumnCount = 8;
             this.diet_plan_pnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -1462,7 +1453,7 @@ namespace DietApp
             this.diet_plan_pnl.Controls.Add(this.label46, 0, 6);
             this.diet_plan_pnl.Controls.Add(this.label40, 0, 7);
             this.diet_plan_pnl.Controls.Add(this.label47, 7, 0);
-            this.diet_plan_pnl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.diet_plan_pnl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.diet_plan_pnl.Location = new System.Drawing.Point(92, 166);
             this.diet_plan_pnl.Name = "diet_plan_pnl";
             this.diet_plan_pnl.RowCount = 8;
@@ -1645,7 +1636,7 @@ namespace DietApp
             // 
             // panel18
             // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.panel18.Controls.Add(this.diet_close_btn);
             this.panel18.Controls.Add(this.diet_gendiet_btn);
             this.panel18.Controls.Add(this.diet_diettype_cb);
@@ -1664,17 +1655,17 @@ namespace DietApp
             // 
             this.diet_close_btn.BorderColor = System.Drawing.Color.Red;
             this.diet_close_btn.ButtonColor = System.Drawing.Color.Red;
-            this.diet_close_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_close_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.diet_close_btn.FlatAppearance.BorderSize = 0;
-            this.diet_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_close_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
+            this.diet_close_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.diet_close_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_close_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diet_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.diet_close_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.diet_close_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.diet_close_btn.Location = new System.Drawing.Point(189, 73);
             this.diet_close_btn.Name = "diet_close_btn";
-            this.diet_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.diet_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.diet_close_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (128)))), ((int) (((byte) (128)))));
+            this.diet_close_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (128)))), ((int) (((byte) (128)))));
             this.diet_close_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.diet_close_btn.Size = new System.Drawing.Size(96, 35);
             this.diet_close_btn.TabIndex = 8;
@@ -1685,20 +1676,20 @@ namespace DietApp
             // 
             // diet_gendiet_btn
             // 
-            this.diet_gendiet_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.diet_gendiet_btn.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(82)))), ((int)(((byte)(186)))));
-            this.diet_gendiet_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
+            this.diet_gendiet_btn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            this.diet_gendiet_btn.ButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (82)))), ((int) (((byte) (186)))));
+            this.diet_gendiet_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.diet_gendiet_btn.FlatAppearance.BorderSize = 0;
-            this.diet_gendiet_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.diet_gendiet_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.diet_gendiet_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
+            this.diet_gendiet_btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int) (((byte) (37)))), ((int) (((byte) (42)))), ((int) (((byte) (64)))));
             this.diet_gendiet_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_gendiet_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diet_gendiet_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.diet_gendiet_btn.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.diet_gendiet_btn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.diet_gendiet_btn.Location = new System.Drawing.Point(35, 73);
             this.diet_gendiet_btn.Name = "diet_gendiet_btn";
-            this.diet_gendiet_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.diet_gendiet_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.diet_gendiet_btn.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
+            this.diet_gendiet_btn.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (128)))), ((int) (((byte) (255)))));
             this.diet_gendiet_btn.OnHoverTextColor = System.Drawing.Color.White;
             this.diet_gendiet_btn.Size = new System.Drawing.Size(143, 35);
             this.diet_gendiet_btn.TabIndex = 4;
@@ -1710,12 +1701,9 @@ namespace DietApp
             // diet_diettype_cb
             // 
             this.diet_diettype_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_diettype_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_diettype_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.diet_diettype_cb.FormattingEnabled = true;
-            this.diet_diettype_cb.Items.AddRange(new object[] {
-            "Weight Loss",
-            "Muscle Gain",
-            "Weight Maintenance"});
+            this.diet_diettype_cb.Items.AddRange(new object[] {"Weight Loss", "Muscle Gain", "Weight Maintenance"});
             this.diet_diettype_cb.Location = new System.Drawing.Point(687, 25);
             this.diet_diettype_cb.Margin = new System.Windows.Forms.Padding(2);
             this.diet_diettype_cb.Name = "diet_diettype_cb";
@@ -1726,8 +1714,8 @@ namespace DietApp
             // 
             this.label33.AutoSize = true;
             this.label33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label33.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label33.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label33.Location = new System.Drawing.Point(567, 22);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
@@ -1738,12 +1726,9 @@ namespace DietApp
             // diet_type_cb
             // 
             this.diet_type_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_type_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_type_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.diet_type_cb.FormattingEnabled = true;
-            this.diet_type_cb.Items.AddRange(new object[] {
-            "Standard",
-            "Active",
-            "Athletic"});
+            this.diet_type_cb.Items.AddRange(new object[] {"Standard", "Active", "Athletic"});
             this.diet_type_cb.Location = new System.Drawing.Point(388, 23);
             this.diet_type_cb.Margin = new System.Windows.Forms.Padding(2);
             this.diet_type_cb.Name = "diet_type_cb";
@@ -1754,7 +1739,7 @@ namespace DietApp
             // 
             this.diet_date_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.diet_date_cb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diet_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diet_date_cb.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.diet_date_cb.FormattingEnabled = true;
             this.diet_date_cb.Location = new System.Drawing.Point(104, 25);
             this.diet_date_cb.Margin = new System.Windows.Forms.Padding(2);
@@ -1767,8 +1752,8 @@ namespace DietApp
             // 
             this.label31.AutoSize = true;
             this.label31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label31.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label31.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label31.Location = new System.Drawing.Point(319, 22);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
@@ -1780,8 +1765,8 @@ namespace DietApp
             // 
             this.label20.AutoSize = true;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
+            this.label20.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (158)))), ((int) (((byte) (161)))), ((int) (((byte) (176)))));
             this.label20.Location = new System.Drawing.Point(36, 22);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
@@ -1801,7 +1786,7 @@ namespace DietApp
             // 
             // diet_navBar_pnl
             // 
-            this.diet_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.diet_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.diet_navBar_pnl.Controls.Add(this.diet_lbl);
             this.diet_navBar_pnl.Location = new System.Drawing.Point(740, 0);
             this.diet_navBar_pnl.Name = "diet_navBar_pnl";
@@ -1810,9 +1795,9 @@ namespace DietApp
             // 
             // diet_lbl
             // 
-            this.diet_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.diet_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diet_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.diet_lbl.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.diet_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.diet_lbl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.diet_lbl.Location = new System.Drawing.Point(0, 0);
             this.diet_lbl.Name = "diet_lbl";
             this.diet_lbl.Size = new System.Drawing.Size(280, 55);
@@ -1825,7 +1810,7 @@ namespace DietApp
             // 
             // history_navBar_pnl
             // 
-            this.history_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.history_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.history_navBar_pnl.Controls.Add(this.history_lbl);
             this.history_navBar_pnl.Location = new System.Drawing.Point(370, 0);
             this.history_navBar_pnl.Name = "history_navBar_pnl";
@@ -1834,10 +1819,10 @@ namespace DietApp
             // 
             // history_lbl
             // 
-            this.history_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.history_lbl.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.history_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.history_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.history_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.history_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.history_lbl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.history_lbl.Location = new System.Drawing.Point(0, 0);
             this.history_lbl.Name = "history_lbl";
             this.history_lbl.Size = new System.Drawing.Size(370, 55);
@@ -1851,7 +1836,7 @@ namespace DietApp
             // 
             // info_navBar_pnl
             // 
-            this.info_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.info_navBar_pnl.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (20)))), ((int) (((byte) (30)))), ((int) (((byte) (54)))));
             this.info_navBar_pnl.Controls.Add(this.info_lbl);
             this.info_navBar_pnl.Location = new System.Drawing.Point(90, 0);
             this.info_navBar_pnl.Name = "info_navBar_pnl";
@@ -1860,10 +1845,10 @@ namespace DietApp
             // 
             // info_lbl
             // 
-            this.info_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.info_lbl.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.info_lbl.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.info_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.info_lbl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.info_lbl.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (126)))), ((int) (((byte) (249)))));
             this.info_lbl.Location = new System.Drawing.Point(0, 0);
             this.info_lbl.Name = "info_lbl";
             this.info_lbl.Size = new System.Drawing.Size(280, 55);
@@ -1878,7 +1863,7 @@ namespace DietApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (46)))), ((int) (((byte) (51)))), ((int) (((byte) (73)))));
             this.Controls.Add(this.ClientCard_pnl);
             this.Controls.Add(this.AddClient_pnl);
             this.Controls.Add(this.ShowAll_pnl);
@@ -1890,7 +1875,7 @@ namespace DietApp
             this.Load += new System.EventHandler(this.UcClients_Load);
             this.ShowAll_pnl.ResumeLayout(false);
             this.ShowAll_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showClients_pnl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.showClients_pnl)).EndInit();
             this.AddClient_pnl.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -1939,7 +1924,6 @@ namespace DietApp
             this.info_navBar_pnl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private System.Windows.Forms.Panel diet_pnl;
