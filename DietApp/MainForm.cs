@@ -31,14 +31,17 @@ namespace DietApp
             BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5, 10);
 
             Region = Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
-            PnlNav.Height = BtnDashboard.Height;
+            /*PnlNav.Height = BtnDashboard.Height;
             PnlNav.Top = BtnDashboard.Top;
-            PnlNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(46, 51, 73);
+            PnlNav.Left = BtnDashboard.Left;*/
+            BtnCalendar.BackColor = Color.FromArgb(46, 51, 73);
+
+            // Setting default shown panel.
+            ucCalendar1.Visible = true;
 
             // Location and size for user controls setting, dashboard, calendar, clients.
-            ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = ucDashboard1.Location = new Point(150, 5);
-            ucSettings1.Size = ucCalendar1.Size = ucClients1.Size = ucDashboard1.Size = new Size(1150, 900);
+            ucSettings1.Location = ucCalendar1.Location = ucClients1.Location = new Point(150, 5);
+            ucSettings1.Size = ucCalendar1.Size = ucClients1.Size = new Size(1150, 900);
             
             WelcomeMess();
         }
@@ -52,17 +55,6 @@ namespace DietApp
          * CLick Event Buttons
          * <
          */
-        private void BtnDashboard_Click(object sender, EventArgs e)
-        {
-            PnlNav.Height = BtnDashboard.Height;
-            PnlNav.Top = BtnDashboard.Top;
-            PnlNav.Left = BtnDashboard.Left;
-            BtnDashboard.BackColor = Color.FromArgb(46, 51, 73);
-            ucDashboard1.Visible = true;
-            BtnCalendar.BackColor = BtnSettings.BackColor = BtnClients.BackColor = Color.FromArgb(20, 30, 54);
-            ucSettings1.Visible = ucClients1.Visible = ucCalendar1.Visible = false;
-
-        }
 
         private void BtnClients_Click(object sender, EventArgs e)
         {
@@ -71,8 +63,8 @@ namespace DietApp
             PnlNav.Left = BtnClients.Left;
             BtnClients.BackColor = Color.FromArgb(46, 51, 73);
             ucClients1.Visible = true;
-            BtnCalendar.BackColor = BtnSettings.BackColor = BtnDashboard.BackColor = Color.FromArgb(20, 30, 54);
-            ucSettings1.Visible = ucCalendar1.Visible = ucDashboard1.Visible = false;
+            BtnCalendar.BackColor = BtnSettings.BackColor = Color.FromArgb(20, 30, 54);
+            ucSettings1.Visible = ucCalendar1.Visible = false;
 
         }
 
@@ -83,8 +75,8 @@ namespace DietApp
             PnlNav.Left = BtnCalendar.Left;
             BtnCalendar.BackColor = Color.FromArgb(46, 51, 73);
             ucCalendar1.Visible = true;
-            BtnDashboard.BackColor = BtnSettings.BackColor = BtnClients.BackColor = Color.FromArgb(20, 30, 54);
-            ucSettings1.Visible = ucClients1.Visible = ucDashboard1.Visible = false;
+            BtnSettings.BackColor = BtnClients.BackColor = Color.FromArgb(20, 30, 54);
+            ucSettings1.Visible = ucClients1.Visible = false;
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -94,7 +86,7 @@ namespace DietApp
             PnlNav.Left = BtnSettings.Left;
             BtnSettings.BackColor = Color.FromArgb(46, 51, 73);
             ucSettings1.Visible = true;
-            BtnCalendar.BackColor = BtnDashboard.BackColor = BtnClients.BackColor = Color.FromArgb(20, 30, 54);
+            BtnCalendar.BackColor = BtnClients.BackColor = Color.FromArgb(20, 30, 54);
             ucClients1.Visible = ucCalendar1.Visible = ucClients1.Visible = false;
         }
         /*
@@ -173,11 +165,6 @@ namespace DietApp
             if (!_draggable) return;
             Top = Cursor.Position.Y - _mouseY;
             Left = Cursor.Position.X - _mouseX;
-        }
-
-        private void ucDashboard1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void moveFormPnl_MouseUp(object sender, MouseEventArgs e)

@@ -34,7 +34,6 @@ namespace DietApp
             this.BtnSettings = new System.Windows.Forms.Button();
             this.BtnCalendar = new System.Windows.Forms.Button();
             this.BtnClients = new System.Windows.Forms.Button();
-            this.BtnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.welcomeMsgLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@ namespace DietApp
             this.ucSettings1 = new DietApp.UcSettings();
             this.ucCalendar1 = new DietApp.UcCalendar();
             this.ucClients1 = new DietApp.UcClients();
-            this.ucDashboard1 = new DietApp.UcDashboard();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,7 +56,6 @@ namespace DietApp
             this.panel1.Controls.Add(this.BtnSettings);
             this.panel1.Controls.Add(this.BtnCalendar);
             this.panel1.Controls.Add(this.BtnClients);
-            this.panel1.Controls.Add(this.BtnDashboard);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -70,10 +67,10 @@ namespace DietApp
             // PnlNav
             // 
             this.PnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.PnlNav.Location = new System.Drawing.Point(2, 176);
+            this.PnlNav.Location = new System.Drawing.Point(2, 164);
             this.PnlNav.Margin = new System.Windows.Forms.Padding(2);
             this.PnlNav.Name = "PnlNav";
-            this.PnlNav.Size = new System.Drawing.Size(2, 92);
+            this.PnlNav.Size = new System.Drawing.Size(2, 74);
             this.PnlNav.TabIndex = 1;
             // 
             // BtnSettings
@@ -102,7 +99,7 @@ namespace DietApp
             this.BtnCalendar.Font = new System.Drawing.Font("Nirmala UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.BtnCalendar.Image = global::DietApp.Properties.Resources.calendar;
-            this.BtnCalendar.Location = new System.Drawing.Point(0, 238);
+            this.BtnCalendar.Location = new System.Drawing.Point(0, 201);
             this.BtnCalendar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCalendar.Name = "BtnCalendar";
             this.BtnCalendar.Size = new System.Drawing.Size(150, 37);
@@ -120,7 +117,7 @@ namespace DietApp
             this.BtnClients.Font = new System.Drawing.Font("Nirmala UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnClients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.BtnClients.Image = global::DietApp.Properties.Resources.Conact;
-            this.BtnClients.Location = new System.Drawing.Point(0, 201);
+            this.BtnClients.Location = new System.Drawing.Point(0, 164);
             this.BtnClients.Margin = new System.Windows.Forms.Padding(2);
             this.BtnClients.Name = "BtnClients";
             this.BtnClients.Size = new System.Drawing.Size(150, 37);
@@ -129,24 +126,6 @@ namespace DietApp
             this.BtnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BtnClients.UseVisualStyleBackColor = true;
             this.BtnClients.Click += new System.EventHandler(this.BtnClients_Click);
-            // 
-            // BtnDashboard
-            // 
-            this.BtnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnDashboard.FlatAppearance.BorderSize = 0;
-            this.BtnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDashboard.Font = new System.Drawing.Font("Nirmala UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.BtnDashboard.Image = global::DietApp.Properties.Resources.home;
-            this.BtnDashboard.Location = new System.Drawing.Point(0, 164);
-            this.BtnDashboard.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnDashboard.Name = "BtnDashboard";
-            this.BtnDashboard.Size = new System.Drawing.Size(150, 37);
-            this.BtnDashboard.TabIndex = 1;
-            this.BtnDashboard.Text = "Dashboard";
-            this.BtnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnDashboard.UseVisualStyleBackColor = true;
-            this.BtnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
             // 
             // panel2
             // 
@@ -277,16 +256,6 @@ namespace DietApp
             this.ucClients1.TabIndex = 2;
             this.ucClients1.Visible = false;
             // 
-            // ucDashboard1
-            // 
-            this.ucDashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ucDashboard1.Location = new System.Drawing.Point(1313, 55);
-            this.ucDashboard1.Margin = new System.Windows.Forms.Padding(1);
-            this.ucDashboard1.Name = "ucDashboard1";
-            this.ucDashboard1.Size = new System.Drawing.Size(210, 98);
-            this.ucDashboard1.TabIndex = 1;
-            this.ucDashboard1.Load += new System.EventHandler(this.ucDashboard1_Load);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,7 +268,6 @@ namespace DietApp
             this.Controls.Add(this.ucSettings1);
             this.Controls.Add(this.ucCalendar1);
             this.Controls.Add(this.ucClients1);
-            this.Controls.Add(this.ucDashboard1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -321,12 +289,10 @@ namespace DietApp
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label welcomeMsgLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button BtnDashboard;
         private System.Windows.Forms.Button BtnSettings;
         private System.Windows.Forms.Button BtnCalendar;
         private System.Windows.Forms.Button BtnClients;
         private System.Windows.Forms.Panel PnlNav;
-        private UcDashboard ucDashboard1;
         private UcClients ucClients1;
         private UcCalendar ucCalendar1;
         private UcSettings ucSettings1;

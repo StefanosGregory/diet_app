@@ -125,12 +125,6 @@
     <Compile Include="UCClients.Designer.cs">
       <DependentUpon>UCClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCDashboard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UCDashboard.Designer.cs">
-      <DependentUpon>UCDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="UCSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCClients.resx">
       <DependentUpon>UCClients.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UCDashboard.resx">
-      <DependentUpon>UCDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSettings.resx">
       <DependentUpon>UCSettings.cs</DependentUpon>

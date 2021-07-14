@@ -23,7 +23,6 @@ C:\Users\Gregory\Desktop\diet_app\DietApp\obj\Debug\DietApp.MainForm.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.MainForm.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCCalendar.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCClients.resources
-C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCDashboard.resources
 C:\Users\Bakeries\Desktop\diet_app\DietApp\obj\Debug\DietApp.UCSettings.resources
 C:\Users\Gregory\Desktop\diet_app\DietApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Gregory\Desktop\diet_app\DietApp\bin\Debug\Npgsql.dll
