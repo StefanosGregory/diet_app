@@ -197,8 +197,8 @@ namespace DietApp
         private void showClients_pnl_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             clients_lbl.Text = @"Client Info";
-            ClientCard_pnl.Visible = info_pnl.Visible = true;
-            ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
+            ClientCard_pnl.Visible = info_pnl.Visible = PnlNav_Info.Visible = true;
+            ShowAll_pnl.Visible = AddClient_pnl.Visible = PnlNav_Diet.Visible = PnlNav_History.Visible = false;
             
             // Reset controls of info_pnl, history_pnl, diet_pnl.
             history_bmi_txt.Text = "";
@@ -366,8 +366,8 @@ namespace DietApp
          */
         private void info_lbl_Click(object sender, EventArgs e)
         {
-            info_pnl.Visible = true;
-            history_pnl.Visible = diet_pnl.Visible = false;
+            info_pnl.Visible = PnlNav_Info.Visible = true;
+            history_pnl.Visible = diet_pnl.Visible = PnlNav_Diet.Visible = PnlNav_History.Visible = false;
             
             info_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             info_lbl.ForeColor = Color.FromArgb(15, 82, 186);
@@ -493,8 +493,8 @@ namespace DietApp
         private void history_lbl_Click(object sender, EventArgs e)
         {
             // Setting visibility to true for history_pnl and false for info_pnl and diet_pnl.
-            history_pnl.Visible = true;
-            info_pnl.Visible = diet_pnl.Visible = false;
+            history_pnl.Visible = PnlNav_History.Visible = true;
+            info_pnl.Visible = diet_pnl.Visible = PnlNav_Diet.Visible = PnlNav_Info.Visible = false;
             
             history_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             history_lbl.ForeColor = Color.FromArgb(15, 82, 186);
@@ -717,8 +717,8 @@ namespace DietApp
          */
         private void diet_lbl_Click(object sender, EventArgs e)
         {
-            diet_pnl.Visible = true;
-            info_pnl.Visible = history_pnl.Visible = false;
+            diet_pnl.Visible = PnlNav_Diet.Visible = true;
+            info_pnl.Visible = history_pnl.Visible = PnlNav_History.Visible = PnlNav_Info.Visible = false;
 
             diet_navBar_pnl.BackColor = Color.FromArgb(46, 51, 73);
             diet_lbl.ForeColor = Color.FromArgb(15, 82, 186);
@@ -829,10 +829,13 @@ namespace DietApp
                         TextAlign = ContentAlignment.MiddleCenter,
                         Text = row == 7
                             ? details.GetTotalCalories().ToString(CultureInfo.InvariantCulture)
-                            : details.GetFoodName(),
-                        Cursor = Cursors.Hand
+                            : details.GetFoodName()
                     };
-                    lbl.Click += (sender, args) => { new FoodInfoForm(details).Show(); };
+                    if (row != 7)
+                    {
+                        lbl.Cursor = Cursors.Hand;
+                        lbl.Click += (sender, args) => { new FoodInfoForm(details).Show(); };
+                    }
                     diet_plan_pnl.Controls.Add(lbl, column, row);
                     row++;
                 }

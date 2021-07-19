@@ -72,6 +72,7 @@ namespace DietApp
             this.calories_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.calories_lbl.AutoSize = true;
             this.calories_lbl.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calories_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.calories_lbl.Location = new System.Drawing.Point(279, 13);
             this.calories_lbl.Name = "calories_lbl";
             this.calories_lbl.Size = new System.Drawing.Size(62, 20);
@@ -81,12 +82,12 @@ namespace DietApp
             // calories
             // 
             this.calories.AutoSize = true;
-            this.calories.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calories.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.calories.Location = new System.Drawing.Point(8, 13);
             this.calories.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.calories.Name = "calories";
-            this.calories.Size = new System.Drawing.Size(76, 18);
+            this.calories.Size = new System.Drawing.Size(75, 21);
             this.calories.TabIndex = 4;
             this.calories.Text = "Calories:";
             // 
@@ -122,6 +123,7 @@ namespace DietApp
             this.foodname_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.foodname_lbl.AutoSize = true;
             this.foodname_lbl.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.foodname_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.foodname_lbl.Location = new System.Drawing.Point(9, 10);
             this.foodname_lbl.Name = "foodname_lbl";
             this.foodname_lbl.Size = new System.Drawing.Size(98, 21);
@@ -145,6 +147,7 @@ namespace DietApp
             this.fat_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.fat_lbl.AutoSize = true;
             this.fat_lbl.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fat_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.fat_lbl.Location = new System.Drawing.Point(280, 12);
             this.fat_lbl.Name = "fat_lbl";
             this.fat_lbl.Size = new System.Drawing.Size(29, 20);
@@ -155,12 +158,12 @@ namespace DietApp
             // fat
             // 
             this.fat.AutoSize = true;
-            this.fat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fat.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.fat.Location = new System.Drawing.Point(8, 13);
             this.fat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fat.Name = "fat";
-            this.fat.Size = new System.Drawing.Size(37, 18);
+            this.fat.Size = new System.Drawing.Size(36, 21);
             this.fat.TabIndex = 4;
             this.fat.Text = "Fat:";
             // 
@@ -181,6 +184,7 @@ namespace DietApp
             this.protein_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.protein_lbl.AutoSize = true;
             this.protein_lbl.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.protein_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.protein_lbl.Location = new System.Drawing.Point(279, 13);
             this.protein_lbl.Name = "protein_lbl";
             this.protein_lbl.Size = new System.Drawing.Size(60, 20);
@@ -190,12 +194,12 @@ namespace DietApp
             // proteins
             // 
             this.proteins.AutoSize = true;
-            this.proteins.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteins.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proteins.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.proteins.Location = new System.Drawing.Point(8, 13);
             this.proteins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.proteins.Name = "proteins";
-            this.proteins.Size = new System.Drawing.Size(76, 18);
+            this.proteins.Size = new System.Drawing.Size(77, 21);
             this.proteins.TabIndex = 4;
             this.proteins.Text = "Proteins:";
             // 
@@ -216,6 +220,7 @@ namespace DietApp
             this.carbohydrates_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.carbohydrates_lbl.AutoSize = true;
             this.carbohydrates_lbl.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbohydrates_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.carbohydrates_lbl.Location = new System.Drawing.Point(280, 12);
             this.carbohydrates_lbl.Name = "carbohydrates_lbl";
             this.carbohydrates_lbl.Size = new System.Drawing.Size(65, 20);
@@ -226,12 +231,12 @@ namespace DietApp
             // carbohydrates
             // 
             this.carbohydrates.AutoSize = true;
-            this.carbohydrates.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbohydrates.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbohydrates.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.carbohydrates.Location = new System.Drawing.Point(8, 13);
             this.carbohydrates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.carbohydrates.Name = "carbohydrates";
-            this.carbohydrates.Size = new System.Drawing.Size(123, 18);
+            this.carbohydrates.Size = new System.Drawing.Size(125, 21);
             this.carbohydrates.TabIndex = 4;
             this.carbohydrates.Text = "Carbohydrates:";
             // 
@@ -252,6 +257,7 @@ namespace DietApp
             this.carbs_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.carbs_lbl.AutoSize = true;
             this.carbs_lbl.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbs_lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.carbs_lbl.Location = new System.Drawing.Point(280, 12);
             this.carbs_lbl.Name = "carbs_lbl";
             this.carbs_lbl.Size = new System.Drawing.Size(46, 20);
@@ -262,12 +268,12 @@ namespace DietApp
             // carbs
             // 
             this.carbs.AutoSize = true;
-            this.carbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbs.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carbs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.carbs.Location = new System.Drawing.Point(8, 13);
             this.carbs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.carbs.Name = "carbs";
-            this.carbs.Size = new System.Drawing.Size(58, 18);
+            this.carbs.Size = new System.Drawing.Size(56, 21);
             this.carbs.TabIndex = 4;
             this.carbs.Text = "Carbs:";
             // 
@@ -309,13 +315,11 @@ namespace DietApp
         private System.Windows.Forms.Label calories;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button close_btn;
-        private System.Windows.Forms.Label carolies_lbl;
         private System.Windows.Forms.Label foodname_lbl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label fat_lbl;
         private System.Windows.Forms.Label fat;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label proteins;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label carbohydrates_lbl;
