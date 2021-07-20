@@ -16,9 +16,8 @@ namespace DietApp
         private const string Cs = "Host=localhost; Username=diet; Password=dietapp2021; Database=dietdb";
         private readonly DateTime _dateTime;
         private readonly List<NutritionInfo> _monday = new(), _tuesday = new(), _wednesday = new(), _thursday = new(), _friday = new(), _saturday = new(), _sunday = new();
-        private ClientCalories _clientCalories;
-        private string _clientType, _dietType, _sex;
-        private readonly int _age, _id, _clientshistoryid;
+        private string _clientType, _dietType;
+        private readonly int _id, _clientshistoryid;
 
         // Getters for _clientType and _dietType and _days
         public string GetClientType() { return _clientType; }
@@ -39,7 +38,7 @@ namespace DietApp
             
             GetOldDiet();
         }
-        public GenerationOfDiet(string clientType, string dietType, DateTime dateTime, int age, string sex, int id, int clientshistoryid)
+        public GenerationOfDiet(string clientType, string dietType, DateTime dateTime, int id, int clientshistoryid)
         {
             if (clientshistoryid == 0)
             {
@@ -50,20 +49,10 @@ namespace DietApp
             _clientType = clientType;
             _dietType = dietType;
             _dateTime = dateTime;
-            _age = age;
-            _sex = sex;
             _id = id;
             _clientshistoryid = clientshistoryid;
-
-            GetClientCaloriesInfo();
+            
             DietGeneration();
-        }
-
-        // Do i need it? maybe for create new diet plan.
-        private void GetClientCaloriesInfo()
-        {
-            //
-            _clientCalories = new ClientCalories(_clientType, _age, _sex);
         }
 
         // Select old diet plan.

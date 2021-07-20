@@ -87,7 +87,6 @@
     <Compile Include="AddAppointmentForm.Designer.cs">
       <DependentUpon>AddAppointmentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientCalories.cs" />
     <Compile Include="FoodInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>

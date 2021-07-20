@@ -754,7 +754,7 @@ namespace DietApp
              * Display diet plan.
              */
             if (diet_date_cb.Text.Equals("") || diet_diettype_cb.Text.Equals("") || diet_type_cb.Text.Equals("")) return;
-            var diet = new GenerationOfDiet(diet_type_cb.Text, diet_diettype_cb.Text, DateTime.Parse(diet_date_cb.Text), short.Parse(info_age_txt.Text), info_sex_cb.Text, _id, _clienthistoryid);
+            var diet = new GenerationOfDiet(diet_type_cb.Text, diet_diettype_cb.Text, DateTime.Parse(diet_date_cb.Text), _id, _clienthistoryid);
             
             if (diet.GetClientType() == null && diet.GetDietType() == null) return;
             DisplayDiet(diet.GetDays());
@@ -786,7 +786,7 @@ namespace DietApp
              * Calling DisplayDiet method to display diet plan.
              */
             if (!diet_pnl.Visible) return;
-            diet_gendiet_btn.Enabled = true;
+            diet_gendiet_btn.Enabled = diet_type_cb.Enabled = diet_diettype_cb.Enabled = true;
             var showOld = new GenerationOfDiet(_id, _clienthistoryid, DateTime.Parse(diet_date_cb.Text));
             if (diet_date_cb.SelectedIndex == diet_date_cb.Items.Count - 1 && showOld.GetClientType() == null && showOld.GetDietType() == null) return;
             if (showOld.GetClientType() == null || showOld.GetDietType() == null)
@@ -814,6 +814,7 @@ namespace DietApp
             {
                 for (var col = 1; col < diet_plan_pnl.ColumnCount; col++)
                 {
+                    // Reset diet_plan_pnl.
                     diet_plan_pnl.Controls.Remove(diet_plan_pnl.GetControlFromPosition(col, row));
                 }
             }
