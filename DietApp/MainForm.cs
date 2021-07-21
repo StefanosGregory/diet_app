@@ -31,9 +31,9 @@ namespace DietApp
             BtnMinimize.Location = new Point(BtnCloseApp.Location.X - BtnCloseApp.Size.Width + 5, 10);
 
             Region = Region.FromHrgn(CreateRoundRectRgn(0,0, Width, Height, 25,25));
-            /*PnlNav.Height = BtnDashboard.Height;
-            PnlNav.Top = BtnDashboard.Top;
-            PnlNav.Left = BtnDashboard.Left;*/
+            PnlNav.Height = BtnCalendar.Height;
+            PnlNav.Top = BtnCalendar.Top;
+            PnlNav.Left = BtnCalendar.Left;
             BtnCalendar.BackColor = Color.FromArgb(46, 51, 73);
 
             // Setting default shown panel.
