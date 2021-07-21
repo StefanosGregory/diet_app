@@ -167,9 +167,9 @@ namespace DietApp
 
                 FillDataGrid();
 
-                ShowAll_pnl.Visible = AddClient_pnl.Visible = false;
+                AddClient_pnl.Visible = false;
                 clients_lbl.Text = @"Client Info";
-                ClientCard_pnl.Visible = true;
+                ShowAll_pnl.Visible = true;
             }
             catch (SqlException e)
             {
